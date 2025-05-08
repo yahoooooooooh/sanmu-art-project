@@ -1,0 +1,192 @@
+/* 全局样式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid; /* 蓝色强调 */
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+
+/* 主内容区域 */
+main {
+    flex: 1; /* 让 main 区域填满剩余空间 */
+    padding: 20px 0;
+    display: flex; /* 使用 flex 布局来并排显示文章列表和内容 */
+    gap: 20px; /* 列表和内容之间的间距 */
+}
+
+/* 文章列表 */
+#articles-list {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%; /* 文章列表占30%宽度 */
+    overflow-y: auto; /* 如果列表过长，允许滚动 */
+    max-height: calc(100vh - 200px); /* 限制最大高度，避免过长 */
+}
+
+#articles-list h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#articles-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+#articles-list ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ddd;
+}
+
+#articles-list ul li:last-child {
+    border-bottom: none;
+}
+
+#articles-list ul li a {
+    text-decoration: none;
+    color: #337ab7; /* 链接颜色 */
+    transition: color 0.3s ease;
+}
+
+#articles-list ul li a:hover {
+    color: #23527c; /* 链接悬停颜色 */
+}
+
+/* 文章内容区 */
+#article-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 70%; /* 文章内容占70%宽度 */
+    overflow-y: auto; /* 如果内容过长，允许滚动 */
+    max-height: calc(100vh - 200px); /* 限制最大高度 */
+}
+
+/* Markdown 渲染出的内容的样式 */
+#article-content h1, 
+#article-content h2, 
+#article-content h3, 
+#article-content h4, 
+#article-content h5, 
+#article-content h6 {
+    color: #333;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+#article-content h1 { font-size: 2em; border-bottom: 1px solid #eee; padding-bottom: 0.3em;}
+#article-content h2 { font-size: 1.75em; border-bottom: 1px solid #eee; padding-bottom: 0.3em;}
+#article-content h3 { font-size: 1.5em; }
+#article-content h4 { font-size: 1.25em; }
+#article-content p {
+    margin-bottom: 1em;
+}
+#article-content ul, #article-content ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+#article-content blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 1em;
+    border-left: 5px solid #eee;
+    background-color: #f9f9f9;
+}
+#article-content pre {
+    background: #2d2d2d; /* 深色代码块背景 */
+    color: #f8f8f2;     /* 浅色代码文本 */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+}
+#article-content code { /* 行内代码 */
+    background: #f4f4f4;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 3px;
+    font-family: "Courier New", Courier, monospace;
+}
+#article-content pre code { /* 代码块内的 code 元素不需要额外样式 */
+    padding: 0;
+    background: none;
+    border-radius: 0;
+}
+#article-content img {
+    max-width: 100%; /* 图片响应式 */
+    height: auto;
+    border-radius: 5px; /* 轻微圆角 */
+    margin: 10px 0;
+}
+
+
+/* 页脚样式 */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* 将页脚推到底部 */
+}
+
+/* 响应式调整：当屏幕宽度小于768px时 */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* 垂直排列文章列表和内容 */
+    }
+
+    #articles-list,
+    #article-content {
+        width: 100%; /* 宽度占满 */
+        max-height: none; /* 取消最大高度限制，允许内容自然流动 */
+        margin-bottom: 20px;
+    }
+
+    #articles-list {
+        order: 1; /* 文章列表显示在前面 */
+    }
+    #article-content {
+        order: 2; /* 文章内容显示在后面 */
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+    .container {
+        width: 95%;
+    }
+}
