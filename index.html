@@ -9,53 +9,70 @@
 <body>
     <header>
         <h1>扑灰年画创新传承项目成果展示网站</h1>
-        <nav>
-            <!-- 导航链接会在这里 -->
-        </nav>
     </header>
 
-    <main>
-        <section id="articles-list">
-            <h2>文章列表</h2>
-            <!-- 文章列表会在这里动态生成 -->
-            <ul>
-                <!-- Placeholder for article list -->
-            </ul>
-        </section>
+    <!-- 新增一个主容器 -->
+    <div class="main-container">
+        <!-- 左侧导航栏 -->
+        <aside class="sidebar">
+            <h2>导航</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" id="nav-articles">文章概览</a></li>
+                    <li><a href="#" id="nav-gallery">图片画廊</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        <section id="article-content">
-            <!-- 单篇文章内容会在这里加载和显示 -->
-        </section>
+        <!-- 右侧主内容区 -->
+        <main class="content-area">
+            <!-- 文章相关的视图 -->
+            <section id="articles-view" class="view-section">
+                <!-- 包裹文章列表 -->
+                <div id="articles-list-container">
+                    <h2>文章列表</h2>
+                    <ul id="articles-list-ul">
+                        <!-- 文章列表会在这里动态生成 -->
+                    </ul>
+                </div>
+                <!-- 包裹文章内容 -->
+                <div id="article-content-container">
+                    <!-- 单篇文章内容会在这里加载和显示 -->
+                </div>
+            </section>
 
-        <section id="image-gallery" style="display: none;">
-            <h2>图片画廊 (可选)</h2>
-            <!-- 图片画廊会在这里动态生成 -->
-            <div class="gallery-container">
-                <!-- Placeholder for image gallery -->
-            </div>
-        </section>
-    </main>
+            <!-- 图片画廊视图，默认隐藏 -->
+            <section id="gallery-view" class="view-section" style="display: none;">
+                <h2>图片画廊</h2>
+                <div class="gallery-container">
+                    <!-- 图片画廊会在这里动态生成 -->
+                </div>
+            </section>
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 扑灰年画创新传承项目</p>
     </footer>
 
-    <!-- Giscus 评论组件会添加到文章内容下方 -->
-    <div id="giscus-container"><script src="https://giscus.app/client.js"
-        data-repo="yahoooooooooh/sanmu-art-project"
-        data-repo-id="R_kgDOOmrJ3Q"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOOmrJ3c4Cp6rL"
-        data-mapping="url"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script></div>
+    <!-- Giscus 评论组件容器，JS会根据需要移动它或重新初始化 -->
+    <div id="giscus-placeholder" style="display: none;">
+         <script src="https://giscus.app/client.js"
+                data-repo="yahoooooooooh/sanmu-art-project"
+                data-repo-id="R_kgDOOmrJ3Q"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOOmrJ3c4Cp6rL"
+                data-mapping="url"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="preferred_color_scheme"
+                data-lang="zh-CN"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
 
     <script src="js/lib/marked.min.js"></script>
     <script src="js/main.js"></script>
