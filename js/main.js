@@ -1,54 +1,76 @@
 document.addEventListener('DOMContentLoaded', () => {
     const articlesListElement = document.querySelector('#articles-list ul');
     const articleContentElement = document.getElementById('article-content');
-    // Giscus 实例会自己管理，不再需要直接操作它
+
+    // 动态获取基础路径，以适应 GitHub Pages 的子目录结构
+    // 如果仓库名是 'your-username.github.io'，则 basePath 为 ""
+    // 否则，如果仓库 URL 是 'https://your-username.github.io/your-repo-name/', basePath 为 "/your-repo-name"
+    let basePath = "";
+    const repoName = window.location.pathname.split('/')[1]; // 获取路径的第一个部分
+    // 检查当前域名是否为 github.io 并且路径不是简单的 '/'
+    if (window.location.hostname.endsWith('github.io') && window.location.pathname !== '/') {
+        // 假设路径结构是 /repo-name/ 或 /repo-name/index.html 等
+        // 我们需要确保 basePath 是 /repo-name
+        // 如果直接在根目录的 your-username.github.io 仓库，则 pathname 可能只是 /
+        const pathSegments = window.location.pathname.split('/').filter(segment => segment.length > 0);
+        if (pathSegments.length > 0 && pathSegments[0] !== 'index.html') { // 避免username.github.io仓库的根目录index.html被误判
+            // 进一步检查是否是用户站点 (username.github.io) 还是项目站点 (username.github.io/repo-name)
+            // 对于项目站点，pathname 通常以 /repo-name/ 开头
+            const hostnameParts = window.location.hostname.split('.');
+            // 如果 hostname 不是 username.github.io 这种形式，或者路径段数大于1
+            if (hostnameParts.length < 3 || hostnameParts[0] !== repoName || pathSegments.length > 1 || (pathSegments.length === 1 && pathSegments[0] !== 'index.html' && pathSegments[0] !== '')) {
+                 basePath = `/${repoName}`;
+            }
+        }
+    }
+    console.log("Detected basePath:", basePath);
+
 
     // --- 1. 加载并显示文章列表 ---
-    fetch('data/article_index.json')
+    fetch(`${basePath}/data/article_index.json`) // 在路径前添加 basePath
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                throw new Error(`HTTP error! status: ${response.status}, trying to fetch ${response.url}`);
             }
             return response.json();
         })
         .then(articles => {
             if (articles.length === 0) {
                 articlesListElement.innerHTML = '<li>没有找到文章。</li>';
-                // 如果没有文章，也设置一个默认标题
                 document.title = '扑灰年画创新传承项目成果展示';
                 return;
             }
             articles.forEach(article => {
                 const listItem = document.createElement('li');
                 const link = document.createElement('a');
-                link.href = `#${article.id}`;
+                // 链接的 hash 保持不变，因为它是页面内的锚点
+                link.href = `#${article.id}`; 
                 link.textContent = article.title;
                 link.dataset.filename = article.filename;
                 
                 link.addEventListener('click', (event) => {
                     event.preventDefault();
-                    loadArticle(article.filename, article.id, article.title); // 传入文章标题
+                    loadArticle(article.filename, article.id, article.title);
                     window.location.hash = `#${article.id}`;
                 });
                 
                 listItem.appendChild(link);
                 articlesListElement.appendChild(listItem);
             });
-            // 列表加载完成后，尝试从hash加载文章（如果存在）
             loadArticleFromHash(articles);
         })
         .catch(error => {
             console.error('加载文章索引失败:', error);
-            articlesListElement.innerHTML = '<li>加载文章列表失败，请查看控制台。</li>';
+            articlesListElement.innerHTML = `<li>加载文章列表失败，请查看控制台。错误: ${error.message}</li>`;
             document.title = '错误 - 扑灰年画创新传承项目成果展示';
         });
 
     // --- 2. 加载并显示单篇文章内容 ---
-    function loadArticle(filename, articleId, articleTitle) { // 接收文章标题
-        fetch(`articles/${filename}`)
+    function loadArticle(filename, articleId, articleTitle) {
+        fetch(`${basePath}/articles/${filename}`) // 在路径前添加 basePath
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                    throw new Error(`HTTP error! status: ${response.status}, trying to fetch ${response.url}`);
                 }
                 return response.text();
             })
@@ -60,12 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     articleContentElement.innerHTML = '<p>错误：Markdown解析库未加载。</p>';
                 }
                 
-                // 更新浏览器标签页标题
                 if (articleTitle) {
                     document.title = `${articleTitle} - 扑灰年画创新传承项目成果展示`;
                 } else {
-                    // 如果由于某种原因没有文章标题（理论上不应该发生，因为我们从索引加载）
-                    // 则尝试从文章内容的第一行H1提取（这是一个更健壮的后备）
                     const firstH1 = articleContentElement.querySelector('h1');
                     if (firstH1 && firstH1.textContent) {
                         document.title = `${firstH1.textContent.trim()} - 扑灰年画创新传承项目成果展示`;
@@ -73,23 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.title = '扑灰年画创新传承项目成果展示';
                     }
                 }
-                
-                // Giscus 会自动监听 URL (包括 hash) 的变化并更新评论区
                 console.log(`文章 ${filename} (ID: ${articleId}, Title: ${articleTitle}) 已加载。`);
             })
             .catch(error => {
                 console.error(`加载文章 '${filename}' 失败:`, error);
-                articleContentElement.innerHTML = `<p>加载文章内容失败，请查看控制台。</p>`;
+                articleContentElement.innerHTML = `<p>加载文章内容失败，请查看控制台。错误: ${error.message}</p>`;
                 document.title = '错误 - 扑灰年画创新传承项目成果展示';
             });
     }
 
     // --- 页面加载时尝试加载hash中的文章 ---
-    function loadArticleFromHash(articles) { // 接收文章列表数据
+    function loadArticleFromHash(articles) {
         let articleLoadedFromHash = false;
         if (window.location.hash && articles && articles.length > 0) {
             const articleIdFromHash = window.location.hash.substring(1);
-            
             const articleToLoad = articles.find(article => article.id === articleIdFromHash);
 
             if (articleToLoad) {
@@ -100,16 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        // 如果没有通过hash加载文章（比如初始访问或hash无效），并且有文章列表，
-        // 可以选择加载第一篇文章或保持空白。
-        // 当前行为是：如果没有hash匹配，则不主动加载任何文章，等待用户点击。
-        // 同时也设置一个默认的页面标题。
         if (!articleLoadedFromHash) {
             document.title = '扑灰年画创新传承项目成果展示';
-             // 如果希望默认加载第一篇文章，取消下面这几行的注释
-            // if (articles && articles.length > 0) {
-            //     loadArticle(articles[0].filename, articles[0].id, articles[0].title);
-            // }
         }
     }
 });
