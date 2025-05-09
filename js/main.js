@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 左侧导航链接
     const navArticlesLink = document.getElementById('nav-articles');
     const navGalleryLink = document.getElementById('nav-gallery');
+    const navAIChatLink = document.getElementById('nav-ai-chat'); // 新增：获取AI对话导航链接
 
     // 右侧视图区域
     const articlesView = document.getElementById('articles-view');
     const galleryView = document.getElementById('gallery-view');
+    const aiChatView = document.getElementById('ai-chat-view'); // 新增：获取AI对话视图
 
     // 文章相关元素
     const articlesListULElement = document.getElementById('articles-list-ul');
@@ -13,10 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 图片画廊容器
     const galleryContainerElement = document.querySelector('#gallery-view .gallery-container');
-
-    // Giscus 占位符和实际的 script 元素
-    const giscusPlaceholder = document.getElementById('giscus-placeholder');
-    const giscusScript = giscusPlaceholder ? giscusPlaceholder.querySelector('script') : null;
 
     let basePath = "";
     const repoName = window.location.pathname.split('/')[1];
@@ -31,23 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log("Detected basePath:", basePath);
 
+    // 更新：将 navAIChatLink 添加到数组
+    const allNavLinks = [navArticlesLink, navGalleryLink, navAIChatLink];
+    const allViews = [articlesView, galleryView, aiChatView];
+
     function setActiveNav(activeLink) {
-        [navArticlesLink, navGalleryLink].forEach(link => {
+        allNavLinks.forEach(link => {
             if (link) link.classList.remove('active');
         });
         if (activeLink) activeLink.classList.add('active');
     }
 
     function showView(viewToShow) {
-        [articlesView, galleryView].forEach(view => {
+        allViews.forEach(view => {
             if (view) view.style.display = 'none';
         });
         if (viewToShow) {
-            // **** 修改在这里：确保 #gallery-view 也使用 display: flex ****
+            // 根据视图类型决定 display 属性
+            // articles-view 使用 flex, 其他使用 block (或者 galleryView 也用 flex)
             if (viewToShow.id === 'articles-view' || viewToShow.id === 'gallery-view') {
                  viewToShow.style.display = 'flex'; 
             } else {
-                 viewToShow.style.display = 'block'; // 其他可能的视图（目前没有）
+                 viewToShow.style.display = 'block'; // aiChatView 用 block
             }
         }
     }
@@ -57,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             showView(articlesView);
             setActiveNav(navArticlesLink);
+            window.location.hash = ''; // 清除哈希，或设置为文章概览的特定哈希
         });
     }
 
@@ -66,8 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
             showView(galleryView);
             setActiveNav(navGalleryLink);
             loadGallery(); 
+            window.location.hash = '#gallery'; // 为画廊设置哈希
         });
     }
+
+    // 新增：为AI对话导航链接添加事件监听器
+    if (navAIChatLink) {
+        navAIChatLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showView(aiChatView);
+            setActiveNav(navAIChatLink);
+            window.location.hash = '#ai-chat'; // 为AI对话设置哈希
+        });
+    }
+
 
     function loadArticlesList(articlesData) {
         if (!articlesListULElement) return;
@@ -86,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             link.addEventListener('click', (event) => {
                 event.preventDefault();
+                showView(articlesView); // 确保文章视图是显示的
+                setActiveNav(navArticlesLink); // 设置文章导航为激活
                 loadArticleContent(article.filename, article.id, article.title);
                 window.location.hash = `#${article.id}`; 
             });
@@ -106,12 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(articles => {
             allArticles = articles; 
             loadArticlesList(allArticles); 
-            loadArticleFromHash(allArticles); 
-            // 默认显示文章视图（showView 和 setActiveNav 会在 loadArticleFromHash 中处理，或在此处确保）
-            if (!window.location.hash) { // 如果没有hash，则明确设置默认视图
-                showView(articlesView);
-                setActiveNav(navArticlesLink);
-            }
+            // 处理哈希加载的逻辑调整
+            handleHashChange(allArticles); 
         })
         .catch(error => {
             console.error('加载文章索引失败:', error);
@@ -119,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 articlesListULElement.innerHTML = `<li>加载文章列表失败。错误: ${error.message}</li>`;
             }
             document.title = '错误 - 扑灰年画创新传承项目成果展示';
-            showView(articlesView); // 即使失败，也显示文章区域的错误信息
+            showView(articlesView); // 默认或错误时显示文章视图
             setActiveNav(navArticlesLink);
         });
 
@@ -141,20 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     articleContentContainerElement.innerHTML = '<p>错误：Markdown解析库未加载。</p>';
                 }
                 
-                const existingGiscusContainer = articleContentContainerElement.querySelector('[id^="giscus-comments-for-"]');
-                if (existingGiscusContainer) {
-                    existingGiscusContainer.remove();
-                }
-                if (giscusScript) {
-                    const giscusContainerForArticle = document.createElement('div');
-                    giscusContainerForArticle.id = `giscus-comments-for-${articleId}`;
-                    giscusContainerForArticle.style.marginTop = '30px'; 
-                    
-                    const newGiscusScript = giscusScript.cloneNode(true);
-                    giscusContainerForArticle.appendChild(newGiscusScript);
-                    articleContentContainerElement.appendChild(giscusContainerForArticle);
-                }
-
                 if (articleTitle) {
                     document.title = `${articleTitle} - 扑灰年画创新传承项目成果展示`;
                 } else {
@@ -180,7 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn("图片画廊容器 '.gallery-container' 未找到。");
             return;
         }
-        // if (galleryLoadedOnce) { return; } // 如果不希望每次都重新加载，可以启用这个
+         // 如果已经加载过一次，可以根据需求决定是否重新加载
+        // if (galleryLoadedOnce) return;
 
         fetch(`${basePath}/data/image_index.json`)
             .then(response => {
@@ -192,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(images => {
                 galleryContainerElement.innerHTML = ''; 
                 if (images.length === 0) {
-                    galleryContainerElement.innerHTML = '<p>没有找到图片。</p>';
+                    galleryContainerElement.innerHTML = '<p>沒有找到圖片。</p>';
                     return;
                 }
 
@@ -230,26 +231,46 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    function loadArticleFromHash(articles) {
-        let articleLoadedFromHash = false;
-        if (window.location.hash) {
-            const articleIdFromHash = window.location.hash.substring(1);
+    // 统一处理哈希变化的函数
+    function handleHashChange(articles = allArticles) {
+        const hash = window.location.hash;
+        if (hash.startsWith('#gallery')) {
+            showView(galleryView);
+            setActiveNav(navGalleryLink);
+            loadGallery();
+        } else if (hash.startsWith('#ai-chat')) {
+            showView(aiChatView);
+            setActiveNav(navAIChatLink);
+        } else if (hash && hash !== '#') { // 处理文章哈希
+            const articleIdFromHash = hash.substring(1);
             const articleToLoad = articles.find(article => article.id === articleIdFromHash);
-
             if (articleToLoad) {
-                showView(articlesView); 
-                setActiveNav(navArticlesLink); 
+                showView(articlesView);
+                setActiveNav(navArticlesLink);
                 loadArticleContent(articleToLoad.filename, articleToLoad.id, articleToLoad.title);
-                articleLoadedFromHash = true;
             } else {
-                console.warn(`页面加载时未能在文章索引中找到ID为 '${articleIdFromHash}' 的文章。`);
+                console.warn(`哈希路由：未找到ID为 '${articleIdFromHash}' 的文章。显示默认文章视图。`);
+                showView(articlesView); // 如果文章ID无效，显示文章列表
+                setActiveNav(navArticlesLink);
+                if (articles.length > 0 && articleContentContainerElement) {
+                     // 可选：清空文章内容区或加载第一篇文章
+                    articleContentContainerElement.innerHTML = '<p>请从左侧选择一篇文章查看。</p>';
+                    document.title = '文章概览 - 扑灰年画创新传承项目成果展示';
+                }
+            }
+        } else { // 没有哈希或哈希是空的，默认显示文章视图
+            showView(articlesView);
+            setActiveNav(navArticlesLink);
+            if (articles.length > 0 && articleContentContainerElement) {
+                articleContentContainerElement.innerHTML = '<p>请从左侧选择一篇文章查看。</p>';
+                document.title = '文章概览 - 扑灰年画创新传承项目成果展示';
             }
         }
-        
-        if (!articleLoadedFromHash) {
-            showView(articlesView); // 默认显示文章视图
-            setActiveNav(navArticlesLink); // 默认激活文章导航
-            document.title = '扑灰年画创新传承项目成果展示';
-        }
     }
+
+    // 监听哈希变化
+    window.addEventListener('hashchange', () => handleHashChange(allArticles));
+
+    // 初始加载时也调用一次（在文章列表加载后）
+    // loadArticleFromHash(allArticles) 已被 handleHashChange(allArticles) 替代，在 fetch.then 中调用
 });
