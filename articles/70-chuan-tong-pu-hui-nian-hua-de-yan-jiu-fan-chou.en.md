@@ -1,0 +1,9 @@
+# 70-Upholding the Soul of Tradition: The Core Scope of Puhui New Year Picture Research
+
+When conducting artistic research on Gaomi Puhui New Year Pictures, the core texts primarily refer to traditional works that have formed through a long historical evolution, possess a relatively stable artistic style, and have unique significance in folk art.
+
+Researchers particularly emphasize that a relatively cautious and critical attitude should be taken towards some emerging styles that have arisen due to drastic changes in the cultural ecological environment, such as the tendency to excessively lean towards academic techniques or pursue so-called "雅化" (elegant refinement). This research orientation is not intended to deny innovation, but rather to clarify that what we protect and inherit today as intangible cultural heritage is the traditional Puhui New Year Picture that has accumulated throughout history and possesses unique cultural genes, rather than contemporary innovations that may belong to the future category of "非遗" (intangible cultural heritage).
+
+Therefore, the focus of research lies in deeply exploring and interpreting the inherent artistic characteristics and aesthetic connotations of traditional Puhui New Year Pictures. This includes its unique production techniques, "写意性" (freehand) artistic style, 简洁空灵的构图 (concise and ethereal composition), 稚拙传神的人物造型 (naive yet vivid figure modeling), and the 雅俗并行的设色特点 (coexistence of elegant and popular coloring characteristics). Such a definition helps us accurately grasp the artistic essence of Puhui New Year Pictures and provides theoretical basis for its correct inheritance and development.
+
+(This content is compiled and written based on the relevant discussions in the abstract and introduction sections of An Mingming's thesis "Research on Gaomi Puhui New Year Picture Art.")

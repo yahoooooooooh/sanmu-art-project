@@ -1,0 +1,22 @@
+# 27-Artistic Principles, Cultural Adherence, and Thoughts on Inheritance of "Jia Tang"
+
+The "Jia Tang" theme in Gaomi Puhui New Year paintings is not only rich in content and profound in meaning, but also exhibits distinct characteristics in artistic expression and cultural inheritance, prompting researchers to reflect on the current state of inheritance.
+
+**Characteristics of Artistic Expression**:
+1. **Variation within Symmetry**: Puhui New Year paintings are known for being purely hand-drawn. Although the overall layout of "Jia Tang" paintings strictly follows the principle of symmetry, due to being hand-drawn, artists have different specific painting techniques and creative ideas, making the details of the object shapes on the left and right sides of the symmetry often "not identical, each with its own characteristics." This is precisely the special charm of Puhui New Year paintings, where灵动 (lively and agile) is seen within regularity, and individuality is shown within stylization.
+2. **The Etiquette of "Left is Superior"**: The arrangement of objects in the entire "Jia Tang" painting strictly follows the principle of "left is superior" in traditional Chinese etiquette. For example, as mentioned earlier, the clothing of figures outside the courtyard is "Ming on the left, Qing on the right," and the arrangement of ancestor tablets in the main hall is "direct relatives on the left side of the Yong Lu," etc., all reflect this cultural rule.
+3. **Preference for Even Numbers**: In "Jia Tang" paintings, the quantities of various objects mostly use even numbers such as 2, 4, 6, and 8. This reflects the Chinese traditional culture's preference for and reverence for even numbers, which are considered to symbolize being paired and perfect auspiciousness.
+
+**Cultural Connotation and Function**:
+The object shapes in "Jia Tang" paintings, such as luxurious buildings, elaborate figure clothing, etc., have a dual meaning:
+* **Remembrance and Wishes for Ancestors**: On the one hand, they express the descendants' deep remembrance and beautiful wishes for the deceased ancestors, vividly embodying the long-standing filial piety culture of the Chinese nation.
+* **Yearning for a Better Life**: On the other hand, these beautiful depictions also convey people's ardent pursuit and yearning for a better life in reality, showing a positive and upward-looking state of life and aspirations for the future.
+
+**Hidden Worries and Appeals in Inheritance**:
+The authors of the literature, Yang Aixia and Song Kuiyan, express concern about the current state of inheritance of "Jia Tang" paintings and even the entire Puhui New Year painting tradition at the end of their article. They point out that things are constantly developing, but while developing and innovating, the original purpose and cultural core must be adhered to.
+* **Lack of Cultural Connotation**: Many contemporary artists engaged in Puhui New Year painting mostly reproduce based on inherited techniques and draft copies, or simply create based on market and customer demand, but know little about the deep cultural connotation contained within Puhui New Year paintings themselves.
+* **Blind Innovation Leading to Distortion**: It is precisely due to the lack of in-depth understanding of traditional culture that some so-called "innovations" often cause their works to lose their proper cultural color and historical basis. For example, in modern "Jia Tang" paintings, some artists, in pursuit of visual effects, have changed the historically significant "Left Sophora, Right Pine" layout outside the courtyard to two pine trees, ignoring its connection to the history of ancestor migration and thus ignoring part of the reason for "Jia Tang" paintings, which is unreasonable. Another example is arbitrarily writing words like "忠义祠" (Hall of Loyalty and Righteousness) on the main hall plaque, which is inconsistent with the core meaning of "Jia Tang."
+
+Therefore, the authors appeal that in the process of developing Gaomi Puhui New Year paintings, innovation must be carried out on the basis of respecting its original cultural heritage. Only in this way can it both meet the needs of social development and not lose its original artistic characteristics and cultural value, thereby ensuring that this precious intangible cultural heritage is inherited healthily and authentically.
+
+(This content is compiled and written based on the description in "IV. Conclusion" of Yang Aixia and Song Kuiyan's "Research on the Art of Gaomi Puhui New Year Painting - <Jia Tang>".)

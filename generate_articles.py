@@ -1,395 +1,300 @@
 import os
 
-# 用户之前提供的文章列表 (保留以供参考或合并)
-# articles_old = [
-#     {
-#         "filename": "28-han-hua-xiang-shi-xun-gen.md",
-#         "content": """# 28-汉画像石上的远古回响：扑灰年画的艺术溯源猜想
-# ... (原始内容) ...
-# """
-#     },
-#     # ... (其他旧文章) ...
-#     {
-#         "filename": "41-pu-hui-nian-hua-gong-xu-xiang-jie.md",
-#         "content": """# 41-二十余道工序的锤炼：一张高密扑灰年画的诞生全过程
-# ... (原始内容) ...
-# """
-#     }
-# ]
+# Define the output directory for the translated articles
+output_dir = "translated_articles"
 
-# 从新论文中提取并生成的新文章列表
+# Create the output directory if it doesn't exist
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# This list will contain dictionaries for each translated article
+# Each dictionary has 'filename' and 'content'
 new_articles = [
     {
-        "filename": "69-pu-hui-nian-hua-de-shuang-zhong-jia-zhi.md",
-        "content": """# 69-扑灰年画的双重价值：文化与经济的交融
+        'filename': '81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.en.md',
+        'content': """# 81-The Aesthetic Implication of Puhui New Year Pictures: The Folk Cultural Code for Praying for Blessings and Good Fortune
 
-高密扑灰年画作为一种原生态的地域特色文化，在当代经济和文化发展的视角下，展现出其显著的双重价值：即文化价值和经济价值。
+Gaomi Puhui New Year Picture, as a folk art form rooted in the agricultural era, its aesthetic implication is first reflected in its role as a vivid carrier of the core folk cultural concept of "praying for blessings and good fortune." It is not just visual art, but also a code to interpret the spiritual world and collective consciousness of the people in the Gaomi area during a specific historical period.
 
-**文化价值**：扑灰年画是中国年画大家族中罕有的完全采用手绘技法并流传至今的民间美术种类，是我国民间艺术的奇葩。它承载了丰富的历史文化信息，是农耕时代高密地区老百姓精神生活的真实写照和民俗事象的载体，深刻反映了他们原生态的精神家园。对扑灰年画艺术性的研究和文化意义的发掘，有助于解决其作为非物质文化遗产项目的传承与保护问题。
+**Artistic Recreation of Folk Customs**:
+The themes of Puhui New Year Pictures are closely linked to local folk customs. Whether it's weddings, funerals, seasonal festivals, daily life, or religious beliefs, corresponding artistic expressions can be found in the New Year pictures. Artists, centered around the theme of "New Year," create works like "God of Wealth," "Good Fortune as You Wish," and "He He Er Xian" (Two Immortals of Harmony) to seek blessings; depict the yearning for a better life through works like "Round Fan Beauty," "Sisters-in-Law Chatting," and "Mother and Son"; convey educational concepts through works like "Five Sons Vying for First Place," "Mother San Teaching Her Son," and "Twenty-Four Filial Exemplars"; satisfy entertainment needs with opera stories like "Zhou Yu Beating Huang Gai" and "Yan Qing Selling Threads"; and beautify the home environment with flowers, birds, insects, fish, plum blossoms, orchids, bamboos, and chrysanthemums.
 
-**经济价值**：随着地方政府对民间艺术的重视和扶持，高密扑灰年画已成为特色民俗旅游产品。通过举办民间艺术节、开办民俗博物馆、扶持艺人创作等方式，扑灰年画带来的经济效益日益显现，为当地文化旅游产业的发展注入了活力。
+**Widespread Use of Symbolism and Meaning**:
+Artists skillfully use symbolism, metaphor, and homophones to integrate people's wishes into the pictures. For example:
+*   A fat baby holding a carp symbolizes "nian nian you yu" (abundance year after year).
+*   Pomegranate symbolizes "liu kai bai zi" (many children and many blessings).
+*   Peony symbolizes "wealth and prosperity."
+*   Bat symbolizes "blessings" (fú).
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文摘要及绪论、结语部分相关论述整理编写。）
-"""
+These visual symbols directly express the simple desires of ordinary people for a good life, including happiness, wealth, longevity, and prosperity of descendants.
+
+**Unity of Practicality and Spiritual Comfort**:
+The concept of praying for blessings and good fortune carried by Puhui New Year Pictures has a strong practical aspect, such as sacrificing to ancestors for protection and offering to the God of Wealth for abundant income. However, when these practical wishes are spiritually satisfied through the aesthetic form of the New Year picture, they can transform into the optimistic spirit and inner strength of the people facing real life and overcoming difficulties.
+
+Therefore, the aesthetic implication of Gaomi Puhui New Year Pictures is deeply rooted in its cultural core of praying for blessings and good fortune. It is both an artistic reflection of folk life and a concrete manifestation of people's spiritual sustenance.
+
+(This content is compiled and written based on Section "4.1 The Folk Cultural Concept of Praying for Blessings and Good Fortune" of An Mingming's thesis "Research on the Art of Gaomi Puhui New Year Pictures.")
+""",
     },
     {
-        "filename": "70-chuan-tong-pu-hui-nian-hua-de-yan-jiu-fan-chou.md",
-        "content": """# 70-坚守传统之魂：扑灰年画研究的核心范畴
+        'filename': '81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.ja.md',
+        'content': """# 81-撲灰年画の審美的な意味合い：祈福求吉の民間文化コード
 
-在对高密扑灰年画进行艺术研究时，其核心文本主要指向那些在悠久历史演变中形成的、艺术风貌相对稳定、具有独特民间美术意义的传统作品。
+高密撲灰年画は、農耕時代に根差した民間美術形式として、その審美的な意味合いはまず「祈福求吉」という核心的な民間文化概念の生きた担い手であるという点に現れています。それは単なる視覚芸術ではなく、特定の歴史時期における高密地区の民衆の精神世界と集団意識を読み解くためのコードです。
 
-研究者特别强调，对于当前因文化生态环境剧变而产生的一些新兴风格，例如过度倾向学院派技法或追求所谓“雅化”的趋势，应持相对审慎和批判的态度。这种研究取向并非否定创新，而是旨在厘清：我们今天作为非物质文化遗产加以保护和传承的，是历史上沉淀下来的、具有独特文化基因的传统扑灰年画，而非那些可能属于未来“非遗”范畴的当代创新。
+**民俗事象の芸術的な再表現**：
+撲灰年画の題材内容は、当地の民俗事象と密接に結びついており、結婚、葬儀、年中行事、日常生活、宗教信仰など、いずれも年画の中にそれに対応する芸術的な表現を見出すことができます。芸術家たちは「年」のテーマを中心に、『財神』、『吉祥如意』、『和合二仙』などの作品を創作して福を招き入れようとします。『団扇美人図』、『姑嫂閑話』、『母子図』などを通じて、美しい生活への憧れを描写します。『五子奪魁』、『三娘教子』、『二十四孝』などを借りて、教化の理念を伝えます。『周瑜打黄蓋』、『燕青売線』などの戯曲物語を利用して娯楽のニーズを満たします。そして、花鳥虫魚、梅蘭竹菊などで家居環境を美化します。
 
-因此，研究的焦点在于深入挖掘和阐释传统扑灰年画所固有的艺术特征和审美意蕴，这包括其独特的制作工艺、“写意性”的艺术风格、简洁空灵的构图、稚拙传神的人物造型以及雅俗并行的设色特点等。这样的界定有助于我们准确把握扑灰年画的艺术本质，并为其正确的传承与发展提供理论依据。
+**象徴と寓意の広範な運用**：
+芸術家たちは巧みに象徴、隠喩、諧音などの手法を用い、民衆の願いを画面に溶け込ませます。例えば：
+*   太った赤ん坊が鯉を抱くのは「年年有余」（毎年豊かになる）を象徴します。
+*   ザクロは「榴開百子」（多くの子供と多くの幸福）を象徴します。
+*   牡丹は「富貴」を象徴します。
+*   コウモリは「福気」（fú）を象徴します。
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文摘要及绪论部分相关论述整理编写。）
-"""
+これらの視覚的なシンボルは、幸福、富裕、長寿、子孫繁栄など、庶民の美しい生活への素朴な願いを直接的に表現しています。
+
+**功利性と精神的な慰めの一致**：
+撲灰年画が担う祈福求吉の概念は、家堂を拝んで祖先の庇護を求めたり、財神を祀って財源が広がることを求めたりするなど、強い功利的な色彩を帯びています。しかし、これらの功利的な願いが年画という審美的な形式を通じて精神的に満たされるとき、それは現実生活に立ち向かい、困難を克服する民衆の楽観的な精神と内在的な力に転化することができます。
+
+したがって、高密撲灰年画の審美的な意味合いは、その祈福求吉の文化的な核に深く根差しています。それは民俗生活の芸術的な反映であるとともに、民衆の精神的な支えの具体的な表現でもあります。
+
+（本内容は安明明氏の論文『高密撲灰年画芸術研究』の「4.1 祈福求吉の民間文化概念」を基に整理・執筆しました。）
+""",
     },
     {
-        "filename": "71-mo-yan-dong-bei-xiang-yu-pu-hui-nian-hua.md",
-        "content": """# 71-莫言“东北乡”的艺术回响：扑灰年画的新契机
+        'filename': '82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.en.md',
+        'content': """# 82-Hand-Painted and Block-Printed: The Divergent Aesthetic Orientations of Puhui New Year Pictures
 
-高密扑灰年画的发源地，恰好与2012年诺贝尔文学奖得主、高密籍作家莫言笔下的“东北乡”高度重合。莫言先生曾坦言，高密丰富多彩的民间艺术，如泥塑、剪纸、扑灰年画、茂腔等，是他文学创作的丰厚土壤。这些民间文化元素自幼便耳濡目染，深刻影响甚至决定了他的作品的艺术风格。
+Gaomi Puhui New Year Picture insists on "entirely hand-painted" as its main technique, which fundamentally distinguishes its aesthetic orientation from woodblock New Year Pictures (including semi-printed and semi-painted, and full-color block printing), thus creating unique artistic charm.
 
-诺贝尔文学奖评审委员会对莫言作品的评价中亦提及“魔幻现实主义融合民间故事、历史和现实”，这无疑肯定了民间文化在其创作中的重要地位。
+**The Uniqueness of "Painted Flavor"**:
+Unlike the "block flavor," "knife flavor," and "print flavor" emphasized in woodblock New Year Pictures, the core aesthetic characteristic of Gaomi Puhui New Year Picture lies in its "painted flavor." This "painted flavor" is reflected in:
+1.  **Flexibility of Composition**: Hand-painting allows for greater freedom in composition, often pursuing simplicity and etherealness, approaching the artistic conception of literati painting, which is different from the common full and formulaic compositions of woodblock New Year Pictures.
+2.  **Vividness of Modeling**: Although there is a draft as a basis, each hand-painted New Year Picture is re-created by the artist. The expressions of the figures and the handling of lines have room for personal expression, thus presenting diverse forms and rich variations, rather than the monotonous replication of woodblock printing.
+3.  **Richness of Color**: Hand-painting is not limited by the number of color blocks, allowing for extensive use of blended colors and gradients. The color layers are richer and more delicate, making it easier to create the artistic charm of ink wash painting and subtle visual effects. Woodblock New Year Pictures, on the other hand, mostly use primary colors, resulting in strong color contrast and vivid effects.
 
-随着莫言先生及其“东北乡”文学概念在全球范围内的广泛关注，无疑也为以扑灰年画为代表的高密民间艺术的宣传、推广和发展带来了前所未有的新契机。这种文化名人效应，有助于提升扑灰年画的知名度，吸引更多人关注这项古老的民间艺术，从而为其传承和发展注入新的活力。
+**Source of Artistic Style**:
+The "freehand" style of Puhui New Year Pictures partially originates from the imitation of literati ink wash painting since the Yuan and Ming dynasties. Its techniques like "mo" (抹) and "shuan" (涮) have the same artistic effect as the "泼墨" (splashing ink) in traditional Chinese painting, pursuing the expression of brushwork interest and spiritual charm. Even semi-printed and semi-painted New Year Pictures (such as those from Yangliuqing), although colored by hand, have their contours and modeling fixed by the printing block, limiting the freedom of hand-painting.
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文摘要及绪论部分相关论述整理编写。）
-"""
+**Differences in Aesthetic Implication**:
+Woodblock New Year Pictures mostly use strong colors, full compositions, and formulaic modeling to create a festive and lively atmosphere for the New Year. Their aesthetic value is more reflected in their craftsmanship and decorative nature. Gaomi Puhui New Year Pictures, however, convey a more individualized and artistic aesthetic implication with their hand-painted agility, ink wash elegance, and subtle colors, sometimes even comparable to literati painting sketches.
+
+It is this unique "painted flavor" brought by the insistence on hand-painting that makes Gaomi Puhui New Year Pictures stand out among the many folk New Year Pictures in China.
+
+(This content is compiled and written based on Section "4.2 Hand-Painted New Year Pictures and Block-Printed New Year Pictures Have Different Aesthetic Orientations" of An Mingming's thesis "Research on the Art of Gaomi Puhui New Year Pictures.")
+""",
     },
     {
-        "filename": "72-gao-mi-de-nian-su-feng-qing.md",
-        "content": """# 72-高密的年俗风情：孕育扑灰年画的文化土壤
+        'filename': '82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.ja.md',
+        'content': """# 82-手描きと版画：撲灰年画の異なる審美的な志向
 
-高密扑灰年画的产生与繁荣，离不开当地浓厚的年节民俗文化氛围。在高密，过年是最隆重、最热闹的节日，一系列丰富多彩的年俗活动构成了扑灰年画应用的广阔舞台。
+高密撲灰年画は「全て手描き」を主要な技法として堅持しており、これによりその審美的な志向は木版年画（半版半絵および全色套印を含む）と根本的に異なり、独特の芸術的な魅力が生まれています。
 
-*   **腊八启岁**：农历十二月初八的“腊八粥”拉开年节序幕，所谓“喝了腊八粥，就把年来数”。
-*   **年前准备**：腊八过后，家家户户蒸馒头、面鱼（寓意年年有余）、年糕（寓意年年高），添置新碗筷（寓意增添人口），做豆腐（谐音“都福”）。购买年画、张贴春联更是必不可少的环节，象征辞旧迎新。
-*   **小年辞灶**：腊月廿三，俗称“小年”，家家户户用糖果等供奉灶君，送其上天禀报，祈求灶君在玉帝面前美言。
-*   **除夕守岁**：除夕日，家家贴年画、春联。午后上坟祭祖，傍晚“接财神”。之后悬挂“轴子”（家堂），摆设供品祭奠。入夜灯火通明，通宵不眠，称“守岁”。凌晨五更吃素馅饺子（内包硬币，吃到者来年发财），拜祭天地，祀奉祖宗，晚辈给长辈叩头拜年。
-*   **新春拜年**：年初一开始，人们走亲串友，互相拜年祝福。
-*   **送年仪式**：初二或初三清晨举行“送年”仪式，收起家堂，撤掉供桌。
-*   **元宵灯会**：正月十五元宵节，高密地区通常热闹三天（十四至十六）。城乡举办灯会，家家挂灯笼，伴有唱茂腔、踩高跷、跑旱船等游艺活动。
+**「絵の味」の独自性**：
+木版年画が強調する「版の味」、「刀の味」、「印の味」とは異なり、高密撲灰年画の核心的な審美的な特質はその「絵の味」にあります。この「絵の味」は以下に現れています。
+1.  **構図の柔軟性**：手描きにより構図がより自由になり、しばしばシンプルで幽玄さを追求し、文人画の境地に近づきます。これは木版年画によく見られる満ちて程式化された構図とは異なります。
+2.  **造型の生動性**：下絵を根拠としながらも、一枚一枚の手描き年画は芸術家によって再創造されます。人物の表情、線描の処理には個人の発揮の余地があり、そのため千差万別で変化に富んでおり、木版複製による千篇一律とは異なります。
+3.  **色彩の豊かさ**：手描きは套色版の数に制限されず、多くの調和色、グラデーション色を使用できます。色彩の層がより豊かで繊細であり、水墨画のような趣と微妙な視覚効果を容易に生み出します。一方、木版年画は多くの場合原色を使用し、色彩の対比が強く、効果は鮮やかで目を引きます。
 
-这些世代相传的年俗，不仅是高密人民精神家园的体现，也为扑灰年画提供了丰富的创作题材和广阔的应用空间，使其成为当地民俗事象的重要载体。
+**芸術様式の源流**：
+撲灰年画の「写意」スタイルは、一部が元明代以来の文人水墨画の追摹に由来しています。その「抹」、「涮」などの技法は、国画の「泼墨」と異曲同工の妙があり、筆墨の趣と神韻の表現を追求しています。半版半絵の年画（例えば楊柳青）であっても、手描きで彩色されますが、その輪郭造型は既に版によって固定されており、手描きの自由度は制限されます。
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“1.1 高密地域文化及民俗文化特色”中关于年俗的描述整理编写。）
-"""
+**審美的な意味合いの違い**：
+木版年画は、その強い色彩、満ちた構図、程式化された造型で、年節の喜ばしく賑やかな雰囲気を醸し出すことが多く、その美学的な価値は工芸性と装飾性に多く現れています。一方、高密撲灰年画は、その手描きの霊動、水墨の雅致、色彩の微妙さで、より個性豊かで芸術的な審美的な意味合いを伝えており、時には文人画の小品に匹敵することもあります。
+
+まさにこの手描きへのこだわりがもたらす独特の「絵の味」が、高密撲灰年画を中国の多くの民間年画の中で独自のものにしています。
+
+（本内容は安明明氏の論文『高密撲灰年画芸術研究』の「4.2 手描き年画と版画年画は異なる審美的な志向を持つ」を基に整理・執筆しました。）
+""",
     },
     {
-        "filename": "73-pu-hui-nian-hua-de-li-shi-mai-luo.md",
-        "content": """# 73-扑灰年画的历史脉络：从明初到民国
+        'filename': '83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.en.md',
+        'content': """# 83-Vast World in the "Great Vulgarity": The Folk Essence and Contemporary Challenges of Puhui New Year Pictures
 
-高密扑灰年画的起源可追溯至明朝初年，拥有约六百余年的悠久历史。其发展演变大致经历了以下几个重要阶段：
+Gaomi Puhui New Year Picture originates from the countryside and serves the folk. Its artistic charm is rooted in the simple aesthetic concepts and rich New Year customs of ordinary people. The "entirely hand-painted" technique and the resulting "freehand" style are the fundamental aspects that distinguish it from other art forms.
 
-*   **起源与萌芽（明初至明成化）**：始于高密东北乡（姜庄、夏庄、大栏一带），由当地穷文人模仿文人画和庙宇壁画，结合传统粉本技术创作而成。公婆庙村的王姓读书人被传为始创者。题材早期以神像、墨屏花卉为主。至明成化年间，已具备成熟制作流程和初步艺术风格。
-*   **初步发展（清乾隆至咸丰）**：乾隆年间，公婆庙王氏开始收徒传艺（如张氏四兄弟），年画作坊出现。乾隆末期，李家庄胡玉显、赵家圈赵大伦、杜家官庄杜万等人的作坊推动了扑灰年画的传播，销售范围扩大至胶东、苏北、东北等地，并形成了“北有潍县杨家埠，南有高密扑灰”的格局。
-*   **技艺革新（清嘉庆、道光）**：艺人胡仲宽（一说胡殿邦）从天津杨柳青带来刻版，将杨柳青木版年画的线版功能与扑灰年画的手绘技法相结合，开创了高密“半印半绘”年画的先河，提高了生产效率。
-*   **鼎盛时期（清道光至民国初）**：在扑灰和半印半画基础上，部分画店引进杨家埠木刻套印技术，生产纯木版年画。高密年画呈现出扑灰、半印半绘、全色套印木版三种艺术风格并存的繁荣局面。光绪至民国初年达到发展顶峰。
-*   **走向衰落（20世纪20-30年代后）**：受西方印刷技术（如月份牌年画）冲击及战乱影响，传统年画市场萎缩。
-*   **曲折复兴（新中国成立后至今）**：新中国成立后曾有组织地集体生产，一度复苏。文革期间遭严重破坏。改革开放后，特别是被列入非物质文化遗产名录以来，在政府和民间共同努力下，扑灰年画的抢救、整理、保护和传承工作取得显著进展，重焕生机。
+**The Artistic Value of "Great Vulgarity"**:
+Puhui New Year Picture is the art of working people in the agricultural era. The "vulgarity" it embodies is a "great vulgarity" that is close to life and reflects folk sentiments, different from the "elegance" of "highbrow" art pursued by literati painting. However, this "great vulgarity" contains strong vitality and unique aesthetic value. As folk art expert Zhang Daoyi said: "It has its own vast world, isn't it said that 'when it reaches the ultimate vulgarity, it becomes elegant'?" The "freehand" nature, the techniques of "mo" and "shuan," and the ethereal composition with blank space are the soul of Puhui New Year Picture.
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“1.2 高密扑灰年画溯源及发展演变”及“29-康熙县志佐证”、“30-画子店的兴隆”、“32-胡殿邦引进技艺”、“34-木版年画题材演变”、“35-民国初年盛况”、“36-五十年代复兴”、“37-文革后再度复苏”等综合信息整理编写。）
-"""
+**Challenges of the Contemporary Cultural Ecosystem**:
+With the development of the times, the cultural ecosystem on which Puhui New Year Picture relies has undergone tremendous changes:
+1.  **Changes in Consumer Groups**: From meeting the New Year customs needs of local farmers to serving tourists, collectors, and the gift market, purchasing motives and aesthetic standards have changed.
+2.  **Shift in Creation Trends**: Some artists, to cater to the market or pursue economic interests, begin to imitate the refined and delicate styles of academic meticulous painting or modern literati painting. Works tend to be gorgeous and detailed, with a strong tendency towards "elegance," gradually deviating from the "freehand" essence and folk roots of traditional Puhui New Year Picture.
+3.  **Inheritance Dilemma**: Artists who can adhere to traditional techniques are increasingly scarce. Some artists embark on the path of professional painters, and the prices of their works far exceed the affordability of ordinary people, which is not conducive to its living inheritance as intangible cultural heritage.
+
+**Adherence and Innovation**:
+Under new historical conditions, the core of inheriting and protecting Puhui New Year Picture lies in the correct understanding and adherence to its traditional artistic style. Innovation and development are necessary, and new New Year Pictures reflecting contemporary aesthetics can be created, but it must be clearly distinguished from the traditional Puhui New Year Picture in the sense of intangible cultural heritage. If it loses its most fundamental artistic quality and cultural gene, the significance of "intangible cultural heritage" protection will be greatly diminished. Puhui New Year Picture should explore points of integration with the times while maintaining its "great vulgarity" essence, allowing this ancient folk art to radiate new brilliance in the contemporary era.
+
+(This content is compiled and written based on Section "4.3 Puhui New Year Picture has a 'Vast World in the Great Vulgarity'" and relevant discussions in the "Conclusion" section of An Mingming's thesis "Research on the Art of Gaomi Puhui New Year Pictures.")
+""",
     },
     {
-        "filename": "74-wen-ren-hua-yu-zong-jiao-bi-hua-de-shen-yuan-ying-xiang.md",
-        "content": """# 74-文人画与宗教壁画：扑灰年画艺术风格的两大源头
+        'filename': '83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.ja.md',
+        'content': """# 83-「大俗」の中の広大な世界：撲灰年画の民間的な本質と現代の課題
 
-高密扑灰年画的艺术风格并非凭空产生，其形成深受中国传统文人画和地方宗教壁画的深刻影响。
+高密撲灰年画は郷土に源を発し、民間に奉仕しており、その芸術的な魅力は普通の人々の素朴な審美観と濃厚な年俗生活に根ざしています。「全て手描き」の技とそれによって生まれる「写意性」のスタイルは、他の芸術形式と区別される根本的な点です。
 
-**文人画的影响**：
-明清时期，文人画成为中国艺术的主流审美形式。高密地区文风颇盛，涌现出不少文人书画家（如刘统勋、刘墉父子），他们的作品在乡间流传，潜移默化地影响了当地的审美趣味。扑灰年画在起源之初，便有当地穷文人模仿文人画的背景。因此，无论在形式（如水墨为主、立轴装裱、诗书画印结合）还是内容（如表现文人雅趣、儒家思想）上，扑灰年画都明显带有追摹文人画的印记。这种对“雅”的追求，使得扑灰年画在民间艺术中独具特色。
+**「大俗」の芸術的価値**：
+撲灰年画は農耕時代の労働者の芸術であり、それが体現する「俗」は、生活に密着し、民情を反映した「大俗」であり、文人画が追求する「陽春白雪」式の「雅」とは異なります。しかし、この「大俗」の中には強靭な生命力と独自の審美的な価値が秘められています。民芸専門家の張道一氏が言うように、「それ自身に広大な世界がある、『俗到家時便是雅嗎』（俗が極まれば雅となるのではないか）と言われるのではないか？」撲灰年画の「写意性」、「抹」と「涮」の技法、余白を生かした幽玄な構図、これらがその魂です。
 
-**宗教壁画的影响**：
-农耕时代，寺观庙宇遍布乡里，是民众精神信仰的重要场所。庙宇壁画作为宗教思想传播和教化民众的重要载体，其绘画风格和题材内容对民间美术产生了直接影响。许多扑灰年画的艺人本身也兼职绘制庙宇壁画，他们将寺观壁画的造型元素、线条特点、色彩运用等技法，自然地融入到年画创作中。尤其在神仙佛道题材的年画（如《千手观音》、《文财神》）中，这种影响尤为显著，赋予了扑灰年画一种庄重古朴的气息。
+**現代文化生態系の課題**：
+時代の発展とともに、撲灰年画が依存してきた文化生態系は巨大な変化を遂げました。
+1.  **消費層の変化**：地元の農民の年俗ニーズを満たすことから、旅行者、収集家、贈答品市場に奉仕するようになり、購買動機と審美基準が変化しました。
+2.  **創作傾向の変化**：一部の芸術家は市場に迎合したり経済的な利益を追求したりするために、学院派の工筆画や現代文人画のスタイルを模倣し始め、作品は華麗で繊細になり、「雅化」の傾向が著しくなり、伝統的な撲灰年画の「写意」の本質と民俗的な根拠から徐々に逸脱しています。
+3.  **継承の困難**：伝統的な技法を守り続けることができる芸術家は日増しに少なくなっています。一部の芸術家は職業画家への道を歩み、その作品価格は普通の人々の負担能力をはるかに超え、無形文化遺産としての生きた継承には不利です。
 
-文人画的“雅”与庙宇壁画的“俗”在高密扑灰年画中交融，共同塑造了其独特的艺术风貌。
+**堅守と革新**：
+新しい歴史的条件下で、撲灰年画を継承し保護する核心は、その独特の芸術様式、特に「写意性」という文化的な遺伝子を正確に認識し効果的に継承することにあります。革新と発展は必要であり、時代の審美を反映した新しい年画を創作することは可能ですが、これが無形文化遺産としての伝統的な撲灰年画とは異なることを明確にしなければなりません。もしその最も根本的な芸術的な品質と文化的な遺伝子を失ってしまえば、「無形文化遺産」保護の意味は大きく損なわれます。撲灰年画は、「大俗」の本質を保ったまま、時代との接点を探求し、この古い民間芸術が現代に新たな輝きを放つようにすべきです。
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“1.3 文人画、宗教壁画的深刻影响”整理编写。）
-"""
+（本内容は安明明氏の論文『高密撲灰年画芸術研究』の「4.3 撲灰年画は『大俗』の中に『それ自身広大な世界がある』」および「結語」部分の関連論述を基に整理・執筆しました。）
+""",
     },
     {
-        "filename": "75-pu-hui-nian-hua-de-pu-hui-gong-yi-kao.md",
-        "content": """# 75-“扑灰”工艺考：传承古老的复制智慧
+        'filename': '84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.en.md',
+        'content': """# 84-Jiatang New Year Pictures: A Folk 重器 (Important Artifact) Carrying Filial Piety Culture and Family Bloodline
 
-高密扑灰年画得名于其独特的“扑灰”起稿工艺，这是一种为提高生产效率而沿用至今的传统复制技术。它与中国美术史上的“粉本”技术有着渊源关系。
+Among the many themes of Gaomi Puhui New Year Pictures, "Jiatang" (also called "zhouzi" locally) is undoubtedly the one most closely integrated with folk customs and carrying the deepest cultural implications. It is not only an important item for New Year sacrifices but also a symbolic representation carrying filial piety culture and maintaining family bloodlines.
 
-**“粉本”溯源**：
-“粉本”是中国古代复制画稿的传统方法。元代夏文彦《图绘宝鉴》载：“古人画稿谓之粉本”。其法主要有两种：一是针孔扑粉法，即按画稿墨线密刺小孔，将粉末通过小孔扑到承印物上形成点线稿；二是用类似复写的方式，在画稿反面涂粉，再依正面墨线描传。
+**Folk Function of Jiatang**:
+Jiatang painting is an indispensable part of the Lunar New Year's Eve family sacrifice ritual in the Gaomi area, used to replace the old custom of placing ancestor tablets for worship. Its size is usually large, its content is rich, and its structure is generally divided into three parts: the upper part shows the ancestor couple sitting in the main hall, the middle part shows children playing in the courtyard, and the lower part shows the family members symbolizing lineage. Jiatang often has grids left for filling in the names of family members, also serving as a family tree. A Jiatang painting can be used for decades until the grids are filled before being replaced, and it is regarded as a precious family possession.
 
-**高密“扑灰”技法**：
-高密扑灰年画的“扑灰”技艺与“粉本”有相似之处，但更为直接：
-1.  **制作灰稿**：选用柳枝烧制的炭条，在纸上勾画出底稿，称为“灰稿”。
-2.  **扑抹复制**：将此“灰稿”覆盖在新的画纸上进行扑抹（或将画纸覆于灰稿上扑抹），炭末便会转移到新纸上，形成与原稿镜像对称的轮廓线。
-3.  **重复利用**：一张灰稿可以扑印数张。当炭痕变淡时，可在灰稿上重新描浓线条，再次扑印。
+**Concentrated Embodiment of Filial Piety Culture**:
+The core cultural implication of Jiatang painting is "filial piety." Hanging Jiatang and sacrificing to ancestors is a direct manifestation of the concept of filial piety in the traditional family culture of the Chinese nation, which is based on agricultural civilization. This reverence for ancestors and identification with family bloodline contains strong national cohesion. Even during special historical periods, the folk worship of Jiatang was never completely interrupted, showing its deeply rooted cultural gene.
 
-这种“扑灰”工艺虽然相对原始，主要适用于画面内容较为简单的稿件，但它使得画稿能够快速复制，为后续的手工着色节省了时间。正是这种对传统复制智慧的巧妙运用和坚持，构成了高密扑灰年画制作技艺的一大特色，并对其对称式构图的形成产生了一定影响。
+**Integration of Art and Folk Customs**:
+Due to its complex content and large size, pure hand-painted Jiatang paintings are expensive, so they are often made using semi-printed and semi-painted or woodblock block printing methods. Even hand-painted Jiatang often uses symmetrical composition to improve efficiency. Its solemn and dignified artistic style complements the atmosphere of the ancestor worship ceremony.
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“2.1 高密扑灰年画的制作工艺”关于“扑灰”的论述整理编写。）
-"""
+In today's Gaomi, Jiatang painting is still an indispensable part of the New Year customs. It transcends ordinary decorative New Year Pictures and becomes an important cultural carrier connecting the past and the present and maintaining family feelings. It is the category of Gaomi Puhui New Year Pictures that truly still performs its core New Year custom mission.
+
+(This content is compiled and written based on the discussion on Jiatang in Section "5.2 Puhui New Year Picture from the Perspective of Art and Folk Customs" of An Mingming's thesis "Research on the Art of Gaomi Puhui New Year Pictures.")
+""",
     },
     {
-        "filename": "76-pu-hui-nian-hua-de-xie-yi-xing-yu-gong-bi-xing.md",
-        "content": """# 76-写意挥洒与工笔精微：扑灰年画的技法交融
+        'filename': '84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.ja.md',
+        'content': """# 84-家堂年画：孝文化と家族の血脈を担う民俗の重器
 
-高密扑灰年画的独特艺术魅力，在于其“写意性”与“工笔性”两种技法特征的巧妙融合，这在其广为流传的画诀中得到了生动体现：“刷刷刷，一溜栽花；大涮狂涂，描子勾拉；细心粉脸，眉眼巧画；待要好看，咸菜磕花。”
+高密撲灰年画の多くの題材の中で、「家堂」（現地では「軸子」とも呼ばれる）は間違いなく民俗事象との結びつきが最も密接で、文化的な意味合いが最も深いものの一つです。それは年節の祭祀における重要な用品であるだけでなく、孝道文化を担い、家族の血脈を維持する象徴的な符号でもあります。
 
-**“写意性”的“大涮狂涂”**：
-“大涮狂涂，描子勾拉”精确概括了扑灰年画在整体绘制上的“写意”特点。艺人在绘制时，尤其在处理衣纹、背景等大面积区域时，常使用“抹”、“涮”等类似大写意国画的泼墨、泼彩手法，追求挥洒自如、一气呵成的效果。为提高效率，还创造了鸳鸯笔、排笔、涮笔等特殊工具。这种“写意性”是扑灰年画的灵魂，也是其区别于其他年画品种的关键所在。无论是水墨为主的“老抹画”（黑货），还是色彩鲜艳的“红货”，其绘制都离不开一个“抹”字。
+**家堂の民俗的機能**：
+家堂画は高密地区の大晦日の家祭儀式に欠かせない部分であり、昔の祖先の位牌を置いて祭奠する習慣に代わって使用されます。その画幅は通常大きく、内容は豊富で、構造は一般的に三つの部分に分かれています。上部は堂屋の中央に座る祖先の夫婦、中部には庭で遊ぶ子供たち、下部は門構えを象徴する家族の人々です。家堂にはしばしば格子が残されており、家族のメンバーの名前を記入するために使われ、家譜の機能も兼ねています。一枚の家堂画は数十年間使用することができ、格子が埋まるまで交換されず、家庭の貴重な物品と見なされています。
 
-**“工笔性”的“眉眼巧画”**：
-“细心粉脸，眉眼巧画”则点明了扑灰年画在细节刻画上的“工笔”追求，尤其体现在人物面部的处理上。艺人对于开脸、粉脸、勾勒五官等步骤极为用心，强调“细心”与“巧画”。面部常先敷白粉，干后再精细勾描五官、敷染肤色，最后罩明油，以求红润细腻的肌肤质感。这种对人物神情（所谓“传神写照正在阿堵中”）的精微刻画，赋予了扑灰年画生动的神采。
+**孝文化の集中的な体現**：
+家堂画の核心的な文化的な意味合いは「孝」です。家堂を掛け、祖先を祭るのは、農耕文明を主体とする中華民族の伝統的な家族文化における孝道概念の直接的な現れです。祖先への敬畏と家族の血脈への同一視は、強固な民族凝集力を内包しています。特殊な歴史時期においても、民間の家堂への供奉は完全に中断されることはなく、その心に深く根差した文化的な遺伝子を示しています。
 
-“大涮狂涂”的写意挥洒与“眉眼巧画”的工笔精微，在高密扑灰年画中相得益彰，共同构成了其“工写结合”的独特艺术风貌。
+**芸術と民俗の融合**：
+家堂画は内容が複雑で画幅が大きいため、純手描きのものは価格が高価であり、そのため半版半絵または木版套印の方法で制作されることが多いです。手描きの家堂であっても、効率を上げるためにしばしば対称構図が採用されます。その荘重で厳粛な芸術様式は、祖先祭祀儀式の雰囲気に相補的です。
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“2.2 意笔性‘大涮狂涂’与工笔性‘眉眼巧画’”整理编写。）
-"""
+今日の高密では、家堂画は依然として年俗に欠かせない一部であり、一般的な装飾年画を超えて、過去と現在を結びつけ、家族感情を維持する重要な文化的な担い手となっています。それは高密撲灰年画の中で、真にその核心的な年俗使命を果たし続けている品目です。
+
+（本内容は安明明氏の論文『高密撲灰年画芸術研究』の「5.2 芸術民俗視点からの撲灰年画」における家堂に関する論述を基に整理・執筆しました。）
+""",
     },
     {
-        "filename": "77-pu-hui-nian-hua-zhong-de-cu-huo-yu-xi-huo.md",
-        "content": """# 77-扑灰年画中的“粗活”与“细活”：雅俗共赏的艺术分层
+        'filename': '85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.en.md',
+        'content': """# 85-Confucian Breeze Brushing the Scroll: Traditional Humanistic Spirit in Puhui New Year Pictures
 
-在高密扑灰年画的发展历程中，艺人们为了适应不同消费群体的需求和不同题材的表现，逐渐形成了“粗活”与“细活”并存的生产局面，体现了其艺术创作中相对的“雅”与“俗”。
+In its development and thematic expression, Gaomi Puhui New Year Picture is deeply imprinted with the humanistic spirit of traditional Chinese Confucian culture. Artists consciously or unconsciously integrate the core concepts of Confucian thought into their creations, making New Year Pictures a carrier for transmitting moral ethics and cultural values.
 
-*   **“粗活”：写意挥洒，求量求速**
-    “粗活”主要指年画作坊中采用“大涮狂涂”等写意技法快速绘制的作品。这类年画产量较大，绘制速度快，因此价格相对便宜，能够满足广大普通百姓的日常年节需求。其艺术风格更倾向于扑灰年画固有的“写意性”和“抹”的特点，朴拙而富有生趣。
+**The Aesthetic Pursuit of "Hui Shi Hou Su" (Painting Comes After Plainness)**:
+Puhui New Year Picture, especially the "Old Mo Painting" series, with its concise and ethereal composition and reduced-stroke freehand modeling, has similarities with the aesthetic viewpoint of "Hui Shi Hou Su" advocated by Confucius. It pursues a simple and benevolent artistic realm, closely combining beauty and goodness, and embodying the Confucian ideal of "尽善尽美" (perfect goodness and perfect beauty) through the unity of simple modeling and color, form and content.
 
-*   **“细活”：工笔精描，费时费工**
-    “细活”则指那些绘制较为工细、人物众多、构图复杂的年画，如家堂画、精细的文武财神像等。这类作品需要投入更多的时间和精力进行精描细绘，因此价格也相对昂贵，往往被有更高审美要求的客户所青睐。
+**Vivid Interpretation of "Loyalty and Filial Piety Culture"**:
+"Loyalty" and "filial piety" are the core of Confucian ethics. Gaomi Puhui New Year Picture has a large number of themes that promote the concepts of loyalty and filial piety.
+*   **Filial Piety First**: For example, "Five Sons Offering Longevity" expresses the wish for the elder's well-being and longevity, advocating respect for the elderly. "Twenty-Four Filial Exemplars" further illustrates historically famous acts of filial piety, becoming an intuitive teaching material for educating children to be filial, and its educational significance far exceeds its simple viewing value.
+*   **Loyalty and Righteousness Passed Down**: For example, the image of Guan Yu in "God of Wealth" represents the spirit of loyalty, righteousness, and courage, and is deeply respected by the people.
 
-这种“粗活”与“细活”的分野，是艺人根据市场需求和创作条件进行的灵活性调整。然而，值得注意的是，即使是“细活”，其精细也是在扑灰年画整体“写意”基调下的工致，与纯粹的工笔画或学院派的精细有所区别。
+**Ideal Picture of "Harmony and Benevolence"**:
+Confucianism emphasizes "harmony is precious" and focuses on harmonious interpersonal relationships and social stability. Puhui New Year Picture also expresses this ideal through numerous themes.
+*   **Family Harmony**: For example, "Pomegranate Opening a Hundred Sons" and "Hoping the Son Becomes a Dragon" express the hope for flourishing descendants and a happy family. "Sisters-in-Law Chatting" depicts the close harmony between sisters-in-law, and "Mother and Son Affection" shows warm parental love.
+*   **Social Education**: Through the depiction of historical stories and opera characters, moral principles such as benevolence, righteousness, and trustworthiness are subtly transmitted.
 
-当前，部分现代扑灰年画创作片面追求工细华丽的“雅”，可能使其逐渐偏离传统扑灰年画“俗中见雅”的民间美术本色，这是在传承与发展中需要警惕的现象。
+Through the artistic presentation of core Confucian values such as "loyalty and filial piety," "benevolence," and "harmony," Gaomi Puhui New Year Picture not only beautifies people's lives but also subtly plays a social role of "成教化，助人伦" (achieving education and assisting human relations), becoming an important part of the folk spiritual and cultural life in the agricultural era.
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“2.3 扑灰年画中的‘粗活’与‘细活’”整理编写。）
-"""
+(This content is compiled and written based on Section "5.3 Traditional Humanistic Spirit in Puhui New Year Pictures" of An Mingming's thesis "Research on the Art of Gaomi Puhui New Year Pictures.")
+""",
     },
     {
-        "filename": "78-pu-hui-nian-hua-de-gou-tu-te-zheng-jian-jie-kong-ling.md",
-        "content": """# 78-扑灰年画的构图特征：简洁空灵，兼具对称
+        'filename': '85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.ja.md',
+        'content': """# 85-儒家の風が絵巻物を撫でる：撲灰年画における伝統的な人文精神
 
-高密扑灰年画在画面构成上展现出鲜明的特色，总体而言追求简洁空灵的意境，同时巧妙运用对称元素，这既是艺术追求的体现，也与手绘工艺的特性密切相关。
+高密撲灰年画は、その発展と題材表現において、中国の伝統的な儒家文化の人文精神を深く刻んでいます。芸術家たちは自覚的または無自覚的に儒家思想の核心的な理念を創作に溶け込ませ、年画を道徳倫理を伝え、文化的価値を担う媒体としています。
 
-**简洁空灵的布局**：
-除了少数题材如家堂画、文武财神像等追求构图丰满、内容繁复外，大部分扑灰年画，尤其是被称为“老抹画”的水墨风格作品，其构图都以简洁空灵为主要特点。艺人常突出主体人物，占据画面绝大部分面积，而背景则往往作简略概括处理，甚至直接留白。这种处理方式，一方面是为了在手绘过程中提高生产效率；另一方面，也与中国传统文人画的审美追求相契合，营造出“疏可走马”的意境和“空灵”的美感，给观者留下想象空间。这种“绘味”与木版年画追求饱满热闹的“版味”形成了鲜明对比。
+**「絵事後素」の審美的な追求**：
+撲灰年画、特に「老抹画」シリーズは、その簡潔で幽玄な構成法、減筆写意の造型が、孔子が提唱する「絵事後素」の美学的な観点と通じるものがあります。それは素朴で善に向かう芸術的な境地を追求し、美と善を密接に結合させ、質朴な造型と色彩、形式と内容の統一を通じて、儒家の「尽善尽美」の理想を体現しています。
 
-**对称元素的运用**：
-对称是扑灰年画构图中另一个显著特点。
-1.  **成对作品（对画）**：“扑灰”复制时，一张底稿可以扑出左右对称的两幅画面。艺人巧妙利用此特性，将对称的另一张稍作变化，即可成为与原稿呼应的成对作品，迎合了民间“好事成双”的观念。
-2.  **单幅内的对称**：在同一幅作品中，特别是家堂、财神等题材，也常采用对称式构图，以增强画面的稳定感和庄重感。
+**「忠孝文化」の生動的な演繹**：
+「忠」と「孝」は儒家倫理の核心です。高密撲灰年画には忠孝観念を宣揚する題材が多数あります。
+*   **孝道を先とする**：例えば、『五子献寿』は長上者の福寿康寧を祝う願いを表し、老人を敬うことを提唱します。『二十四孝図』はさらに歴史上の有名な孝行の物語を絵に描き出し、子供たちに人人孝行を尽くすことを教えるための直感的な教材となり、その教化の意味は単純な鑑賞価値をはるかに超えています。
+*   **忠義を伝える**：例えば、『武財神』における関羽の形象は、忠義勇武の精神を代表し、民衆に深く尊敬されています。
 
-这种简洁空灵而又不失均衡对称的构图，构成了高密扑灰年画独特的视觉美学。
+**「和諧仁愛」の理想的な図像**：
+儒家は「和を貴しとなす」を強調し、人間関係の和諧と社会の安定を重視します。撲灰年画も多くの題材を通じてこの理想を表現しています。
+*   **家庭の和睦**：例えば、『榴開百子』、『望子成龍』は子孫繁栄、家庭円満への期待を託しています。『姑嫂閑話』は姑と姉妹間の親密な和諧を描き、『母子情』は温かい親子の愛情を示しています。
+*   **社会教化**：歴史物語、戯曲人物の描写を通じて、仁愛、信義などの道徳規範を潜在的に伝えています。
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“3.1 画面构成：简洁空灵”整理编写。）
-"""
+高密撲灰年画は、儒家の「忠孝」、「仁愛」、「和諧」などの核心的な価値を芸術的に表現することで、民衆の生活を美化しただけでなく、知らず知らずのうちに「成教化，助人倫」という社会的な役割を果たし、農耕時代の民間の精神文化生活の重要な構成部分となっています。
+
+（本内容は安明明氏の論文『高密撲灰年画芸術研究』の「5.3 撲灰年画における伝統的な人文精神」を基に整理・執筆しました。）
+""",
     },
     {
-        "filename": "79-pu-hui-nian-hua-de-ren-wu-zao-xing-zhi-zhuo-chuan-shen.md",
-        "content": """# 79-扑灰年画的人物造型：稚拙传神，独具匠心
+        'filename': '86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.en.md',
+        'content': """# 86-Style Inheritance of Puhui New Year Pictures from the Perspective of Intangible Cultural Heritage: Challenges and Responsibilities in Safeguarding Cultural Genes
 
-高密扑灰年画在人物造型上形成了“稚拙传神”的独特风格，这既吸收了多方艺术养分，也体现了民间艺人服务于年俗需求的匠心。
+As a national intangible cultural heritage, the inheritance and protection of Gaomi Puhui New Year Picture face the challenges of the times. The core lies in how to accurately recognize and effectively inherit its unique artistic style, especially the "freehand" nature, which is its cultural gene.
 
-**造型渊源与特点**：
-扑灰年画的人物造型融合了各地年画元素、明清文人画风韵及庙宇壁画特色。尤其在仕女造型上，多吸收清末服饰特点，追求秀润含蓄、婉丽动人。其普遍特点包括：
-*   **比例**：多采用接近儿童的“五个头长”身长比例，无论老少，皆显稚拙可爱，符合年节喜庆氛围。艺诀云：“人站着高五个头，坐着矮一半。”
-*   **动态与神态**：强调面部特别是五官的透视和神态刻画。艺诀：“若要凶，杏眼挣。若要喜，展眉头。若要俊，弯弯眉，线线眼，樱桃小嘴一点点。”手绘技法使每位艺人笔下的人物神态各异，富有生气。
-*   **程式化特征**：不刻意追求写实，五官清秀平直，常有上身长下身短的比例，仕女的小脚被特别夸张，手的造型多带有佛道壁画的影子。
+**The Core of Inheritance: Adherence to Artistic Style**
+The typical artistic style of Gaomi Puhui New Year Picture is its "freehand" nature, which is shaped by its historical origins, hand-painting techniques, material usage, and the folk culture it carries. Protecting Puhui New Year Picture means primarily protecting this unique artistic style, rather than merely preserving a few works or technique names. Inheritors should deeply understand and master the essence of traditional Puhui New Year Picture drawing, including "mo" and "shuan" freehand techniques and "细心粉脸、眉眼巧画" (careful face dusting, skillful eye drawing) meticulous techniques.
 
-**典型人物造型举例**：
-*   **胖娃娃**：造型丰满，圆头圆脑，活泼可爱，如《桃献千年寿》。
-*   **姑娘小媳妇**：多为白皙粉脸，柳眉凤眼，妩媚动人，如《姑嫂闲话》。
-*   **文武财神**：主次分明，通过比例大小突出主神，常配以祥云、聚宝盆等吉祥图案。如《文财神》（比干配秦琼、敬德）、《武财神》（关羽配关平、周仓）。
-*   **卷轴画人物**：模仿文人画，刻画历史人物或文学典型，如《四爱图》、《二十四孝》，强调写意减笔，稚拙传神。
+**Facing Challenges: Changes in Cultural Ecosystem and Market Orientation**
+1.  **"Elegantization" of Aesthetic Taste**: With the change in consumer groups (from rural people to urban tourists and collectors), some artists begin to cater to the market, pursuing a more delicate and gorgeous "academic" or "literati painting" style, leading to the gradual loss of the rough, naive, and freehand folk essence of traditional Puhui New Year Picture.
+2.  **Decline of Traditional Techniques**: The pursuit of speed and efficiency may lead to the simplification or abandonment of traditional complex processes, and the use of special tools and materials may also be replaced.
+3.  **Authenticity of "Intangible Cultural Heritage"**: If Puhui New Year Picture loses its original cultural ecosystem and artistic characteristics, even if the name remains the same, its authenticity and cultural value as "intangible cultural heritage" will be greatly diminished. Innovation is necessary, but the creation of new New Year Pictures that keep pace with contemporary aesthetics should be distinguished from traditional Puhui New Year Picture in the sense of "intangible cultural heritage," avoiding putting the cart before the horse.
 
-高密扑灰年画的人物造型，不拘泥于解剖结构，而是以“得意”和“传神”为旨归，将艺术审美与功利求吉巧妙结合，体现了东方传统美学的人物塑造智慧。
+**Responsibilities and Paths of Inheritance**:
+1.  **Government Guidance and Support**: Provide stable economic support and a good creative environment for inheritors, encouraging them to adhere to tradition.
+2.  **Theoretical Research and Popularization of Education**: Strengthen in-depth research on the artistic value of Puhui New Year Picture and popularize the aesthetic value of traditional Puhui New Year Picture to the public, enhancing social awareness.
+3.  **Adherence and Moderate Innovation**: While fully inheriting traditional techniques and styles, explore innovative paths that combine with modern aesthetics, but the distinction from the "intangible cultural heritage" itself should be clear, avoiding putting the cart before the horse.
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“3.2 人物造型：稚拙传神”整理编写。）
-"""
+Safeguarding the cultural gene of Gaomi Puhui New Year Picture is not only the protection of a folk art but also the cherishing and inheritance of the spiritual tradition and cultural diversity of the Chinese nation.
+
+(This content is compiled and written based on the "Conclusion" section of An Mingming's thesis "Research on the Art of Gaomi Puhui New Year Pictures," especially "2. Cultural Ecosystem Problems Faced by Gaomi Puhui New Year Picture" and "3. Style Inheritance Problems of Gaomi Puhui New Year Picture from the Perspective of Intangible Cultural Heritage.")
+""",
     },
     {
-        "filename": "80-pu-hui-nian-hua-de-she-se-zhi-dao-ya-su-bing-xing.md",
-        "content": """# 80-扑灰年画的设色之道：雅俗并行，浓淡总相宜
+        'filename': '86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.ja.md',
+        'content': """# 86-無形文化遺産の視点から見た撲灰年画の様式継承：文化的遺伝子を守る課題と責任
 
-高密扑灰年画的设色技艺是其艺术魅力的重要组成部分，相较于木版年画，其用色更为自由，调和色运用丰富，并在发展中形成了“雅”、“俗”并行，各具特色的色彩风格。
+国家級無形文化遺産として、高密撲灰年画の継承と保護は時代の課題に直面しており、その核心は、その独特の芸術様式、特に「写意性」という文化的な遺伝子をいかに正確に認識し効果的に継承するかという点にあります。
 
-**“黑货”之雅：水墨意境，古朴典雅**
-早期及部分坚持传统的扑灰年画，被称为“墨屏”、“老抹画”或“黑货”。这类作品以水墨为主，追求文人画的笔墨意境和神韵，色彩运用上“重墨不重色”。即使使用其他颜色（如石青、黄、胭脂等），也多起点缀和提神作用，整体呈现典雅、朴素的水墨之美。题材多为文人雅士、神像仙人、花鸟虫鱼等，如《琴棋书画》。当时的顺口溜“墨屏墨屏，案头清供；婆娘不喜，老头奉承”生动描绘了其特定受众。
+**継承の核心：芸術様式の堅守**
+高密撲灰年画の典型的な芸術様式はその「写意性」であり、この様式は歴史的な源流、手描きの技、材料の使用、そしてそれが担う民俗文化によって共に形作られています。撲灰年画を保護するとは、まず第一にこの独特の芸術様式を保護することであり、単にいくつかの作品や技法の名称を保存することではありません。継承者は、伝統的な撲灰年画の描画のエッセンス、すなわち「抹」、「涮」などの写意技法と「细心粉脸、眉眼巧画」（丁寧に顔を粉をつけ、巧みに目鼻を描く）という工筆技法を深く理解し習得する必要があります。
 
-**“红货”之俗：艳丽红火，喜庆热烈**
-另一大流派被称为“红货”或“大色画”，主要为了迎合年轻群体和年节喜庆的审美需求。这类作品借鉴了杨柳青、杨家埠年画的鲜亮色彩，大胆使用大红大绿，以色代墨，追求艳丽红火的视觉效果。艺人充分发挥手绘优势，大量使用调和色和对比色，色彩明度、纯度高，画面热闹非凡。画诀“红靠黄，喜煞娘，绿靠紫，不如死”即是其色彩经验的总结。题材多为吉祥花卉、胖娃娃等，如《富贵牡丹》。
+**直面する課題：文化生態系の変化と市場志向**
+1.  **審美趣味の「雅化」**：消費層の変化（郷土の民衆から都市の旅行者、収集家へ）に伴い、一部の芸術家は市場に迎合し始め、より繊細で華麗な「学院派」や「文人画」のスタイルを追求しており、伝統的な撲灰年画の粗犷で稚拙、写意的な民間的な本質が徐々に失われています。
+2.  **伝統技法の衰退**：速度と効率の追求は、伝統的な複雑な工程の簡略化や放棄につながる可能性があり、特殊な道具や材料の使用も代替される可能性があります。
+3.  **「無形文化遺産」の真実性**：もし撲灰年画がその本来の文化生態系と芸術的な特徴を失ってしまえば、たとえ名称は同じであっても、「無形文化遺産」としてのその真実性と文化的な価値は大きく損なわれます。革新は必要ですが、現代の審美と歩調を合わせた新しい年画の創作は、「無形文化遺産」本来の意味での伝統的な撲灰年画とは区別されるべきであり、本末転倒を避けるべきです。
 
-**雅俗交融：兼收并蓄，光彩照人**
-在鼎盛时期，还出现了一种介于“黑货”与“红货”之间的风格。它既有“黑货”的墨韵造型，又兼备“红货”的鲜艳色彩，水墨与重彩巧妙结合，迎合了更广泛的审美需求。如王俊臣的《双美图》、李云香的《美人图》，人物服饰色彩丰富，调和色运用自如，头饰等处甚至运用排笔蘸双色画出渐变效果，整体浓淡适宜，俊美传神。
+**継承の責任と道筋**：
+1.  **政府の指導と支援**：継承者に対し安定した経済的支援と良好な創作環境を提供し、伝統を守るよう奨励します。
+2.  **理論研究と教育普及**：撲灰年画の芸術的価値に関する深い研究を強化し、伝統的な撲灰年画の審美的な価値を一般に普及させ、社会的な認知度を高めます。
+3.  **堅守と適度な革新の並行**：伝統的な技法と様式を完全に継承した上で、現代の審美と結合する革新的な道筋を探求することは可能ですが、それが「無形文化遺産」本体との区別を明確にすべきであり、本末転倒を避けるべきです。
 
-高密扑灰年画这种“雅俗并行”的设色特点，是艺人适应不同民俗需求和审美取向的智慧体现，使其色彩语言丰富多层，极富艺术感染力。
+高密撲灰年画の文化的遺伝子を守ることは、一つの民間芸術の保護であるだけでなく、中華民族の精神的な伝統と文化的な多様性を大切にし継承することでもあります。
 
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“3.3 作品设色：雅俗并行”整理编写。）
-"""
+（本内容は安明明氏の論文『高密撲灰年画芸術研究』の「結語」部分、特に「2.高密撲灰年画が直面する文化生態系の問題」および「3.無形文化遺産視点の高密撲灰年画芸術様式継承問題」を基に整理・執筆しました。）
+""",
     },
-    {
-        "filename": "81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.md",
-        "content": """# 81-扑灰年画的审美意蕴：祈福求吉的民间文化密码
-
-高密扑灰年画作为一种植根于农耕时代的民间美术形式，其审美意蕴首先体现在它作为“祈福求吉”这一核心民间文化观念的生动载体。它不仅仅是视觉艺术，更是解读特定历史时期高密地区民众精神世界和群体意识的密码。
-
-**民俗事象的艺术再现**：
-扑灰年画的题材内容与当地的民俗事象紧密相连，无论是婚丧嫁娶、岁时节令，还是日常生活、宗教信仰，都能在年画中找到对应的艺术表现。艺人们围绕“年”的主题，创作出《财神》、《吉祥如意》、《和合二仙》等作品以求纳福；通过《团扇美人图》、《姑嫂闲话》、《母子图》等描绘对美好生活的向往；借助《五子夺魁》、《三娘教子》、《二十四孝》等传递教化理念；利用《周瑜打黄盖》、《燕青卖线》等戏曲故事满足娱乐需求；并以花鸟虫鱼、梅兰竹菊等美化家居环境。
-
-**象征与寓意的广泛运用**：
-艺人们巧妙运用象征、隐喻、谐音等手法，将民众的祈愿融入画面。例如：
-*   胖娃娃抱鲤鱼象征“年年有余”。
-*   石榴象征“榴开百子”（多子多福）。
-*   牡丹象征“富贵”。
-*   蝙蝠象征“福气”。
-这些视觉符号直接表达了老百姓对幸福、富裕、长寿、子孙兴旺等美好生活的朴素愿望。
-
-**功利性与精神慰藉的统一**：
-扑灰年画所承载的祈福求吉观念带有强烈的功利色彩，如祭拜家堂求祖上护佑，供奉财神求财源广进。然而，当这些功利意愿通过年画这一审美形式得到精神上的满足时，便能转化为民众面对现实生活、克服困难的乐观精神和内在力量。
-
-因此，高密扑灰年画的审美意蕴，深植于其祈福求吉的文化内核，它既是民俗生活的艺术反映，也是民众精神寄托的具象体现。
-
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“4.1 祈福求吉的民间文化观念”整理编写。）
-"""
-    },
-    {
-        "filename": "82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.md",
-        "content": """# 82-手绘与版印：扑灰年画迥异的审美取向
-
-高密扑灰年画坚持以“全手绘”为主要技法，这使其在审美取向上与木版年画（包括半印半绘及全色套印）形成了根本性的区别，从而产生了独特的艺术魅力。
-
-**“绘味”的独特性**：
-与木版年画强调的“版味”、“刀味”、“印味”不同，高密扑灰年画的核心审美特质在于其“绘味”。这种“绘味”体现在：
-1.  **构图的灵活性**：手绘使得构图可以更加自由，多追求简洁空灵，接近文人画的意境，与木版年画常见的饱满、程式化构图不同。
-2.  **造型的生动性**：虽然有画样作为依据，但每一张手绘年画都经过艺人的再次创作，人物神态、线条处理都带有个人发挥的余地，因此千姿百态，富于变化，而非木版复制的千篇一律。
-3.  **色彩的丰富性**：手绘不受套色版数量的限制，可以大量运用调和色、渐变色，色彩层次更丰富细腻，更易于营造水墨画般的韵味和微妙的视觉效果。木版年画则多用原色，色彩对比强烈，效果鲜艳夺目。
-
-**艺术风格的渊源**：
-扑灰年画的“写意”风格，部分源于对元明以来文人水墨画的追摹。其“抹”、“涮”等技法，与国画的“泼墨”有异曲同工之妙，追求笔墨意趣和神韵的表达。即使是半印半绘的年画（如杨柳青），虽有手绘填色，但其轮廓造型已由印版固定，手绘的自由度受到限制。
-
-**审美意蕴的差异**：
-木版年画多以其强烈的色彩、饱满的构图、程式化的造型来营造年节喜庆热烈的气氛，其美学价值更多体现在工艺性和装饰性上。而高密扑灰年画则以其手绘的灵动、水墨的雅致、色彩的微妙，传递出一种更具个性化和艺术性的审美意蕴，有时甚至可与文人画小品相媲美。
-
-正是这种坚持手绘所带来的独特“绘味”，使得高密扑灰年画在中国众多民间年画中独树一帜。
-
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“4.2 手绘年画与版印年画有着不同的审美取向”整理编写。）
-"""
-    },
-    {
-        "filename": "83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.md",
-        "content": """# 83-“大俗”中的广阔天地：扑灰年画的民间本色与当代挑战
-
-高密扑灰年画源于乡土，服务于民间，其艺术魅力根植于普通百姓淳朴的审美观念和浓厚的年俗生活。“全手绘”的技艺和由此产生的“写意性”风格，是其区别于其他艺术形式的根本所在。
-
-**“大俗”的艺术价值**：
-扑灰年画是农耕时代劳动人民的艺术，它所体现的“俗”，是贴近生活、反映民情的“大俗”，与文人画追求的“阳春白雪”式的“雅”有所不同。然而，这种“大俗”中蕴含着强大的生命力和独特的审美价值。正如民艺专家张道一所言：“它自有广阔天地，不是说‘俗到家时便是雅吗’？”扑灰年画的“写意性”、“抹”和“涮”的技法、留白空灵的构图，这些都是其灵魂所在。
-
-**当代文化生态的挑战**：
-随着时代发展，扑灰年画赖以生存的文化生态发生了巨大变化：
-1.  **消费群体变迁**：从满足本地农民年俗需求，转向服务于旅游者、收藏爱好者和礼品市场，购买动机和审美标准发生改变。
-2.  **创作风向转变**：部分艺人为迎合市场或追求经济利益，开始模仿学院派工笔画或现代文人画风格，作品趋向华丽细腻，“雅化”倾向严重，逐渐偏离了传统扑灰年画的“写意”本色和民俗根基。
-3.  **传承困境**：能够坚守传统技艺的艺人日渐稀少，部分艺人走向职业画家道路，其作品价格远超普通民众的承受能力，不利于其作为非物质文化遗产的活态传承。
-
-**坚守与创新**：
-在新的历史条件下，传承和保护扑灰年画，核心在于对其传统艺术风格的正确认识和坚守。创新和发展是必要的，可以创作反映时代审美的新年画，但必须明确这与作为非物质文化遗产的传统扑灰年画有所区别。如果失去了其最根本的艺术品质和文化基因，那么“非遗”保护的意义便会大打折扣。扑灰年画应在保持其“大俗”本色的前提下，探索与时代的结合点，让这一古老的民间艺术在当代焕发新的光彩。
-
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“4.3 扑灰年画在‘大俗’中‘自有广阔天地’”及“结语”部分相关论述整理编写。）
-"""
-    },
-    {
-        "filename": "84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.md",
-        "content": """# 84-家堂年画：承载孝文化与家族血脉的民俗重器
-
-在高密扑灰年画的众多题材中，“家堂”（当地亦称“轴子”）无疑是与民俗事象结合最为紧密、文化意涵最为深厚的一种。它不仅是年节祭祀的重要用品，更是承载孝道文化、维系家族血脉的象征符号。
-
-**家堂的民俗功能**：
-家堂画是高密地区除夕家祭仪式中不可或缺的部分，用于替代旧时安放祖先牌位进行祭奠的习俗。其画幅通常较大，内容丰富，结构一般分为三部分：上部为堂屋中端坐的祖宗夫妇，中部为庭院玩耍的孩童，下部为象征门第的家族人群。家堂上常留有格子，用于填写家族成员名讳，兼具家谱功能。一幅家堂画可使用数十年，直至格子填满才更换，被视为家庭的珍贵物品。
-
-**孝文化的集中体现**：
-家堂画的核心文化内涵是“孝”。悬挂家堂、祭拜祖先，是中华民族以农耕文明为主体的传统家族文化中孝道观念的直接体现。这种对祖先的敬畏和对家族血脉的认同，蕴含着强大的民族凝聚力。即使在特殊历史时期，民间对家堂的供奉也未曾完全中断，显示了其深植人心的文化基因。
-
-**艺术与民俗的融合**：
-家堂画因其内容繁杂、画幅巨大，纯手绘者价格昂贵，故多采用半印半绘或木版套印的方式制作。即便是手绘家堂，也常采用对称构图以提高效率。其庄重肃穆的艺术风格，与祭祖仪式的氛围相得益彰。
-
-在今天的高密，家堂画依然是年俗中不可或缺的一部分，它超越了一般的装饰年画，成为连接过去与现在、维系家族情感的重要文化载体，是高密扑灰年画中真正意义上仍在行使其核心年俗使命的品类。
-
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“5.2 艺术民俗视域中的扑灰年画”关于家堂的论述整理编写。）
-"""
-    },
-    {
-        "filename": "85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.md",
-        "content": """# 85-儒家之风拂画卷：扑灰年画中的传统人文精神
-
-高密扑灰年画在其发展和题材表现上，深刻地烙印着中国传统儒家文化的人文精神。艺人们自觉或不自觉地将儒家思想的核心理念融入创作，使年画成为传递道德伦理、承载文化价值的载体。
-
-**“绘事后素”的审美追求**：
-扑灰年画，特别是“老抹画”系列，其简洁空灵的章法、减笔写意的造型，与孔子所倡导的“绘事后素”的美学观点有相通之处。它追求朴素、向善的艺术境界，将美与善紧密结合，通过质朴的造型与色彩、形式与内容的统一，体现了儒家对“尽善尽美”的理想。
-
-**“忠孝文化”的生动演绎**：
-“忠”与“孝”是儒家伦理的核心。高密扑灰年画中有大量题材宣扬忠孝观念。
-*   **孝道为先**：如《五子献寿》表达对长辈福寿康宁的祝愿，倡导孝敬老人。《二十四孝图》更是将历史上著名的孝行故事图绘出来，成为教育子女人人尽孝的直观教材，其教化意义远超单纯的观赏价值。
-*   **忠义传世**：如《武财神》中的关羽形象，代表了忠义勇武的精神，深受民众敬仰。
-
-**“和谐仁爱”的理想图景**：
-儒家强调“和为贵”，注重人际关系的和谐与社会的稳定。扑灰年画亦通过众多题材表达这一理想。
-*   **家庭和睦**：如《榴开百子》、《望子成龙》寄托对子孙兴旺、家庭美满的期盼。《姑嫂闲话》描绘姑嫂间的亲密和谐，《母子情》展现温馨的舔犊之情。
-*   **社会教化**：通过对历史故事、戏曲人物的描绘，潜移默化地传递仁爱、信义等道德准则。
-
-高密扑灰年画通过对儒家“忠孝”、“仁爱”、“和谐”等核心价值的艺术化呈现，不仅美化了民众生活，更在润物细无声中起到了“成教化，助人伦”的社会作用，是农耕时代民间精神文化生活的重要组成部分。
-
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“5.3 扑灰年画中的传统人文精神”整理编写。）
-"""
-    },
-    {
-        "filename": "86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.md",
-        "content": """# 86-非遗视角下扑灰年画的风格传承：守护文化基因的挑战与责任
-
-作为国家级非物质文化遗产，高密扑灰年画的传承与保护面临着时代挑战，其核心在于如何准确认识并有效传承其独特的艺术风格，特别是“写意性”这一文化基因。
-
-**传承的核心：艺术风格的坚守**
-高密扑灰年画的典型艺术风格是其“写意性”，这种风格由其历史渊源、手绘技艺、材料运用以及所承载的民俗文化共同塑造。保护扑灰年画，首要任务是保护这种独特的艺术风格，而非仅仅保存若干作品或技法名目。传承人应深刻理解并掌握传统扑灰年画的绘制精髓，包括“抹”、“涮”等写意技法和“细心粉脸、眉眼巧画”的工笔技巧。
-
-**面临的挑战：文化生态变迁与市场导向**
-1.  **审美趣味的“雅化”**：随着消费群体的变化（从乡土民众转向城市游客、收藏家），部分艺人开始迎合市场，追求更为细腻、华丽的“学院派”或“文人画”风格，导致传统扑灰年画粗犷、稚拙、写意的民间本色逐渐流失。
-2.  **传统技艺的式微**：对速度和效率的追求可能导致传统繁复工序的简化或放弃，特殊工具和材料的运用也可能被替代。
-3.  **“非遗”的真实性**：如果扑灰年画失去了其原有的文化生态和艺术特征，即使名称依旧，其作为“非遗”的真实性和文化价值也会大打折扣。创新是必要的，但与时俱进的新年画创作应与传统“非遗”意义上的扑灰年画有所区分。
-
-**传承的责任与路径**：
-1.  **政府引导与扶持**：为传承人提供稳定的经济支持和良好的创作环境，鼓励他们坚守传统。
-2.  **理论研究与教育普及**：加强对扑灰年画艺术性的深入研究，向公众普及传统扑灰年画的审美价值，提升社会认知。
-3.  **坚守与适度创新并举**：在完整继承传统技艺和风格的基础上，可以探索与现代审美相结合的创新路径，但应明确其与“非遗”本体的区别，避免本末倒置。
-
-守护高密扑灰年画的文化基因，不仅是对一项民间艺术的保护，更是对中华民族精神传统和文化多样性的珍视与传承。
-
-（本篇内容根据安明明《高密扑灰年画艺术研究》论文“结语”部分，特别是“2.高密扑灰年画面临的文化生态问题”及“3.非物质文化遗产视角的高密扑灰年画艺术风格传承问题”整理编写。）
-"""
-    }
 ]
 
+# Loop through the articles and write them to files
+for article in new_articles:
+    filename = article['filename']
+    content = article['content']
+    filepath = os.path.join(output_dir, filename)
 
-# 指定输出目录 (例如，在当前脚本所在目录下创建一个名为 'articles_output' 的文件夹)
-output_dir = "articles_output_new" # 修改为你想要的输出目录名
-# 如果你想直接输出到项目根目录下的 "articles" 文件夹，可以取消下面一行的注释
-# output_dir = "articles" # 确保这个 'articles' 文件夹与你的 01-..., 02-... 文件在同一级别
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(content)
 
-# 创建输出目录 (如果不存在)
-os.makedirs(output_dir, exist_ok=True)
-
-# 批量生成文章 (这里我们只处理新提取的文章)
-articles_to_generate = new_articles # 如果需要合并旧文章，可以使用 articles_old + new_articles
-
-for article_data in articles_to_generate:
-    filename = article_data["filename"]
-    content = article_data["content"]
-    
-    file_path = os.path.join(output_dir, filename)
-    
-    try:
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(content)
-        print(f"成功生成文件: {file_path}")
-    except IOError as e:
-        print(f"写入文件 {file_path} 失败: {e}")
-
-print("\n全部新文章处理完毕！")
+print(f"Generated {len(new_articles)} translated articles in the '{output_dir}' directory.")

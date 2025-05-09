@@ -1,432 +1,1103 @@
 [
     {
         "id": "03-he-wei-pu-hui",
-        "title": "03-何以为“扑灰”：解密高密年画的独特身份与核心工艺",
-        "filename": "03-he-wei-pu-hui.md"
+        "titles": {
+            "en": "03-Why \"Puhui\": Decrypting the Unique Identity and Core Craftsmanship of Gaomi New Year Pictures",
+            "ja": "03-なぜ「撲灰」なのか：高密年画の独自のアイデンティティと核心技術の解読",
+            "zh": "03-何以为“扑灰”：解密高密年画的独特身份与核心工艺"
+        },
+        "filenames": {
+            "en": "03-he-wei-pu-hui.en.md",
+            "ja": "03-he-wei-pu-hui.ja.md",
+            "zh": "03-he-wei-pu-hui.md"
+        }
     },
     {
         "id": "04-nian-hua-dan-sheng-zhi-lv",
-        "title": "04-不止“扑灰”：一张高密年画的诞生之旅（传统与改良）",
-        "filename": "04-nian-hua-dan-sheng-zhi-lv.md"
+        "titles": {
+            "en": "04-More Than Just \"Puhui\": The Birth Journey of a Gaomi New Year Picture (Tradition and Improvement)",
+            "ja": "04-「撲灰」だけではない：一枚の高密年画の誕生の旅（伝統と改良）",
+            "zh": "04-不止“扑灰”：一张高密年画的诞生之旅（传统与改良）"
+        },
+        "filenames": {
+            "en": "04-nian-hua-dan-sheng-zhi-lv.en.md",
+            "ja": "04-nian-hua-dan-sheng-zhi-lv.ja.md",
+            "zh": "04-nian-hua-dan-sheng-zhi-lv.md"
+        }
     },
     {
         "id": "05-nian-hua-pin-ji-zhi-fen",
-        "title": "05-行货、细活、精品：读懂高密扑灰年画的品级之分",
-        "filename": "05-nian-hua-pin-ji-zhi-fen.md"
+        "titles": {
+            "en": "05-Standard Goods, Fine Work, and Masterpieces: Understanding the Grade Distinctions of Gaomi Puhui New Year Pictures",
+            "ja": "05-行貨、細活、精品：高密撲灰年画の品級区分を理解する",
+            "zh": "05-行货、细活、精品：读懂高密扑灰年画的品级之分"
+        },
+        "filenames": {
+            "en": "05-nian-hua-pin-ji-zhi-fen.en.md",
+            "ja": "05-nian-hua-pin-ji-zhi-fen.ja.md",
+            "zh": "05-nian-hua-pin-ji-zhi-fen.md"
+        }
     },
     {
         "id": "06-ming-dai-qi-yuan-tan-mi",
-        "title": "06-寻根溯源：明代高密扑灰年画的起源传说",
-        "filename": "06-ming-dai-qi-yuan-tan-mi.md"
+        "titles": {
+            "en": "06-Tracing its Roots: The Origin Legend of Gaomi Puhui New Year Pictures in the Ming Dynasty",
+            "ja": "06-ルーツを探る：明代高密撲灰年画の起源伝説",
+            "zh": "06-寻根溯源：明代高密扑灰年画的起源传说"
+        },
+        "filenames": {
+            "en": "06-ming-dai-qi-yuan-tan-mi.en.md",
+            "ja": "06-ming-dai-qi-yuan-tan-mi.ja.md",
+            "zh": "06-ming-dai-qi-yuan-tan-mi.md"
+        }
     },
     {
         "id": "07-ban-yin-ban-hua-ge-xin",
-        "title": "07-融合之路：明末清初“半印半画”的革新风尚",
-        "filename": "07-ban-yin-ban-hua-ge-xin.md"
+        "titles": {
+            "en": "07-The Path of Fusion: The Innovative Trend of \"Half-Printed, Half-Painted\" in the Late Ming and Early Qing Dynasties",
+            "ja": "07-融合の道：明末清初「半印半画」の革新的な風潮",
+            "zh": "07-融合之路：明末清初“半印半画”的革新风尚"
+        },
+        "filenames": {
+            "en": "07-ban-yin-ban-hua-ge-xin.en.md",
+            "ja": "07-ban-yin-ban-hua-ge-xin.ja.md",
+            "zh": "07-ban-yin-ban-hua-ge-xin.md"
+        }
     },
     {
         "id": "08-lao-mo-hong-huo-bing-li",
-        "title": "08-双峰并峙：清末民初高密年画鼎盛期的“老抹画”与“红货”",
-        "filename": "08-lao-mo-hong-huo-bing-li.md"
+        "titles": {
+            "en": "08-Two Peaks Standing Together: \"Lao Mo Hua\" and \"Hong Huo\" in the Heyday of Gaomi New Year Pictures in the Late Qing Dynasty and Early Republic of China",
+            "ja": "08-双峰並び立つ：清末民初高密年画全盛期の「老抹画」と「紅貨」",
+            "zh": "08-双峰并峙：清末民初高密年画鼎盛期的“老抹画”与“红货”"
+        },
+        "filenames": {
+            "en": "08-lao-mo-hong-huo-bing-li.en.md",
+            "ja": "08-lao-mo-hong-huo-bing-li.ja.md",
+            "zh": "08-lao-mo-hong-huo-bing-li.md"
+        }
     },
     {
         "id": "09-mu-ban-nian-hua-deng-chang",
-        "title": "09-效益驱动下的新尝试：清末木版年画的登场与普及",
-        "filename": "09-mu-ban-nian-hua-deng-chang.md"
+        "titles": {
+            "en": "09-A New Attempt Driven by Efficiency: The Emergence and Popularization of Woodblock New Year Pictures in the Late Qing Dynasty",
+            "ja": "09-効率駆動の新たな試み：清末木版年画の登場と普及",
+            "zh": "09-效益驱动下的新尝试：清末木版年画的登场与普及"
+        },
+        "filenames": {
+            "en": "09-mu-ban-nian-hua-deng-chang.en.md",
+            "ja": "09-mu-ban-nian-hua-deng-chang.ja.md",
+            "zh": "09-mu-ban-nian-hua-deng-chang.md"
+        }
     },
     {
         "id": "10-qi-lu-wen-hua-di-yun",
-        "title": "10-齐鲁文化的深厚底蕴：扑灰年画独特魅力的文化之源",
-        "filename": "10-qi-lu-wen-hua-di-yun.md"
+        "titles": {
+            "en": "10-The Profound Heritage of Qilu Culture: The Cultural Source of the Unique Charm of Puhui New Year Pictures",
+            "ja": "10-斉魯文化の深厚な底流：撲灰年画の独特な魅力の文化的源泉",
+            "zh": "10-齐鲁文化的深厚底蕴：扑灰年画独特魅力的文化之源"
+        },
+        "filenames": {
+            "en": "10-qi-lu-wen-hua-di-yun.en.md",
+            "ja": "10-qi-lu-wen-hua-di-yun.ja.md",
+            "zh": "10-qi-lu-wen-hua-di-yun.md"
+        }
     },
     {
         "id": "11-li-yue-jiao-hua-xiao-dao",
-        "title": "11-礼乐教化在画中（一）：扑灰年画对“孝道为先”的弘扬",
-        "filename": "11-li-yue-jiao-hua-xiao-dao.md"
+        "titles": {
+            "en": "11-Ritual and Music Education in Paintings (I): The Promotion of \"Filial Piety First\" in Puhui New Year Paintings",
+            "ja": "11-絵画における礼楽教化（一）：撲灰年画による「孝道を優先する」思想の称揚",
+            "zh": "11-礼乐教化在画中（一）：扑灰年画对“孝道为先”的弘扬"
+        },
+        "filenames": {
+            "en": "11-li-yue-jiao-hua-xiao-dao.en.md",
+            "ja": "11-li-yue-jiao-hua-xiao-dao.ja.md",
+            "zh": "11-li-yue-jiao-hua-xiao-dao.md"
+        }
     },
     {
         "id": "12-li-yue-jiao-hua-he-xie",
-        "title": "12-礼乐教化在画中（二）：扑灰年画对“和谐仁爱”人伦理想的描绘",
-        "filename": "12-li-yue-jiao-hua-he-xie.md"
+        "titles": {
+            "en": "12-Ritual and Music Education in Paintings (II): Depiction of the Ideal of \"Harmony and Benevolence\" in Human Relations in Puhui New Year Paintings",
+            "ja": "12-絵画における礼楽教化（二）：撲灰年画による「調和と仁愛」という人間関係の理想の描写",
+            "zh": "12-礼乐教化在画中（二）：扑灰年画对“和谐仁爱”人伦理想的描绘"
+        },
+        "filenames": {
+            "en": "12-li-yue-jiao-hua-he-xie.en.md",
+            "ja": "12-li-yue-jiao-hua-he-xie.ja.md",
+            "zh": "12-li-yue-jiao-hua-he-xie.md"
+        }
     },
     {
         "id": "13-wen-ren-hua-feng-qi-meng",
-        "title": "13-笔墨间的风雅：高密扑灰年画中深藏的文人画气息",
-        "filename": "13-wen-ren-hua-feng-qi-meng.md"
+        "titles": {
+            "en": "13-The Elegance Between Brush and Ink: The Deeply Hidden Literati Painting Atmosphere in Gaomi Puhui New Year Paintings",
+            "ja": "13-筆墨の間の風雅：高密撲灰年画に深く秘められた文人画の趣",
+            "zh": "13-笔墨间的风雅：高密扑灰年画中深藏的文人画气息"
+        },
+        "filenames": {
+            "en": "13-wen-ren-hua-feng-qi-meng.en.md",
+            "ja": "13-wen-ren-hua-feng-qi-meng.ja.md",
+            "zh": "13-wen-ren-hua-feng-qi-meng.md"
+        }
     },
     {
         "id": "14-pu-hui-mo-ping-ya-yun",
-        "title": "14-墨屏生雅韵：扑灰墨屏中的文人画风骨",
-        "filename": "14-pu-hui-mo-ping-ya-yun.md"
-    },
-    {
-        "id": "15-pu-hui-gong-yi-bu-yi",
-        "title": "15-扑灰工艺补遗：柳条与豆茬的炭火智慧",
-        "filename": "15-pu-hui-gong-yi-bu-yi.md"
+        "titles": {
+            "en": "14-Ink Screens Generate Elegance: The Literati Painting Spirit in Puhui Ink Screens",
+            "ja": "14-墨屏、雅韻を生む：撲灰墨屏における文人画の風格",
+            "zh": "14-墨屏生雅韵：扑灰墨屏中的文人画风骨"
+        },
+        "filenames": {
+            "en": "14-pu-hui-mo-ping-ya-yun.en.md",
+            "ja": "14-pu-hui-mo-ping-ya-yun.ja.md",
+            "zh": "14-pu-hui-mo-ping-ya-yun.md"
+        }
     },
     {
         "id": "16-jia-tang-nian-hua-gai-shu",
-        "title": "16-《家堂》：高密扑灰年画中独特的祭祖丰碑",
-        "filename": "16-jia-tang-nian-hua-gai-shu.md"
+        "titles": {
+            "en": "16-\"Family Shrine\": A Unique Ancestral Worship Monument in Gaomi Puhui New Year Paintings",
+            "ja": "16-『家堂』：高密撲灰年画における独特な祖先祭祀の記念碑",
+            "zh": "16-《家堂》：高密扑灰年画中独特的祭祖丰碑"
+        },
+        "filenames": {
+            "en": "16-jia-tang-nian-hua-gai-shu.en.md",
+            "ja": "16-jia-tang-nian-hua-gai-shu.ja.md",
+            "zh": "16-jia-tang-nian-hua-gai-shu.md"
+        }
     },
     {
         "id": "17-jia-tang-hua-juan-qi-yuan",
-        "title": "17-《家堂》画卷的诞生：从实体牌位到纸上追思",
-        "filename": "17-jia-tang-hua-juan-qi-yuan.md"
+        "titles": {
+            "en": "17-The Birth of \"Family Shrine\" Scrolls: From Physical Ancestral Tablets to Remembrance on Paper",
+            "ja": "17-『家堂』絵巻の誕生：実物の位牌から紙上の追憶へ",
+            "zh": "17-《家堂》画卷的诞生：从实体牌位到纸上追思"
+        },
+        "filenames": {
+            "en": "17-jia-tang-hua-juan-qi-yuan.en.md",
+            "ja": "17-jia-tang-hua-juan-qi-yuan.ja.md",
+            "zh": "17-jia-tang-hua-juan-qi-yuan.md"
+        }
     },
     {
         "id": "18-jia-tang-hua-juan-jie-gou",
-        "title": "18-《家堂》画卷的宏观结构：三段式空间与对称之美",
-        "filename": "18-jia-tang-hua-juan-jie-gou.md"
+        "titles": {
+            "en": "18-The Macrostructure of \"Family Shrine\" Scrolls: Three-Part Space and the Beauty of Symmetry",
+            "ja": "18-『家堂』絵巻のマクロ構造：三段式空間と対称の美",
+            "zh": "18-《家堂》画卷的宏观结构：三段式空间与对称之美"
+        },
+        "filenames": {
+            "en": "18-jia-tang-hua-juan-jie-gou.en.md",
+            "ja": "18-jia-tang-hua-juan-jie-gou.ja.md",
+            "zh": "18-jia-tang-hua-juan-jie-gou.md"
+        }
     },
     {
         "id": "19-jia-tang-yuan-wai-jian-zhu",
-        "title": "19-《家堂》细节解密（一）：院外的建筑符号与门楣寄语",
-        "filename": "19-jia-tang-yuan-wai-jian-zhu.md"
+        "titles": {
+            "en": "19-Decoding the Details of \"Family Shrine\" (I): Architectural Symbols and Lintel Messages Beyond the Courtyard",
+            "ja": "19-『家堂』詳細解読（一）：院外の建築記号と門楣のメッセージ",
+            "zh": "19-《家堂》细节解密（一）：院外的建筑符号与门楣寄语"
+        },
+        "filenames": {
+            "en": "19-jia-tang-yuan-wai-jian-zhu.en.md",
+            "ja": "19-jia-tang-yuan-wai-jian-zhu.ja.md",
+            "zh": "19-jia-tang-yuan-wai-jian-zhu.md"
+        }
     },
     {
         "id": "20-jia-tang-yuan-wai-zhen-shou",
-        "title": "20-《家堂》细节解密（二）：院外的镇宅石狮与常青之树",
-        "filename": "20-jia-tang-yuan-wai-zhen-shou.md"
+        "titles": {
+            "en": "20-Decoding the Details of \"Family Shrine\" (II): Guardian Stone Lions and Evergreen Trees Beyond the Courtyard",
+            "ja": "20-『家堂』詳細解読（二）：院外の鎮宅石獅子と常緑樹",
+            "zh": "20-《家堂》细节解密（二）：院外的镇宅石狮与常青之树"
+        },
+        "filenames": {
+            "en": "20-jia-tang-yuan-wai-zhen-shou.en.md",
+            "ja": "20-jia-tang-yuan-wai-zhen-shou.ja.md",
+            "zh": "20-jia-tang-yuan-wai-zhen-shou.md"
+        }
     },
     {
         "id": "21-jia-tang-yuan-wai-ren-wu",
-        "title": "21-《家堂》细节解密（三）：院外的人物群像与秩序井然",
-        "filename": "21-jia-tang-yuan-wai-ren-wu.md"
+        "titles": {
+            "en": "21-Detail Decryption of \"Jia Tang\" (Part 3): Figure Groups Outside the Courtyard and Their Orderly Arrangement",
+            "ja": "21-「家堂」ディテール解読（三）：庭外の人物群像と整然とした配置",
+            "zh": "21-《家堂》细节解密（三）：院外的人物群像与秩序井然"
+        },
+        "filenames": {
+            "en": "21-jia-tang-yuan-wai-ren-wu.en.md",
+            "ja": "21-jia-tang-yuan-wai-ren-wu.ja.md",
+            "zh": "21-jia-tang-yuan-wai-ren-wu.md"
+        }
     },
     {
         "id": "22-jia-tang-ting-yuan-jing-xiang",
-        "title": "22-《家堂》细节解密（四）：庭院中的童趣、祥瑞与分界",
-        "filename": "22-jia-tang-ting-yuan-jing-xiang.md"
+        "titles": {
+            "en": "22-Detail Decryption of \"Jia Tang\" (Part 4): Childhood Fun, Auspicious Signs, and Boundaries in the Courtyard",
+            "ja": "22-「家堂」ディテール解読（四）：庭園の童趣、瑞祥と境界",
+            "zh": "22-《家堂》细节解密（四）：庭院中的童趣、祥瑞与分界"
+        },
+        "filenames": {
+            "en": "22-jia-tang-ting-yuan-jing-xiang.en.md",
+            "ja": "22-jia-tang-ting-yuan-jing-xiang.ja.md",
+            "zh": "22-jia-tang-ting-yuan-jing-xiang.md"
+        }
     },
     {
         "id": "23-jia-tang-tang-wu-tong-dao",
-        "title": "23-《家堂》细节解密（五）：堂屋的神圣通道、跪拜蒲团与祭祀供桌",
-        "filename": "23-jia-tang-tang-wu-tong-dao.md"
+        "titles": {
+            "en": "23-Detail Decryption of \"Jia Tang\" (Part 5): The Sacred Passage, Kneeling Cushions, and Altar Table in the Main Hall",
+            "ja": "23-「家堂」ディテール解読（五）：堂屋の神聖な通路、跪拝蒲団と祭祀供物台",
+            "zh": "23-《家堂》细节解密（五）：堂屋的神圣通道、跪拜蒲团与祭祀供桌"
+        },
+        "filenames": {
+            "en": "23-jia-tang-tang-wu-tong-dao.en.md",
+            "ja": "23-jia-tang-tang-wu-tong-dao.ja.md",
+            "zh": "23-jia-tang-tang-wu-tong-dao.md"
+        }
     },
     {
         "id": "24-jia-tang-tang-wu-gong-pin",
-        "title": "24-《家堂》细节解密（六）：堂屋的“三生”贡品与生命象征",
-        "filename": "24-jia-tang-tang-wu-gong-pin.md"
+        "titles": {
+            "en": "24-Detail Decryption of \"Jia Tang\" (Part 6): The \"Three Offerings\" and Symbols of Life in the Main Hall",
+            "ja": "24-「家堂」ディテール解読（六）：堂屋の「三生」供物と生命の象徴",
+            "zh": "24-《家堂》细节解密（六）：堂屋的“三生”贡品与生命象征"
+        },
+        "filenames": {
+            "en": "24-jia-tang-tang-wu-gong-pin.en.md",
+            "ja": "24-jia-tang-tang-wu-gong-pin.ja.md",
+            "zh": "24-jia-tang-tang-wu-gong-pin.md"
+        }
     },
     {
         "id": "25-jia-tang-tang-wu-zu-pai",
-        "title": "25-《家堂》细节解密（七）：堂屋的核心——祖宗牌位与仪容",
-        "filename": "25-jia-tang-tang-wu-zu-pai.md"
+        "titles": {
+            "en": "25-Detail Decryption of \"Jia Tang\" (Part 7): The Core of the Main Hall - Ancestor Tablets and Appearance",
+            "ja": "25-「家堂」ディテール解読（七）：堂屋の核心——祖宗牌位と儀容",
+            "zh": "25-《家堂》细节解密（七）：堂屋的核心——祖宗牌位与仪容"
+        },
+        "filenames": {
+            "en": "25-jia-tang-tang-wu-zu-pai.en.md",
+            "ja": "25-jia-tang-tang-wu-zu-pai.ja.md",
+            "zh": "25-jia-tang-tang-wu-zu-pai.md"
+        }
     },
     {
         "id": "26-jia-tang-tang-wu-bian-shi",
-        "title": "26-《家堂》细节解密（八）：堂屋的庄严围合与顶上箴言",
-        "filename": "26-jia-tang-tang-wu-bian-shi.md"
+        "titles": {
+            "en": "26-Detail Decryption of \"Jia Tang\" (Part 8): The Solemn Enclosure and Upper Sayings of the Main Hall",
+            "ja": "26-「家堂」ディテール解読（八）：堂屋の荘厳な囲みと頂上の箴言",
+            "zh": "26-《家堂》细节解密（八）：堂屋的庄严围合与顶上箴言"
+        },
+        "filenames": {
+            "en": "26-jia-tang-tang-wu-bian-shi.en.md",
+            "ja": "26-jia-tang-tang-wu-bian-shi.ja.md",
+            "zh": "26-jia-tang-tang-wu-bian-shi.md"
+        }
     },
     {
         "id": "27-jia-tang-yi-shu-fa-ze",
-        "title": "27-《家堂》的艺术法则、文化坚守与传承之思",
-        "filename": "27-jia-tang-yi-shu-fa-ze.md"
+        "titles": {
+            "en": "27-Artistic Principles, Cultural Adherence, and Thoughts on Inheritance of \"Jia Tang\"",
+            "ja": "27-「家堂」の芸術法則、文化の固守と伝承の思索",
+            "zh": "27-《家堂》的艺术法则、文化坚守与传承之思"
+        },
+        "filenames": {
+            "en": "27-jia-tang-yi-shu-fa-ze.en.md",
+            "ja": "27-jia-tang-yi-shu-fa-ze.ja.md",
+            "zh": "27-jia-tang-yi-shu-fa-ze.md"
+        }
     },
     {
         "id": "28-han-hua-xiang-shi-xun-gen",
-        "title": "28-汉画像石上的远古回响：扑灰年画的艺术溯源猜想",
-        "filename": "28-han-hua-xiang-shi-xun-gen.md"
+        "titles": {
+            "en": "28-Ancient Echoes on Han Dynasty Stone Carvings: A Conjecture on the Artistic Origin of Puhui New Year Paintings",
+            "ja": "28-漢代画像石に響く遠古のこだま：撲灰年画の芸術的源流の推測",
+            "zh": "28-汉画像石上的远古回响：扑灰年画的艺术溯源猜想"
+        },
+        "filenames": {
+            "en": "28-han-hua-xiang-shi-xun-gen.en.md",
+            "ja": "28-han-hua-xiang-shi-xun-gen.ja.md",
+            "zh": "28-han-hua-xiang-shi-xun-gen.md"
+        }
     },
     {
         "id": "29-kang-xi-xian-zhi-zuo-zheng",
-        "title": "29-《高密县志》中的年俗印记：清康熙年间扑灰年画已成日常",
-        "filename": "29-kang-xi-xian-zhi-zuo-zheng.md"
+        "titles": {
+            "en": "29-《Gaomi County Annals》 as Testimony: Puhui New Year Paintings Became Common in the Kangxi Period of the Qing Dynasty",
+            "ja": "29-『高密県志』が見る年中行事の足跡：清康熙年間に撲灰年画が日常に",
+            "zh": "29-《高密县志》中的年俗印记：清康熙年间扑灰年画已成日常"
+        },
+        "filenames": {
+            "en": "29-kang-xi-xian-zhi-zuo-zheng.en.md",
+            "ja": "29-kang-xi-xian-zhi-zuo-zheng.ja.md",
+            "zh": "29-kang-xi-xian-zhi-zuo-zheng.md"
+        }
     },
     {
         "id": "30-hua-zi-dian-de-xing-long",
-        "title": "30-“画子店”的兴隆：清代高密年画的市场繁荣与远播",
-        "filename": "30-hua-zi-dian-de-xing-long.md"
+        "titles": {
+            "en": "30-The Prosperity of \"Painting Shops\": Market Flourishing and Wide Distribution of Gaomi New Year Paintings in the Qing Dynasty",
+            "ja": "30-「画子店」の繁盛：清代高密年画の市場繁栄と遠方への伝播",
+            "zh": "30-“画子店”的兴隆：清代高密年画的市场繁荣与远播"
+        },
+        "filenames": {
+            "en": "30-hua-zi-dian-de-xing-long.en.md",
+            "ja": "30-hua-zi-dian-de-xing-long.ja.md",
+            "zh": "30-hua-zi-dian-de-xing-long.md"
+        }
     },
     {
         "id": "31-miao-yu-bi-hua-tong-yuan",
-        "title": "31-庙宇壁画中的年画风：扑灰年画艺人的“副业”与艺术同源",
-        "filename": "31-miao-yu-bi-hua-tong-yuan.md"
+        "titles": {
+            "en": "31-The Folk Art Style in Temple Murals: The \"Side Hustle\" of Puhui New Year Painting Artists and Artistic Homology",
+            "ja": "31-寺院壁画に見る年画の様式：撲灰年画絵師の「副業」と芸術の同源性",
+            "zh": "31-庙宇壁画中的年画风：扑灰年画艺人的“副业”与艺术同源"
+        },
+        "filenames": {
+            "en": "31-miao-yu-bi-hua-tong-yuan.en.md",
+            "ja": "31-miao-yu-bi-hua-tong-yuan.ja.md",
+            "zh": "31-miao-yu-bi-hua-tong-yuan.md"
+        }
     },
     {
         "id": "32-hu-dian-bang-yin-jin-ji-yi",
-        "title": "32-胡殿邦的贡献：杨柳青技艺融入催生高密“半印半画”",
-        "filename": "32-hu-dian-bang-yin-jin-ji-yi.md"
+        "titles": {
+            "en": "32-Hu Dianbang's Contribution: The Integration of Yangliuqing Techniques Spawns Gaomi's \"Half-Print Half-Paint\"",
+            "ja": "32-胡殿邦の貢献：楊柳青の技法導入が高密の「半印半画」を促進",
+            "zh": "32-胡殿邦的贡献：杨柳青技艺融入催生高密“半印半画”"
+        },
+        "filenames": {
+            "en": "32-hu-dian-bang-yin-jin-ji-yi.en.md",
+            "ja": "32-hu-dian-bang-yin-jin-ji-yi.ja.md",
+            "zh": "32-hu-dian-bang-yin-jin-ji-yi.md"
+        }
     },
     {
         "id": "33-nian-hua-ming-jia-feng-yun",
-        "title": "33-鼎盛时期的名家辈出：杨维清、庞凤翥与“气煞曹胡”",
-        "filename": "33-nian-hua-ming-jia-feng-yun.md"
+        "titles": {
+            "en": "33-Emergence of Masters in the Golden Age: Yang Weiqing, Pang Fengzhu, and \"Anger and Difficulty for Cao and Hu\"",
+            "ja": "33-最盛期の大家たちの輩出：楊維清、龐鳳翥と「曹胡を怒らせる」",
+            "zh": "33-鼎盛时期的名家辈出：杨维清、庞凤翥与“气煞曹胡”"
+        },
+        "filenames": {
+            "en": "33-nian-hua-ming-jia-feng-yun.en.md",
+            "ja": "33-nian-hua-ming-jia-feng-yun.ja.md",
+            "zh": "33-nian-hua-ming-jia-feng-yun.md"
+        }
     },
     {
         "id": "34-mu-ban-nian-hua-ti-cai-yan-bian",
-        "title": "34-木版年画的兴起与题材拓展：从“画子店”到千家万户",
-        "filename": "34-mu-ban-nian-hua-ti-cai-yan-bian.md"
+        "titles": {
+            "en": "34-The Rise of Woodblock New Year Paintings and the Expansion of Themes: From \"Huazidian\" to Thousands of Households",
+            "ja": "34-木版年画の興隆と題材の拡張：「画子店」から千家万戸へ",
+            "zh": "34-木版年画的兴起与题材拓展：从“画子店”到千家万户"
+        },
+        "filenames": {
+            "en": "34-mu-ban-nian-hua-ti-cai-yan-bian.en.md",
+            "ja": "34-mu-ban-nian-hua-ti-cai-yan-bian.ja.md",
+            "zh": "34-mu-ban-nian-hua-ti-cai-yan-bian.md"
+        }
     },
     {
         "id": "35-min-guo-chu-nian-sheng-kuang",
-        "title": "35-民国初年的鼎盛高潮：王增盛与“隆顺永”画店的辉煌",
-        "filename": "35-min-guo-chu-nian-sheng-kuang.md"
+        "titles": {
+            "en": "35-The Golden Age Climax in the Early Republic of China: The Brilliance of Wang Zhensheng and the \"Longshun Yong\" Painting Shop",
+            "ja": "35-民国初年の最盛期のクライマックス：王増盛と「隆順永」画店の輝き",
+            "zh": "35-民国初年的鼎盛高潮：王增盛与“隆顺永”画店的辉煌"
+        },
+        "filenames": {
+            "en": "35-min-guo-chu-nian-sheng-kuang.en.md",
+            "ja": "35-min-guo-chu-nian-sheng-kuang.ja.md",
+            "zh": "35-min-guo-chu-nian-sheng-kuang.md"
+        }
     },
     {
         "id": "36-wu-shi-nian-dai-fu-xing",
-        "title": "36-五十年代的集体化生产：高密年画的短暂复兴",
-        "filename": "36-wu-shi-nian-dai-fu-xing.md"
+        "titles": {
+            "en": "36-Collective Production in the 1950s: A Brief Revival of Gaomi New Year Paintings",
+            "ja": "36-1950年代の集団生産：高密年画の短い復興",
+            "zh": "36-五十年代的集体化生产：高密年画的短暂复兴"
+        },
+        "filenames": {
+            "en": "36-wu-shi-nian-dai-fu-xing.en.md",
+            "ja": "36-wu-shi-nian-dai-fu-xing.ja.md",
+            "zh": "36-wu-shi-nian-dai-fu-xing.md"
+        }
     },
     {
         "id": "37-wen-ge-hou-zai-du-fu-su",
-        "title": "37-“文革”后的再度复苏：高密年画重焕生机",
-        "filename": "37-wen-ge-hou-zai-du-fu-su.md"
+        "titles": {
+            "en": "37-Revival After the \"Cultural Revolution\": Gaomi New Year Paintings Regain Vitality",
+            "ja": "37-文化大革命後の再度の復興：高密年画、再び活気を取り戻す",
+            "zh": "37-“文革”后的再度复苏：高密年画重焕生机"
+        },
+        "filenames": {
+            "en": "37-wen-ge-hou-zai-du-fu-su.en.md",
+            "ja": "37-wen-ge-hou-zai-du-fu-su.ja.md",
+            "zh": "37-wen-ge-hou-zai-du-fu-su.md"
+        }
     },
     {
         "id": "38-liu-zhi-shao-tan-mi-jue",
-        "title": "38-柳枝烧炭的秘诀：高密扑灰年画的特有材料之源",
-        "filename": "38-liu-zhi-shao-tan-mi-jue.md"
+        "titles": {
+            "en": "38-The Secret of Burning Willow Branches for Charcoal: The Source of Gaomi Puhui New Year Painting's Unique Material",
+            "ja": "38-柳の枝を焼いて炭を作る秘訣：高密撲灰年画特有の材料の源",
+            "zh": "38-柳枝烧炭的秘诀：高密扑灰年画的特有材料之源"
+        },
+        "filenames": {
+            "en": "38-liu-zhi-shao-tan-mi-jue.en.md",
+            "ja": "38-liu-zhi-shao-tan-mi-jue.ja.md",
+            "zh": "38-liu-zhi-shao-tan-mi-jue.md"
+        }
     },
     {
         "id": "39-pu-hui-nian-hua-ti-cai-fen-lei",
-        "title": "39-包罗万象的民间画卷：高密扑灰年画的五大题材类型",
-        "filename": "39-pu-hui-nian-hua-ti-cai-fen-lei.md"
+        "titles": {
+            "en": "39-A Panorama of Folk Life: Five Major Subject Categories of Gaomi Puhui New Year Paintings",
+            "ja": "39-万象を包容する民間絵巻：高密撲灰年画の五大題材分類",
+            "zh": "39-包罗万象的民间画卷：高密扑灰年画的五大题材类型"
+        },
+        "filenames": {
+            "en": "39-pu-hui-nian-hua-ti-cai-fen-lei.en.md",
+            "ja": "39-pu-hui-nian-hua-ti-cai-fen-lei.ja.md",
+            "zh": "39-pu-hui-nian-hua-ti-cai-fen-lei.md"
+        }
     },
     {
         "id": "40-pu-hui-nian-hua-xing-shi-jiu-fen",
-        "title": "40-贴挂间的民俗万象：高密扑灰年画的九种实用形式",
-        "filename": "40-pu-hui-nian-hua-xing-shi-jiu-fen.md"
+        "titles": {
+            "en": "40-Folk Customs in Hanging and Pasting: Nine Practical Forms of Gaomi Puhui New Year Paintings",
+            "zh": "40-贴挂间的民俗万象：高密扑灰年画的九种实用形式"
+        },
+        "filenames": {
+            "en": "40-pu-hui-nian-hua-xing-shi-jiu-fen.en.md",
+            "zh": "40-pu-hui-nian-hua-xing-shi-jiu-fen.md"
+        }
     },
     {
         "id": "41-pu-hui-nian-hua-gong-xu-xiang-jie",
-        "title": "41-二十余道工序的锤炼：一张高密扑灰年画的诞生全过程",
-        "filename": "41-pu-hui-nian-hua-gong-xu-xiang-jie.md"
+        "titles": {
+            "en": "41 pu hui nian hua gong xu xiang jie",
+            "ja": "41 pu hui nian hua gong xu xiang jie",
+            "zh": "41-二十余道工序的锤炼：一张高密扑灰年画的诞生全过程"
+        },
+        "filenames": {
+            "en": "41-pu-hui-nian-hua-gong-xu-xiang-jie.en.md",
+            "ja": "41-pu-hui-nian-hua-gong-xu-xiang-jie.ja.md",
+            "zh": "41-pu-hui-nian-hua-gong-xu-xiang-jie.md"
+        }
     },
     {
         "id": "42-pu-hui-gong-yi-zai-tan",
-        "title": "42-“扑灰”工艺再探：从“抹画子”到明油的奥秘",
-        "filename": "42-pu-hui-gong-yi-zai-tan.md"
+        "titles": {
+            "en": "42 pu hui gong yi zai tan",
+            "ja": "42 pu hui gong yi zai tan",
+            "zh": "42-“扑灰”工艺再探：从“抹画子”到明油的奥秘"
+        },
+        "filenames": {
+            "en": "42-pu-hui-gong-yi-zai-tan.en.md",
+            "ja": "42-pu-hui-gong-yi-zai-tan.ja.md",
+            "zh": "42-pu-hui-gong-yi-zai-tan.md"
+        }
     },
     {
         "id": "43-nian-hua-dan-sheng-san-yin",
-        "title": "43-探寻高密扑灰年画的诞生之源：谋生、实用与审美",
-        "filename": "43-nian-hua-dan-sheng-san-yin.md"
+        "titles": {
+            "en": "43 nian hua dan sheng san yin",
+            "ja": "43 nian hua dan sheng san yin",
+            "zh": "43-探寻高密扑灰年画的诞生之源：谋生、实用与审美"
+        },
+        "filenames": {
+            "en": "43-nian-hua-dan-sheng-san-yin.en.md",
+            "ja": "43-nian-hua-dan-sheng-san-yin.ja.md",
+            "zh": "43-nian-hua-dan-sheng-san-yin.md"
+        }
     },
     {
         "id": "44-mo-hua-zi-shun-kou-liu",
-        "title": "44-“抹画子”的灵魂：解读高密年画顺口溜中的技法精髓",
-        "filename": "44-mo-hua-zi-shun-kou-liu.md"
+        "titles": {
+            "en": "44 mo hua zi shun kou liu",
+            "ja": "44 mo hua zi shun kou liu",
+            "zh": "44-“抹画子”的灵魂：解读高密年画顺口溜中的技法精髓"
+        },
+        "filenames": {
+            "en": "44-mo-hua-zi-shun-kou-liu.en.md",
+            "ja": "44-mo-hua-zi-shun-kou-liu.ja.md",
+            "zh": "44-mo-hua-zi-shun-kou-liu.md"
+        }
     },
     {
         "id": "45-pu-hui-nian-hua-zao-xing-ren-wu",
-        "title": "45-造型的奥秘（一）：扑灰年画中人物的“粉脸”与体态特征",
-        "filename": "45-pu-hui-nian-hua-zao-xing-ren-wu.md"
+        "titles": {
+            "en": "45 pu hui nian hua zao xing ren wu",
+            "ja": "45 pu hui nian hua zao xing ren wu",
+            "zh": "45-造型的奥秘（一）：扑灰年画中人物的“粉脸”与体态特征"
+        },
+        "filenames": {
+            "en": "45-pu-hui-nian-hua-zao-xing-ren-wu.en.md",
+            "ja": "45-pu-hui-nian-hua-zao-xing-ren-wu.ja.md",
+            "zh": "45-pu-hui-nian-hua-zao-xing-ren-wu.md"
+        }
     },
     {
         "id": "46-pu-hui-nian-hua-zao-xing-wu-pin",
-        "title": "46-造型的奥秘（二）：扑灰年画中象征性的道具与情感的载体",
-        "filename": "46-pu-hui-nian-hua-zao-xing-wu-pin.md"
+        "titles": {
+            "en": "46 pu hui nian hua zao xing wu pin",
+            "ja": "46 pu hui nian hua zao xing wu pin",
+            "zh": "46-造型的奥秘（二）：扑灰年画中象征性的道具与情感的载体"
+        },
+        "filenames": {
+            "en": "46-pu-hui-nian-hua-zao-xing-wu-pin.en.md",
+            "ja": "46-pu-hui-nian-hua-zao-xing-wu-pin.ja.md",
+            "zh": "46-pu-hui-nian-hua-zao-xing-wu-pin.md"
+        }
     },
     {
         "id": "47-pu-hui-nian-hua-zao-xing-tiao-ping",
-        "title": "47-造型的奥秘（三）：吸收文人画特点的条屏卷轴与吉祥寓意",
-        "filename": "47-pu-hui-nian-hua-zao-xing-tiao-ping.md"
+        "titles": {
+            "en": "47 pu hui nian hua zao xing tiao ping",
+            "ja": "47 pu hui nian hua zao xing tiao ping",
+            "zh": "47-造型的奥秘（三）：吸收文人画特点的条屏卷轴与吉祥寓意"
+        },
+        "filenames": {
+            "en": "47-pu-hui-nian-hua-zao-xing-tiao-ping.en.md",
+            "ja": "47-pu-hui-nian-hua-zao-xing-tiao-ping.ja.md",
+            "zh": "47-pu-hui-nian-hua-zao-xing-tiao-ping.md"
+        }
     },
     {
         "id": "48-nian-hua-zhang-tie-jiang-jiu",
-        "title": "48-年画张贴的讲究：内外有别，老少有分",
-        "filename": "48-nian-hua-zhang-tie-jiang-jiu.md"
+        "titles": {
+            "en": "48 nian hua zhang tie jiang jiu",
+            "ja": "48 nian hua zhang tie jiang jiu",
+            "zh": "48-年画张贴的讲究：内外有别，老少有分"
+        },
+        "filenames": {
+            "en": "48-nian-hua-zhang-tie-jiang-jiu.en.md",
+            "ja": "48-nian-hua-zhang-tie-jiang-jiu.ja.md",
+            "zh": "48-nian-hua-zhang-tie-jiang-jiu.md"
+        }
     },
     {
         "id": "49-pu-hui-nian-hua-se-cai-yan-jin",
-        "title": "49-从“老抹画”到“红货”：高密扑灰年画的色彩演进",
-        "filename": "49-pu-hui-nian-hua-se-cai-yan-jin.md"
+        "titles": {
+            "en": "49 pu hui nian hua se cai yan jin",
+            "ja": "49 pu hui nian hua se cai yan jin",
+            "zh": "49-从“老抹画”到“红货”：高密扑灰年画的色彩演进"
+        },
+        "filenames": {
+            "en": "49-pu-hui-nian-hua-se-cai-yan-jin.en.md",
+            "ja": "49-pu-hui-nian-hua-se-cai-yan-jin.ja.md",
+            "zh": "49-pu-hui-nian-hua-se-cai-yan-jin.md"
+        }
     },
     {
         "id": "50-shi-jue-tu-xing-yan-jiu-shi-jiao",
-        "title": "50-新视角：从视觉图形设计解读扑灰年画的传承与创新",
-        "filename": "50-shi-jue-tu-xing-yan-jiu-shi-jiao.md"
+        "titles": {
+            "en": "50 shi jue tu xing yan jiu shi jiao",
+            "ja": "50 shi jue tu xing yan jiu shi jiao",
+            "zh": "50-新视角：从视觉图形设计解读扑灰年画的传承与创新"
+        },
+        "filenames": {
+            "en": "50-shi-jue-tu-xing-yan-jiu-shi-jiao.en.md",
+            "ja": "50-shi-jue-tu-xing-yan-jiu-shi-jiao.ja.md",
+            "zh": "50-shi-jue-tu-xing-yan-jiu-shi-jiao.md"
+        }
     },
     {
         "id": "51-min-jian-chuan-cheng-xian-zhuang-kao-cha",
-        "title": "51-田野调查视角下的扑灰年画：传承的喜悦与市场的困境",
-        "filename": "51-min-jian-chuan-cheng-xian-zhuang-kao-cha.md"
+        "titles": {
+            "en": "51-Gao Mi Poku Hui New Year Paintings from the Perspective of Field Survey: The Joy of Inheritance and the Predicament of the Market",
+            "ja": "51-フィールド調査の視点から見た高密撲灰年画：伝承の喜びと市場の苦境",
+            "zh": "51-田野调查视角下的扑灰年画：传承的喜悦与市场的困境"
+        },
+        "filenames": {
+            "en": "51-min-jian-chuan-cheng-xian-zhuang-kao-cha.en.md",
+            "ja": "51-min-jian-chuan-cheng-xian-zhuang-kao-cha.ja.md",
+            "zh": "51-min-jian-chuan-cheng-xian-zhuang-kao-cha.md"
+        }
     },
     {
         "id": "52-qi-lu-wen-hua-dui-nian-hua-xing-cheng-de-ying-xiang",
-        "title": "52-齐鲁文化的双重滋养：扑灰年画形成的文化背景探源",
-        "filename": "52-qi-lu-wen-hua-dui-nian-hua-xing-cheng-de-ying-xiang.md"
+        "titles": {
+            "en": "52-Double Nourishment from Qilu Culture: Exploring the Cultural Background of the Formation of Poku Hui New Year Paintings",
+            "ja": "52-斉魯文化の二重の滋養：撲灰年画形成の文化的背景を探る",
+            "zh": "52-齐鲁文化的双重滋养：扑灰年画形成的文化背景探源"
+        },
+        "filenames": {
+            "en": "52-qi-lu-wen-hua-dui-nian-hua-xing-cheng-de-ying-xiang.en.md",
+            "ja": "52-qi-lu-wen-hua-dui-nian-hua-xing-cheng-de-ying-xiang.ja.md",
+            "zh": "52-qi-lu-wen-hua-dui-nian-hua-xing-cheng-de-ying-xiang.md"
+        }
     },
     {
         "id": "53-di-yu-jing-ji-yu-nian-hua-tu-yang",
-        "title": "53-地域经济的烙印：早期扑灰年画的题材选择与图样演变",
-        "filename": "53-di-yu-jing-ji-yu-nian-hua-tu-yang.md"
+        "titles": {
+            "en": "53-The Mark of Regional Economy: Subject Matter Selection and Pattern Evolution of Early Poku Hui New Year Paintings",
+            "ja": "53-地域経済の烙印：初期撲灰年画の題材選択と図様変遷",
+            "zh": "53-地域经济的烙印：早期扑灰年画的题材选择与图样演变"
+        },
+        "filenames": {
+            "en": "53-di-yu-jing-ji-yu-nian-hua-tu-yang.en.md",
+            "ja": "53-di-yu-jing-ji-yu-nian-hua-tu-yang.ja.md",
+            "zh": "53-di-yu-jing-ji-yu-nian-hua-tu-yang.md"
+        }
     },
     {
         "id": "54-chun-jie-xi-su-yu-nian-hua-shi-chang",
-        "title": "54-春节习俗的驱动：扑灰年画的市场需求与多样化张贴",
-        "filename": "54-chun-jie-xi-su-yu-nian-hua-shi-chang.md"
+        "titles": {
+            "en": "54-Driven by Spring Festival Customs: Market Demand and Diversified Posting of Poku Hui New Year Paintings",
+            "ja": "54-春節の習俗による推進：撲灰年画の市場需要と多様な貼り方",
+            "zh": "54-春节习俗的驱动：扑灰年画的市场需求与多样化张贴"
+        },
+        "filenames": {
+            "en": "54-chun-jie-xi-su-yu-nian-hua-shi-chang.en.md",
+            "ja": "54-chun-jie-xi-su-yu-nian-hua-shi-chang.ja.md",
+            "zh": "54-chun-jie-xi-su-yu-nian-hua-shi-chang.md"
+        }
     },
     {
         "id": "55-zong-jiao-yi-shu-de-shen-tou-yu-ying-xiang",
-        "title": "55-宗教艺术的浸染：从庙宇壁画到敦煌遗风",
-        "filename": "55-zong-jiao-yi-shu-de-shen-tou-yu-ying-xiang.md"
+        "titles": {
+            "en": "55-Infiltration of Religious Art: From Temple Murals to Dunhuang Style",
+            "ja": "55-宗教芸術の浸透：寺院壁画から敦煌の遺風まで",
+            "zh": "55-宗教艺术的浸染：从庙宇壁画到敦煌遗风"
+        },
+        "filenames": {
+            "en": "55-zong-jiao-yi-shu-de-shen-tou-yu-ying-xiang.en.md",
+            "ja": "55-zong-jiao-yi-shu-de-shen-tou-yu-ying-xiang.ja.md",
+            "zh": "55-zong-jiao-yi-shu-de-shen-tou-yu-ying-xiang.md"
+        }
     },
     {
         "id": "56-zao-qi-pu-hui-nian-hua-lao-mo-hua",
-        "title": "56-早期扑灰年画的探索：“老抹画”的文人风与水陆画痕迹",
-        "filename": "56-zao-qi-pu-hui-nian-hua-lao-mo-hua.md"
+        "titles": {
+            "en": "56-Exploration of Early Poku Hui New Year Paintings: \"Lao Mo Hua\" with Literati Style and Traces of Water and Land Paintings",
+            "ja": "56-初期撲灰年画の探求：「老抹画」の文人風と水陸画の痕跡",
+            "zh": "56-早期扑灰年画的探索：“老抹画”的文人风与水陆画痕迹"
+        },
+        "filenames": {
+            "en": "56-zao-qi-pu-hui-nian-hua-lao-mo-hua.en.md",
+            "ja": "56-zao-qi-pu-hui-nian-hua-lao-mo-hua.ja.md",
+            "zh": "56-zao-qi-pu-hui-nian-hua-lao-mo-hua.md"
+        }
     },
     {
         "id": "57-sheng-qi-pu-hui-nian-hua-yan-bian",
-        "title": "57-盛期扑灰年画的演变：从作坊兴起到“红货”风行",
-        "filename": "57-sheng-qi-pu-hui-nian-hua-yan-bian.md"
+        "titles": {
+            "en": "57-Evolution of Flourishing Poku Hui New Year Paintings: From Workshop Rise to \"Red Goods\" Popularity",
+            "ja": "57-盛期撲灰年画の変遷：工房の興隆から「紅貨」の流行まで",
+            "zh": "57-盛期扑灰年画的演变：从作坊兴起到“红货”风行"
+        },
+        "filenames": {
+            "en": "57-sheng-qi-pu-hui-nian-hua-yan-bian.en.md",
+            "ja": "57-sheng-qi-pu-hui-nian-hua-yan-bian.ja.md",
+            "zh": "57-sheng-qi-pu-hui-nian-hua-yan-bian.md"
+        }
     },
     {
         "id": "58-shuai-tui-zai-sheng-de-ming-yun",
-        "title": "58-衰退与再生的坎坷命运：扑灰年画的近现代浮沉",
-        "filename": "58-shuai-tui-zai-sheng-de-ming-yun.md"
+        "titles": {
+            "zh": "58-衰退与再生的坎坷命运：扑灰年画的近现代浮沉",
+            "en": "58-The Difficult Fate of Decline and Regeneration: The Modern Vicissitudes of Poku Hui New Year Paintings",
+            "ja": "58-衰退と再生の険しい運命：撲灰年画の近現代の浮沈"
+        },
+        "filenames": {
+            "zh": "58-shuai-tui-zai-sheng-de-ming-yun.md",
+            "en": "58-shuai-tui-zai-sheng-de_ming_yun.en.md",
+            "ja": "58-shuai-tui-zai-sheng-de_ming_yun.ja.md"
+        }
     },
     {
         "id": "59-nian-hua-tu-xing-she-ji-mei-fa-ze",
-        "title": "59-扑灰年画视觉图形中的形式美法则运用探析",
-        "filename": "59-nian-hua-tu-xing-she-ji-mei-fa-ze.md"
+        "titles": {
+            "en": "59-Analysis of the Application of Formal Beauty Principles in the Visual Graphics of Poku Hui New Year Paintings",
+            "ja": "59-撲灰年画の視覚グラフィックにおける形式美の法則の応用分析",
+            "zh": "59-扑灰年画视觉图形中的形式美法则运用探析"
+        },
+        "filenames": {
+            "en": "59-nian-hua-tu-xing-she-ji-mei-fa-ze.en.md",
+            "ja": "59-nian-hua-tu-xing-she-ji-mei-fa-ze.ja.md",
+            "zh": "59-nian-hua-tu-xing-she-ji-mei-fa-ze.md"
+        }
     },
     {
         "id": "60-nian-hua-zhuang-shi-tu-an-yu-gou-tu",
-        "title": "60-装饰图案在扑灰年画构图与布局中的作用",
-        "filename": "60-nian-hua-zhuang-shi-tu-an-yu-gou-tu.md"
+        "titles": {
+            "en": "60-The Role of Decorative Patterns in the Composition and Layout of Poku Hui New Year Paintings",
+            "ja": "60-装飾パターンが撲灰年画の構図とレイアウトに果たす役割",
+            "zh": "60-装饰图案在扑灰年画构图与布局中的作用"
+        },
+        "filenames": {
+            "en": "60-nian-hua-zhuang-shi-tu-an-yu-gou-tu.en.md",
+            "ja": "60-nian-hua-zhuang-shi-tu-an-yu-gou-tu.ja.md",
+            "zh": "60-nian-hua-zhuang-shi-tu-an-yu-gou-tu.md"
+        }
     },
     {
         "id": "61-jian-gong-dai-xie-hui-hua-feng-ge",
-        "title": "61-“兼工带写”：扑灰年画独特的绘画语言与风格",
-        "filename": "61-jian-gong-dai-xie-hui-hua-feng-ge.md"
+        "titles": {
+            "en": "61-\"Concurrent Brushwork and Sketching\": The Unique Painting Language and Style of Puhui New Year Pictures",
+            "ja": "61-「兼工帯写」：撲灰年画のユニークな絵画言語とスタイル",
+            "zh": "61-“兼工带写”：扑灰年画独特的绘画语言与风格"
+        },
+        "filenames": {
+            "en": "61-jian-gong-dai-xie-hui-hua-feng-ge.en.md",
+            "ja": "61-jian-gong-dai-xie-hui-hua-feng-ge.ja.md",
+            "zh": "61-jian-gong-dai-xie-hui-hua-feng-ge.md"
+        }
     },
     {
         "id": "62-xian-cai-ke-hua-de-zhi-hui",
-        "title": "62-“咸菜磕花”：乡土智慧孕育的独特装饰手法",
-        "filename": "62-xian-cai-ke-hua-de-zhi-hui.md"
+        "titles": {
+            "en": "62-\"Pickled Vegetable Stamping\": A Unique Decorative Technique Born from Rural Wisdom",
+            "ja": "62-「塩漬け野菜スタンプ」：郷土の知恵が育んだユニークな装飾技法",
+            "zh": "62-“咸菜磕花”：乡土智慧孕育的独特装饰手法"
+        },
+        "filenames": {
+            "en": "62-xian-cai-ke-hua-de-zhi-hui.en.md",
+            "ja": "62-xian-cai-ke-hua-de-zhi-hui.ja.md",
+            "zh": "62-xian-cai-ke-hua-de-zhi-hui.md"
+        }
     },
     {
         "id": "63-zhuang-shi-wen-yang-de-xiang-zheng-yu-bian-qian",
-        "title": "63-装饰纹样的象征意义与文化变迁",
-        "filename": "63-zhuang-shi-wen-yang-de-xiang-zheng-yu-bian-qian.md"
+        "titles": {
+            "en": "63-Symbolic Meaning and Cultural Changes of Decorative Patterns",
+            "ja": "63-装飾模様の象徴的意味と文化の変遷",
+            "zh": "63-装饰纹样的象征意义与文化变迁"
+        },
+        "filenames": {
+            "en": "63-zhuang-shi-wen-yang-de-xiang-zheng-yu-bian-qian.en.md",
+            "ja": "63-zhuang-shi-wen-yang-de-xiang-zheng-yu-bian-qian.ja.md",
+            "zh": "63-zhuang-shi-wen-yang-de-xiang-zheng-yu-bian-qian.md"
+        }
     },
     {
         "id": "64-zhuang-shi-yu-yan-de-ceng-ci-yu-feng-yun",
-        "title": "64-装饰语言的多重层次与独特风韵",
-        "filename": "64-zhuang-shi-yu-yan-de-ceng-ci-yu-feng-yun.md"
+        "titles": {
+            "en": "64-Multiple Layers and Unique Charm of Decorative Language",
+            "ja": "64-装飾言語の多層性と独特な趣",
+            "zh": "64-装饰语言的多重层次与独特风韵"
+        },
+        "filenames": {
+            "en": "64-zhuang-shi-yu-yan-de-ceng-ci-yu-feng-yun.en.md",
+            "ja": "64-zhuang-shi-yu-yan-de-ceng-ci-yu-feng-yun.ja.md",
+            "zh": "64-zhuang-shi-yu-yan-de-ceng-ci-yu-feng-yun.md"
+        }
     },
     {
         "id": "65-se-cai-yu-xian-tiao-de-xiang-tu-te-se",
-        "title": "65-色彩与线条的乡土特色：扑灰年画的视觉冲击与情感表达",
-        "filename": "65-se-cai-yu-xian-tiao-de-xiang-tu-te-se.md"
+        "titles": {
+            "en": "65-Rural Characteristics of Color and Line: Visual Impact and Emotional Expression in Puhui New Year Pictures",
+            "ja": "65-色彩と線描の郷土的特色：撲灰年画の視覚的インパクトと感情表現",
+            "zh": "65-色彩与线条的乡土特色：扑灰年画的视觉冲击与情感表达"
+        },
+        "filenames": {
+            "en": "65-se-cai-yu-xian-tiao-de-xiang-tu-te-se.en.md",
+            "ja": "65-se-cai-yu-xian-tiao-de-xiang-tu-te-se.ja.md",
+            "zh": "65-se-cai-yu-xian-tiao-de-xiang-tu-te-se.md"
+        }
     },
     {
         "id": "66-nian-hua-se-diao-de-duo-yang-yu-shen-mei",
-        "title": "66-年画色调的多样性与审美变迁的深层解读",
-        "filename": "66-nian-hua-se-diao-de-duo-yang-yu-shen-mei.md"
+        "titles": {
+            "en": "66-Diversity of New Year Picture Tones and a Deeper Interpretation of Aesthetic Changes",
+            "ja": "66-年画の色調の多様性と審美変遷の深層解釈",
+            "zh": "66-年画色调的多样性与审美变迁的深层解读"
+        },
+        "filenames": {
+            "en": "66-nian-hua-se-diao-de-duo-yang-yu-shen-mei.en.md",
+            "ja": "66-nian-hua-se-diao-de-duo-yang-yu-shen-mei.ja.md",
+            "zh": "66-nian-hua-se-diao-de-duo-yang-yu-shen-mei.md"
+        }
     },
     {
         "id": "67-nian-hua-fa-zhan-xian-zhuang-yu-kun-jing",
-        "title": "67-传承与市场的博弈：高密扑灰年画的发展现状与面临的困境",
-        "filename": "67-nian-hua-fa-zhan-xian-zhuang-yu-kun-jing.md"
+        "titles": {
+            "en": "67-The Game Between Inheritance and Market: The Current Development Status and Dilemmas Facing Gaomi Puhui New Year Pictures",
+            "ja": "67-継承と市場のせめぎ合い：高密撲灰年画の現状と直面する困難",
+            "zh": "67-传承与市场的博弈：高密扑灰年画的发展现状与面临的困境"
+        },
+        "filenames": {
+            "en": "67-nian-hua-fa-zhan-xian-zhuang-yu-kun-jing.en.md",
+            "ja": "67-nian-hua-fa-zhan-xian-zhuang-yu-kun-jing.ja.md",
+            "zh": "67-nian-hua-fa-zhan-xian-zhuang-yu-kun-jing.md"
+        }
     },
     {
         "id": "68-pu-hui-nian-hua-fa-zhan-zhan-wang",
-        "title": "68-重焕生机的展望：扑灰年画的未来发展路径探索",
-        "filename": "68-pu-hui-nian-hua-fa-zhan-zhan-wang.md"
+        "titles": {
+            "en": "68-Prospects for Rekindling Vitality: Exploring Future Development Paths for Puhui New Year Pictures",
+            "ja": "68-再び活気を取り戻す展望：撲灰年画の未来の発展経路を探る",
+            "zh": "68-重焕生机的展望：扑灰年画的未来发展路径探索"
+        },
+        "filenames": {
+            "en": "68-pu-hui-nian-hua-fa-zhan-zhan-wang.en.md",
+            "ja": "68-pu-hui-nian-hua-fa-zhan-zhan-wang.ja.md",
+            "zh": "68-pu-hui-nian-hua-fa-zhan-zhan-wang.md"
+        }
     },
     {
         "id": "69-pu-hui-nian-hua-de-shuang-zhong-jia-zhi",
-        "title": "69-扑灰年画的双重价值：文化与经济的交融",
-        "filename": "69-pu-hui-nian-hua-de-shuang-zhong-jia-zhi.md"
+        "titles": {
+            "en": "69-The Dual Value of Puhui New Year Pictures: The Fusion of Culture and Economy",
+            "ja": "69-撲灰年画の二重の価値：文化と経済の融合",
+            "zh": "69-扑灰年画的双重价值：文化与经济的交融"
+        },
+        "filenames": {
+            "en": "69-pu-hui-nian-hua-de-shuang-zhong-jia-zhi.en.md",
+            "ja": "69-pu-hui-nian-hua-de-shuang-zhong-jia-zhi.ja.md",
+            "zh": "69-pu-hui-nian-hua-de-shuang-zhong-jia-zhi.md"
+        }
     },
     {
         "id": "70-chuan-tong-pu-hui-nian-hua-de-yan-jiu-fan-chou",
-        "title": "70-坚守传统之魂：扑灰年画研究的核心范畴",
-        "filename": "70-chuan-tong-pu-hui-nian-hua-de-yan-jiu-fan-chou.md"
+        "titles": {
+            "en": "70-Upholding the Soul of Tradition: The Core Scope of Puhui New Year Picture Research",
+            "ja": "70-伝統の魂を守る：撲灰年画研究の核心範疇",
+            "zh": "70-坚守传统之魂：扑灰年画研究的核心范畴"
+        },
+        "filenames": {
+            "en": "70-chuan-tong-pu-hui-nian-hua-de-yan-jiu-fan-chou.en.md",
+            "ja": "70-chuan-tong-pu-hui-nian-hua-de-yan-jiu-fan-chou.ja.md",
+            "zh": "70-chuan-tong-pu-hui-nian-hua-de-yan-jiu-fan-chou.md"
+        }
     },
     {
         "id": "71-mo-yan-dong-bei-xiang-yu-pu-hui-nian-hua",
-        "title": "71-莫言“东北乡”的艺术回响：扑灰年画的新契机",
-        "filename": "71-mo-yan-dong-bei-xiang-yu-pu-hui-nian-hua.md"
+        "titles": {
+            "en": "71-Mo Yan's \"Northeast Township\"'s Artistic Echo: A New Opportunity for Puhui New Year Paintings",
+            "ja": "71-莫言の「東北郷」の芸術的響き：撲灰年画の新たな契機",
+            "zh": "71-莫言“东北乡”的艺术回响：扑灰年画的新契机"
+        },
+        "filenames": {
+            "en": "71-mo-yan-dong-bei-xiang-yu-pu-hui-nian-hua.en.md",
+            "ja": "71-mo-yan-dong-bei-xiang-yu-pu-hui-nian-hua.ja.md",
+            "zh": "71-mo-yan-dong-bei-xiang-yu-pu-hui-nian-hua.md"
+        }
     },
     {
         "id": "72-gao-mi-de-nian-su-feng-qing",
-        "title": "72-高密的年俗风情：孕育扑灰年画的文化土壤",
-        "filename": "72-gao-mi-de-nian-su-feng-qing.md"
+        "titles": {
+            "en": "72-Gaomi's New Year Customs and Scenery: The Cultural Soil Nurturing Puhui New Year Paintings",
+            "ja": "72-高密の年中行事と風習：撲灰年画を育む文化的土壌",
+            "zh": "72-高密的年俗风情：孕育扑灰年画的文化土壤"
+        },
+        "filenames": {
+            "en": "72-gao-mi-de-nian-su-feng-qing.en.md",
+            "ja": "72-gao-mi-de-nian-su-feng-qing.ja.md",
+            "zh": "72-gao-mi-de-nian-su-feng-qing.md"
+        }
     },
     {
         "id": "73-pu-hui-nian-hua-de-li-shi-mai-luo",
-        "title": "73-扑灰年画的历史脉络：从明初到民国",
-        "filename": "73-pu-hui-nian-hua-de-li-shi-mai-luo.md"
+        "titles": {
+            "en": "73-The Historical Context of Puhui New Year Paintings: From the Early Ming Dynasty to the Republic of China",
+            "ja": "73-撲灰年画の歴史的系譜：明初から民国まで",
+            "zh": "73-扑灰年画的历史脉络：从明初到民国"
+        },
+        "filenames": {
+            "en": "73-pu-hui-nian-hua-de-li-shi-mai-luo.en.md",
+            "ja": "73-pu-hui-nian-hua-de-li-shi-mai-luo.ja.md",
+            "zh": "73-pu-hui-nian-hua-de-li-shi-mai-luo.md"
+        }
     },
     {
         "id": "74-wen-ren-hua-yu-zong-jiao-bi-hua-de-shen-yuan-ying-xiang",
-        "title": "74-文人画与宗教壁画：扑灰年画艺术风格的两大源头",
-        "filename": "74-wen-ren-hua-yu-zong-jiao-bi-hua-de-shen-yuan-ying-xiang.md"
+        "titles": {
+            "en": "74-Literati Painting and Religious Murals: The Two Major Sources of Puhui New Year Painting Art Style",
+            "ja": "74-文人画と宗教壁画：撲灰年画芸術スタイルの二大源流",
+            "zh": "74-文人画与宗教壁画：扑灰年画艺术风格的两大源头"
+        },
+        "filenames": {
+            "en": "74-wen-ren-hua-yu-zong-jiao-bi-hua-de-shen-yuan-ying-xiang.en.md",
+            "ja": "74-wen-ren-hua-yu-zong-jiao-bi-hua-de-shen-yuan-ying-xiang.ja.md",
+            "zh": "74-wen-ren-hua-yu-zong-jiao-bi-hua-de-shen-yuan-ying-xiang.md"
+        }
     },
     {
         "id": "75-pu-hui-nian-hua-de-pu-hui-gong-yi-kao",
-        "title": "75-“扑灰”工艺考：传承古老的复制智慧",
-        "filename": "75-pu-hui-nian-hua-de-pu-hui-gong-yi-kao.md"
+        "titles": {
+            "en": "75-Research on the \"Puhui\" Technique: Inheriting Ancient Copying Wisdom",
+            "ja": "75-「撲灰」技法考：古来の複製技術の継承",
+            "zh": "75-“扑灰”工艺考：传承古老的复制智慧"
+        },
+        "filenames": {
+            "en": "75-pu-hui-nian-hua-de-pu-hui-gong-yi-kao.en.md",
+            "ja": "75-pu-hui-nian-hua-de-pu-hui-gong-yi-kao.ja.md",
+            "zh": "75-pu-hui-nian-hua-de-pu-hui-gong-yi-kao.md"
+        }
     },
     {
         "id": "76-pu-hui-nian-hua-de-xie-yi-xing-yu-gong-bi-xing",
-        "title": "76-写意挥洒与工笔精微：扑灰年画的技法交融",
-        "filename": "76-pu-hui-nian-hua-de-xie-yi-xing-yu-gong-bi-xing.md"
+        "titles": {
+            "en": "76-Freehand Splashing and Meticulous Brushwork: The Fusion of Techniques in Puhui New Year Paintings",
+            "ja": "76-写意の洒脱と工筆の緻密：撲灰年画の技法融合",
+            "zh": "76-写意挥洒与工笔精微：扑灰年画的技法交融"
+        },
+        "filenames": {
+            "en": "76-pu-hui-nian-hua-de-xie-yi-xing-yu-gong-bi-xing.en.md",
+            "ja": "76-pu-hui-nian-hua-de-xie-yi-xing-yu-gong-bi-xing.ja.md",
+            "zh": "76-pu-hui-nian-hua-de-xie-yi-xing-yu-gong-bi-xing.md"
+        }
     },
     {
         "id": "77-pu-hui-nian-hua-zhong-de-cu-huo-yu-xi-huo",
-        "title": "77-扑灰年画中的“粗活”与“细活”：雅俗共赏的艺术分层",
-        "filename": "77-pu-hui-nian-hua-zhong-de-cu-huo-yu-xi-huo.md"
+        "titles": {
+            "en": "77-\"Rough Work\" and \"Fine Work\" in Puhui New Year Paintings: Artistic Stratification for Both Refined and Popular Tastes",
+            "ja": "77-撲灰年画における「粗活」と「細活」：雅俗を兼ね備えた芸術的分化",
+            "zh": "77-扑灰年画中的“粗活”与“细活”：雅俗共赏的艺术分层"
+        },
+        "filenames": {
+            "en": "77-pu-hui-nian-hua-zhong-de-cu-huo-yu-xi-huo.en.md",
+            "ja": "77-pu-hui-nian-hua-zhong-de-cu-huo-yu-xi-huo.ja.md",
+            "zh": "77-pu-hui-nian-hua-zhong-de-cu-huo-yu-xi-huo.md"
+        }
     },
     {
         "id": "78-pu-hui-nian-hua-de-gou-tu-te-zheng-jian-jie-kong-ling",
-        "title": "78-扑灰年画的构图特征：简洁空灵，兼具对称",
-        "filename": "78-pu-hui-nian-hua-de-gou-tu-te-zheng-jian-jie-kong-ling.md"
+        "titles": {
+            "en": "78-Compositional Characteristics of Puhui New Year Paintings: Simple and Ethereal, with Symmetry",
+            "ja": "78-撲灰年画の構図の特徴：簡潔で空虚、対称性を兼備",
+            "zh": "78-扑灰年画的构图特征：简洁空灵，兼具对称"
+        },
+        "filenames": {
+            "en": "78-pu-hui-nian-hua-de-gou-tu-te-zheng-jian-jie-kong-ling.en.md",
+            "ja": "78-pu-hui-nian-hua-de-gou-tu-te-zheng-jian-jie-kong-ling.ja.md",
+            "zh": "78-pu-hui-nian-hua-de-gou-tu-te-zheng-jian-jie-kong-ling.md"
+        }
     },
     {
         "id": "79-pu-hui-nian-hua-de-ren-wu-zao-xing-zhi-zhuo-chuan-shen",
-        "title": "79-扑灰年画的人物造型：稚拙传神，独具匠心",
-        "filename": "79-pu-hui-nian-hua-de-ren-wu-zao-xing-zhi-zhuo-chuan-shen.md"
+        "titles": {
+            "en": "79-Character Modeling in Puhui New Year Paintings: Naive Yet Expressive, Uniquely Crafted",
+            "ja": "79-撲灰年画の人物造形：素朴で写実的、独創的な工夫",
+            "zh": "79-扑灰年画的人物造型：稚拙传神，独具匠心"
+        },
+        "filenames": {
+            "en": "79-pu-hui-nian-hua-de-ren-wu-zao-xing-zhi-zhuo-chuan-shen.en.md",
+            "ja": "79-pu-hui-nian-hua-de-ren-wu-zao-xing-zhi-zhuo-chuan-shen.ja.md",
+            "zh": "79-pu-hui-nian-hua-de-ren-wu-zao-xing-zhi-zhuo-chuan-shen.md"
+        }
     },
     {
         "id": "80-pu-hui-nian-hua-de-she-se-zhi-dao-ya-su-bing-xing",
-        "title": "80-扑灰年画的设色之道：雅俗并行，浓淡总相宜",
-        "filename": "80-pu-hui-nian-hua-de-she-se-zhi-dao-ya-su-bing-xing.md"
+        "titles": {
+            "en": "80-The Art of Coloring in Puhui New Year Paintings: Both Refined and Popular, Always Appropriately Shaded",
+            "zh": "80-扑灰年画的设色之道：雅俗并行，浓淡总相宜"
+        },
+        "filenames": {
+            "en": "80-pu-hui-nian-hua-de-she-se-zhi-dao-ya-su-bing-xing.en.md",
+            "zh": "80-pu-hui-nian-hua-de-she-se-zhi-dao-ya-su-bing-xing.md"
+        }
     },
     {
         "id": "81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji",
-        "title": "81-扑灰年画的审美意蕴：祈福求吉的民间文化密码",
-        "filename": "81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.md"
+        "titles": {
+            "en": "81-The Aesthetic Implication of Puhui New Year Pictures: The Folk Cultural Code for Praying for Blessings and Good Fortune",
+            "ja": "81-撲灰年画の審美的な意味合い：祈福求吉の民間文化コード",
+            "zh": "81-扑灰年画的审美意蕴：祈福求吉的民间文化密码"
+        },
+        "filenames": {
+            "en": "81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.en.md",
+            "ja": "81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.ja.md",
+            "zh": "81-pu-hui-nian-hua-de-shen-mei-yi-yun-qi-fu-qiu-ji.md"
+        }
     },
     {
         "id": "82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang",
-        "title": "82-手绘与版印：扑灰年画迥异的审美取向",
-        "filename": "82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.md"
+        "titles": {
+            "en": "82-Hand-Painted and Block-Printed: The Divergent Aesthetic Orientations of Puhui New Year Pictures",
+            "ja": "82-手描きと版画：撲灰年画の異なる審美的な志向",
+            "zh": "82-手绘与版印：扑灰年画迥异的审美取向"
+        },
+        "filenames": {
+            "en": "82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.en.md",
+            "ja": "82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.ja.md",
+            "zh": "82-shou-hui-nian-hua-yu-ban-yin-nian-hua-de-shen-mei-qu-xiang.md"
+        }
     },
     {
         "id": "83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di",
-        "title": "83-“大俗”中的广阔天地：扑灰年画的民间本色与当代挑战",
-        "filename": "83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.md"
+        "titles": {
+            "en": "83-Vast World in the \"Great Vulgarity\": The Folk Essence and Contemporary Challenges of Puhui New Year Pictures",
+            "ja": "83-「大俗」の中の広大な世界：撲灰年画の民間的な本質と現代の課題",
+            "zh": "83-“大俗”中的广阔天地：扑灰年画的民间本色与当代挑战"
+        },
+        "filenames": {
+            "en": "83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.en.md",
+            "ja": "83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.ja.md",
+            "zh": "83-pu-hui-nian-hua-da-su-zhong-de-guang-kuo-tian-di.md"
+        }
     },
     {
         "id": "84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua",
-        "title": "84-家堂年画：承载孝文化与家族血脉的民俗重器",
-        "filename": "84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.md"
+        "titles": {
+            "en": "84-Jiatang New Year Pictures: A Folk 重器 (Important Artifact) Carrying Filial Piety Culture and Family Bloodline",
+            "ja": "84-家堂年画：孝文化と家族の血脈を担う民俗の重器",
+            "zh": "84-家堂年画：承载孝文化与家族血脉的民俗重器"
+        },
+        "filenames": {
+            "en": "84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.en.md",
+            "ja": "84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.ja.md",
+            "zh": "84-jia-tang-nian-hua-cheng-zai-de-xiao-wen-hua.md"
+        }
     },
     {
         "id": "85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen",
-        "title": "85-儒家之风拂画卷：扑灰年画中的传统人文精神",
-        "filename": "85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.md"
+        "titles": {
+            "en": "85-Confucian Breeze Brushing the Scroll: Traditional Humanistic Spirit in Puhui New Year Pictures",
+            "ja": "85-儒家の風が絵巻物を撫でる：撲灰年画における伝統的な人文精神",
+            "zh": "85-儒家之风拂画卷：扑灰年画中的传统人文精神"
+        },
+        "filenames": {
+            "en": "85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.en.md",
+            "ja": "85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.ja.md",
+            "zh": "85-pu-hui-nian-hua-zhong-de-ru-jia-ren-wen-jing-shen.md"
+        }
     },
     {
         "id": "86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng",
-        "title": "86-非遗视角下扑灰年画的风格传承：守护文化基因的挑战与责任",
-        "filename": "86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.md"
+        "titles": {
+            "en": "86-Style Inheritance of Puhui New Year Pictures from the Perspective of Intangible Cultural Heritage: Challenges and Responsibilities in Safeguarding Cultural Genes",
+            "ja": "86-無形文化遺産の視点から見た撲灰年画の様式継承：文化的遺伝子を守る課題と責任",
+            "zh": "86-非遗视角下扑灰年画的风格传承：守护文化基因的挑战与责任"
+        },
+        "filenames": {
+            "en": "86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.en.md",
+            "ja": "86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.ja.md",
+            "zh": "86-fei-yi-shi-jiao-xia-pu-hui-nian-hua-de-feng-ge-chuan-cheng.md"
+        }
     },
     {
         "id": "02-pu-hui-nian-hua-jian-jie",
-        "title": "扑灰年画简介",
-        "filename": "02-pu-hui-nian-hua-jian-jie.md"
+        "titles": {
+            "en": "Introduction to Puhui New Year Pictures",
+            "ja": "撲灰年画概要",
+            "zh": "扑灰年画简介"
+        },
+        "filenames": {
+            "en": "02-pu-hui-nian-hua-jian-jie.en.md",
+            "ja": "02-pu-hui-nian-hua-jian-jie.ja.md",
+            "zh": "02-pu-hui-nian-hua-jian-jie.md"
+        }
     },
     {
         "id": "01-xiang-mu-jie-shao",
-        "title": "项目介绍",
-        "filename": "01-xiang-mu-jie-shao.md"
+        "titles": {
+            "en": "Project Introduction",
+            "ja": "プロジェクト紹介",
+            "zh": "项目介绍"
+        },
+        "filenames": {
+            "en": "01-xiang-mu-jie-shao.en.md",
+            "ja": "01-xiang-mu-jie-shao.ja.md",
+            "zh": "01-xiang-mu-jie-shao.md"
+        }
     }
 ]

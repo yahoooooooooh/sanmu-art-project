@@ -1,0 +1,17 @@
+# 03-Why "Puhui": Decrypting the Unique Identity and Core Craftsmanship of Gaomi New Year Pictures
+
+Among the dazzling array of New Year pictures in China, Gaomi Puhui New Year Pictures have earned the reputation of "China's unique wonder" for their distinctive "Puhui" (ash-dusting) technique. This uniqueness is first hidden in its core drafting skill.
+
+So, what is the mystery behind the words "Puhui"? It directly points to the most fundamental and crucial step in the production of New Year pictures: the reproduction of the draft. The general process is as follows:
+
+1.  **Careful Selection of Materials, Skillful Creation of Drawing Charcoal**: Artisans first carefully select materials to make charcoal sticks for drafting. Traditional materials are mostly **willow branches**, but sometimes **soybean stubble** (stalks left after soybean harvest) is also used. The charcoal sticks made from these materials are the starting point for creating Puhui New Year Pictures.
+
+2.  **Charcoal Sketching, Initial Outline**: Holding a specially made charcoal stick, the artisan skillfully outlines the initial contours and main lines of the work on paper. This is just a preliminary draft.
+
+3.  **Grinding Ash and Mixing Ink, Meticulous Finalization**: Next comes a step that embodies craftsmanship. The artisan will finely **grind the charcoal sticks used for sketching (or specially selected charcoal pieces) into uniform charcoal ash powder, and then mix it with water to create "fine ash ink"** of appropriate consistency. Then, switching to a brush, they dip it in this special ash ink and make more precise and accurate depictions and revisions on the initial charcoal line draft, completing a clear and complete "final draft." This final draft is the master copy for subsequent Puhui reproduction, and its quality directly affects the final product.
+
+4.  **Dusting and Rubbing for Reproduction, Inheriting the Soul of the Painting**: When a perfect "final draft" is completed, the real "Puhui" step begins. The artisan takes a new sheet of paper and covers it over the meticulously drawn charcoal ash ink final draft. Then, using their hand or a special tool, they gently and evenly "dust" and "rub" or press on the overlying paper. Due to the characteristics of charcoal ash ink, the lines on the final draft are clearly transferred (or "stenciled") onto the new paper, forming a copy that is either a mirror image of the final draft or identical in content.
+
+This unique "Puhui drafting" technique allows a meticulously drawn final draft to be continuously used to print multiple pictures. This not only greatly improves production efficiency but also ensures the consistency of the framework of each New Year picture, while also reserving ample creative space for subsequent manual coloring. It is not just a production method, but also a crystallization of wisdom, carrying the ingenuity and craftsmanship of folk artists. It is this seemingly simple "Puhui" that lays the unique foundation for subsequent steps like coloring and face-detailing, and also establishes the irreplaceable position of Gaomi Puhui New Year Pictures in Chinese New Year picture art.
+
+(This article is compiled from descriptions of the "Puhui" technique in the document "The Development Status and Continuity of Gaomi New Year Pictures" and Yang Aixia and Song Kuiyan's "Gaomi Puhui New Year Pictures - Artistic Research on 'Family Shrine Tablets'".)

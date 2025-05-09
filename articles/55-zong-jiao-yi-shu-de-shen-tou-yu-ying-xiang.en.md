@@ -1,0 +1,17 @@
+# 55-Infiltration of Religious Art: From Temple Murals to Dunhuang Style
+
+There is often an intricate connection between religious art and folk New Year paintings, and the formation and development of Gao Mi Poku Hui New Year Paintings are no exception, deeply influenced by local religious beliefs and foreign religious art.
+
+**Direct Influence of Temple Murals**:
+In the early days of the creation of Poku Hui New Year Paintings, an important source for copying and referencing was the local temple murals. Since religious belief played a role in spiritual comfort and hope for the poor people, temple murals were relatively common in the Gao Mi area at that time. The images of deities and stories in these murals naturally became objects of study and imitation for early Poku Hui New Year painting artists. For example, the existing murals in the Guandi Temple in Xiaomujia Village, northwest of Gao Mi (such as "Sworn Brotherhood in the Peach Garden," "Fighting against Huang Zhong") and the dragon and phoenix patterns on the beams have similarities in style with Poku Hui New Year Paintings. More importantly, the **Poku Hui technique itself was also used in the painting of religious murals to create initial drafts of huge deity images to save costs**, which provided a technical origin for the application of the Poku Hui technique to New Year painting production.
+
+**Indirect Penetration of Dunhuang Mural Art**:
+Wen Xin specifically mentioned in his research that the style of Poku Hui New Year Paintings also has a certain origin relationship with the Dunhuang murals in the northwest. Through the investigation of the custom of offering sacrifices to ancestors in family shrines at the end of the year by Gao Mi immigrants in the Northeast region, and citing the view of Mr. Li Kaifu, a scholar from the Dunhuang Research Academy, who had seen Song Dynasty family shrines whose layout style and cultural connotation were roughly similar to those of Poku Hui New Year Paintings, this possibility is hinted at.
+This influence may be multifaceted:
+1.  **Early Source of Copying**: The temple murals in the Gao Mi area themselves may have been indirectly influenced by the early cave temple art of Dunhuang and other places.
+2.  **Introduction by Immigrants**: With historical population migration, some craftsmen or cultures who had contact with or mastered elements of Dunhuang mural art may have been introduced to the Gao Mi area.
+3.  **Absorption of Sister Arts**: In the process of the development of Poku Hui New Year Paintings, especially in the stages of semi-printed and semi-painted and woodblock New Year paintings, it was easier to absorb foreign art elements, which may have included religious art forms.
+
+Although there are fewer existing Poku Hui New Year Paintings directly displaying Buddhist art than those of deity images, works like "Thousand-Armed Guanyin" (Figure 1-11) have artistic characteristics that are both close to water and land paintings and contain elements of Dunhuang murals. These all indicate that various elements of religious art have nurtured the growth of Gao Mi Poku Hui New Year Paintings at different levels and in different periods.
+
+(This content is organized and compiled based on the discussion in "4. Influence of Religious Art" under "Background of the Formation of Poku Hui New Year Paintings" in the first chapter and the description of "Thousand-Armed Guanyin" in the second chapter of Wen Xin's "Research on the Visual Graphics of Gao Mi Poku Hui New Year Paintings".)

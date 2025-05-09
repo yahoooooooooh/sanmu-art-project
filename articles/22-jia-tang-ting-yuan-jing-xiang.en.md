@@ -1,0 +1,17 @@
+# 22-Detail Decryption of "Jia Tang" (Part 4): Childhood Fun, Auspicious Signs, and Boundaries in the Courtyard
+
+The "courtyard" section in "Jia Tang" New Year paintings, serving as a transitional space connecting the "outside the courtyard" and the core "main hall," is relatively simpler in decoration compared to the "outside the courtyard" but is equally filled with festive joy and auspicious meanings.
+
+**Children Playing Scenes**: On both the left and right sides within the courtyard, scenes of children playing and setting off firecrackers are usually depicted. These children are lively, innocent, and vividly show the joy and excitement of celebrating the Spring Festival. In terms of clothing, the children in the courtyard also correspond to the figures outside the courtyard, following the principle of "Ming on the left, Qing on the right." The number of children is also mostly even, usually two on each side.
+
+**Auspicious Animals: Deer and Crane**: Deer and cranes are also painted within the courtyard, and their numbers also follow the principle of even numbers, two on each side. Both of these animals have special auspicious meanings in traditional Chinese culture:
+1. **Blessings for the Living**: For the living members of the family, "deer" (鹿 lù) is a homophone for "salary" or "blessing" (禄 lù), symbolizing blessings, official position, and good fortune; "crane" (鹤 hè) is a symbol of longevity. Therefore, painting deer and cranes expresses people's beautiful wishes for the family members' full blessings and longevity.
+2. **Consolation for Ancestors**: For the family's ancestors, in traditional Chinese Taoist culture, immortals often ride on cranes or divine deer. Therefore, painting deer and cranes in the courtyard also expresses the descendants' beautiful wishes for the deceased ancestors to be happy and peaceful in the other world.
+
+**Boundary between Courtyard and Main Hall**: There is usually a clear boundary between the courtyard and the main hall. There are two common styles for this boundary:
+1. **Fence Style**: Composed of pillars and railings, the colors are mostly blue and grass green interspersed, and the overall shape is relatively simple and unadorned.
+2. **Viewing Platform Style**: This style is more complex and realistic. The central pillars of the viewing platform are usually bluish-green, and pink lotus flowers are often painted at the top. The bricks on the side wall of the viewing platform are meticulously painted with landscape patterns, and the landscape patterns in each part are different, showing the painter's ingenuity. On the platform surface, objects symbolizing scholarly elegance such as pine, bamboo, plum, orchid, as well as zither, chess, calligraphy, and painting are also placed, adding a cultural atmosphere to the painting.
+
+These elements in the courtyard section collectively create a transitional space that is both full of life and rich in auspicious meanings, paving the way for entering the more sacred main hall section.
+
+(This content is compiled and written based on Yang Aixia and Song Kuiyan's description of "II. Courtyard Modeling" in "Research on the Art of Gaomi Puhui New Year Painting - <Jia Tang>".)

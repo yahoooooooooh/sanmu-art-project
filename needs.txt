@@ -3,7 +3,7 @@
 https://github.com/yahoooooooooh/sanmu-art-project
 https://yahoooooooooh.github.io/sanmu-art-project/
 
-相关命令   git push origin main
+相关可执行命令   git push origin main
 
 ### 一、原目标
 

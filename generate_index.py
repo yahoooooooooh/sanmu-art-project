@@ -9,164 +9,141 @@ data_dir = 'data'
 article_index_file = os.path.join(data_dir, 'article_index.json')
 image_index_file = os.path.join(data_dir, 'image_index.json')
 
-# 图片分类常量
-IMAGE_CATEGORIES = {
-    "TRADITIONAL_TECHNIQUE": "传统技艺",
-    "TRADITIONAL_WORK": "传统作品",
-    "INNOVATIVE_WORK": "创新作品",
-    "CULTURAL_CREATIVE": "文创",
-    "AI_PLUS_HANDICRAFT": "AI+手艺",
-    "OTHER": "其他"
+# 图片分类 KEY 常量
+IMAGE_CATEGORY_KEYS = {
+    "TRADITIONAL_TECHNIQUE": "TRADITIONAL_TECHNIQUE",
+    "TRADITIONAL_WORK": "TRADITIONAL_WORK",
+    "INNOVATIVE_WORK": "INNOVATIVE_WORK",
+    "CULTURAL_CREATIVE": "CULTURAL_CREATIVE",
+    "AI_PLUS_HANDICRAFT": "AI_PLUS_HANDICRAFT",
+    "OTHER": "OTHER"
 }
 
 def sanitize_for_id(text, fallback_prefix="item"):
     """
     将文本转换为适合做 HTML ID 的字符串。
-    保留中文、字母、数字、下划线和短横线。
-    将其他特殊字符和空格替换为短横线。
     """
-    # 1. 替换掉大部分不希望出现在ID中的特殊字符，但保留一些有意义的，如括号（稍后处理）
-    # 保留字母（包括中文）、数字、下划线、短横线、空格
     text_no_special_chars = re.sub(r'[^\w\s-]', '', text, flags=re.UNICODE)
-    
-    # 2. 将空格和连续的破折号/下划线替换为单个破折号
     sanitized = re.sub(r'[\s_]+', '-', text_no_special_chars)
-    sanitized = re.sub(r'-+', '-', sanitized) # 合并多个连续的短横线
-    
-    # 3. 转换为小写并去除首尾可能存在的短横线
+    sanitized = re.sub(r'-+', '-', sanitized) 
     sanitized = sanitized.lower().strip('-')
-    
-    # 4. 如果处理后为空，或者太短，则基于原始文本生成一个更安全的哈希或者使用前缀+数字
     if not sanitized:
-        # 可以考虑使用更复杂的哈希，但为了简单，这里用原始文本的非字母数字字符替换版
-        safer_text = re.sub(r'\W+', '', text, flags=re.UNICODE) # 去掉所有非字母数字
+        safer_text = re.sub(r'\W+', '', text, flags=re.UNICODE)
         if not safer_text: # 如果还是空的
-            return f"{fallback_prefix}-unknown"
-        return f"{fallback_prefix}-{safer_text[:20].lower()}" # 取前20个字符，小写
-        
+            return f"{fallback_prefix}-unknown-{os.urandom(4).hex()}" # 添加随机十六进制以确保唯一性
+        return f"{fallback_prefix}-{safer_text[:20].lower()}"
     return sanitized
 
+def extract_title_from_md(file_path):
+    """从 Markdown 文件的第一行提取标题 (H1)"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as md_file:
+            first_line = md_file.readline().strip()
+            if first_line.startswith('#') and len(first_line) > 1:
+                return first_line.lstrip('# ').strip()
+    except Exception as e:
+        print(f"读取文件 {os.path.basename(file_path)} 标题时出错: {e}")
+    return None
+
 def generate_article_index():
-    """扫描 articles 目录生成文章索引"""
-    articles = []
-    used_article_ids = set() # 跟踪已使用的文章ID以确保唯一性
-    
+    """扫描 articles 目录生成多语言文章索引"""
+    articles_data = {} 
     if not os.path.exists(articles_dir):
         print(f"警告: 文章目录 '{articles_dir}' 不存在。")
-        return articles
+        return []
+
+    file_pattern = re.compile(r"^(.*?)(?:\.(zh|en|ja))?\.md$", re.IGNORECASE)
 
     for filename in os.listdir(articles_dir):
-        if filename.endswith('.md'):
-            raw_id_source = os.path.splitext(filename)[0]
-            base_id = sanitize_for_id(raw_id_source, fallback_prefix="article")
-            
-            article_id = base_id
-            counter = 1
-            while article_id in used_article_ids: # 确保ID唯一
-                article_id = f"{base_id}-{counter}"
-                counter += 1
-            used_article_ids.add(article_id)
-
-            title_from_file = None
-            file_path = os.path.join(articles_dir, filename)
-            try:
-                with open(file_path, 'r', encoding='utf-8') as md_file:
-                    first_line = md_file.readline().strip()
-                    if first_line.startswith('#') and len(first_line) > 1:
-                        title_from_file = first_line.lstrip('# ').strip()
-                    elif first_line:
-                        title_from_file = first_line
-            except Exception as e:
-                print(f"读取文件 {filename} 标题时出错: {e}")
-
-            if title_from_file:
-                title = title_from_file
-            else:
-                title = raw_id_source.replace('_', ' ').replace('-', ' ').title()
-                print(f"提示: 未能从文件 '{filename}' 的第一行提取到标题，将使用文件名生成标题: '{title}'")
-
-            articles.append({
+        if not filename.endswith('.md'):
+            continue
+        match = file_pattern.match(filename)
+        if not match:
+            print(f"跳过不匹配格式的文件: {filename}")
+            continue
+        base_name_raw = match.group(1)
+        lang_code = match.group(2) 
+        current_lang = lang_code if lang_code else 'zh'
+        base_id_candidate = sanitize_for_id(base_name_raw, fallback_prefix="article")
+        if not base_id_candidate:
+            print(f"警告: 无法为 {base_name_raw} 生成有效的基础ID。跳过 {filename}.")
+            continue
+        article_id = base_id_candidate
+        file_path = os.path.join(articles_dir, filename)
+        title = extract_title_from_md(file_path)
+        if not title:
+            title = base_name_raw.replace('_', ' ').replace('-', ' ').capitalize()
+            print(f"提示: 未能从文件 '{filename}' 的第一行提取到标题，将使用文件名生成标题: '{title}' for lang '{current_lang}'")
+        if article_id not in articles_data:
+            articles_data[article_id] = {
                 'id': article_id,
-                'title': title,
-                'filename': filename
-            })
-    
-    articles.sort(key=lambda x: x['title'])
-
+                'titles': {},
+                'filenames': {}
+            }
+        if current_lang not in articles_data[article_id]['titles'] or lang_code is not None:
+             articles_data[article_id]['titles'][current_lang] = title
+             articles_data[article_id]['filenames'][current_lang] = filename
+    articles_list = list(articles_data.values())
+    articles_list.sort(key=lambda x: x['titles'].get('zh', x['id']))
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
-
     with open(article_index_file, 'w', encoding='utf-8') as f:
-        json.dump(articles, f, ensure_ascii=False, indent=4)
-    
-    print(f"文章索引已生成: {article_index_file}")
-    if not articles:
+        json.dump(articles_list, f, ensure_ascii=False, indent=4)
+    print(f"多语言文章索引已生成: {article_index_file}")
+    if not articles_list:
         print(f"提示: '{articles_dir}' 目录中没有找到 .md 文件。")
-    return articles
+    return articles_list
 
-def determine_image_category(filename):
+def determine_image_category_key(filename):
     """
-    根据文件名判断图片分类。
+    根据文件名判断图片分类，并返回分类的 KEY。
     """
     fn_lower = filename.lower()
-
-    # AI+手艺 (顺序很重要，特定规则优先)
-    if "ai绘制荷叶.jpg" == fn_lower:
-        return IMAGE_CATEGORIES["AI_PLUS_HANDICRAFT"]
-    if "荷叶头像框.png" == fn_lower: # 这是手绘后的成果
-        return IMAGE_CATEGORIES["AI_PLUS_HANDICRAFT"]
-    # AI生成的原始头像框素材
-    if "头像框.jpg" in fn_lower and \
-       (fn_lower.startswith('0') or fn_lower.startswith('1')) and \
-       len(fn_lower.split('.')[0]) <= 3: # 修正：split_ 改为 split
-        return IMAGE_CATEGORIES["AI_PLUS_HANDICRAFT"]
-    
-    # 传统技艺
-    # 文件名如：1扑灰.png, 2画灰（高清）.png
+    if "ai绘制荷叶.jpg" == fn_lower or "荷叶头像框.png" == fn_lower:
+        return IMAGE_CATEGORY_KEYS["AI_PLUS_HANDICRAFT"]
+    if "头像框.jpg" in fn_lower and (fn_lower.startswith('0') or fn_lower.startswith('1')) and len(fn_lower.split('.')[0]) <= 3: # 修正：split('.')
+        return IMAGE_CATEGORY_KEYS["AI_PLUS_HANDICRAFT"]
     if any(keyword in filename for keyword in ["扑灰", "画灰", "粉手", "上色", "涮花", "开眉眼", "落款成画"]):
-        # 更精确一点，避免文件名中恰好包含这些词但不是技艺本身
         if filename.startswith(tuple(str(i) for i in range(1,8))) or "（高清）" in filename:
-             return IMAGE_CATEGORIES["TRADITIONAL_TECHNIQUE"]
-
-    # 创新作品
-    # 文件名如：鹅次元虎意年画01.jpg, 刘墉拒绝贿赂效果图.png
+             return IMAGE_CATEGORY_KEYS["TRADITIONAL_TECHNIQUE"]
     if "鹅次元虎意年画" in filename or "刘墉拒绝贿赂效果图" in filename:
-        return IMAGE_CATEGORIES["INNOVATIVE_WORK"]
-
-    # 文创
-    # 文件名如：文创小产品01.jpg, 文创——鼠标垫.jpg, 小夜灯高清化.png, 台灯.png
+        return IMAGE_CATEGORY_KEYS["INNOVATIVE_WORK"]
     if "文创小产品" in filename or "文创——鼠标垫" in filename or "小夜灯高清化" in filename or "台灯" in filename:
-        return IMAGE_CATEGORIES["CULTURAL_CREATIVE"]
-    
-    # 传统作品 (基于已知的文件名列表)
+        return IMAGE_CATEGORY_KEYS["CULTURAL_CREATIVE"]
     traditional_works_filenames = [
         "四条屏.jpg", "玉带福春.jpg", "《五子献寿》（又名《千祥百福》）.jpg",
         "《三星高照》.jpg", "《福禄寿喜》 年画.jpg", "渔乐图.jpg", "四美图.png",
         "四季有余图.png", "福禄寿喜.png"
     ]
     if filename in traditional_works_filenames:
-        return IMAGE_CATEGORIES["TRADITIONAL_WORK"]
-
-    return IMAGE_CATEGORIES["OTHER"] # 默认分类
+        return IMAGE_CATEGORY_KEYS["TRADITIONAL_WORK"]
+    return IMAGE_CATEGORY_KEYS["OTHER"] 
 
 def generate_image_index():
-    """扫描 images 目录生成图片索引"""
+    """扫描 images 目录生成支持多语言标题的图片索引"""
     images_data = []
-    used_image_ids = set() # 跟踪已使用的图片ID以确保唯一性
-
+    used_image_ids = set() 
     if not os.path.exists(images_dir):
         print(f"警告: 图片目录 '{images_dir}' 不存在。")
         return images_data
 
     supported_extensions = ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp')
-    
     filenames = sorted([f for f in os.listdir(images_dir) if f.lower().endswith(supported_extensions)])
+    
+    print("\n正在生成图片索引，重要提示：")
+    print("此脚本会将图片文件名（无后缀）作为默认的中文、英文和日文标题。")
+    print("您需要在此脚本运行后，手动编辑生成的 'data/image_index.json' 文件，")
+    print("为每张图片的 'titles' 对象中的 'en' 和 'ja' 键提供准确的翻译。")
+    print("例如，找到对应的图片条目，修改：")
+    print("""  "titles": {\n    "zh": "中文标题来自文件名",\n    "en": "此处填写准确的英文标题",\n    "ja": "此处填写准确的日文标题"\n  },""")
+    print("确保您的图片标题得到正确国际化。\n")
 
     for filename in filenames:
-        image_title = os.path.splitext(filename)[0] 
+        image_title_zh = os.path.splitext(filename)[0] 
+        image_title_en = image_title_zh # 占位：需要用户在JSON中手动翻译
+        image_title_ja = image_title_zh # 占位：需要用户在JSON中手动翻译
         
-        base_id = sanitize_for_id(image_title, fallback_prefix="image")
-        
+        base_id = sanitize_for_id(image_title_zh, fallback_prefix="image")
         image_id = base_id
         counter = 1
         while image_id in used_image_ids or not image_id: 
@@ -178,14 +155,18 @@ def generate_image_index():
             counter += 1
         used_image_ids.add(image_id)
 
-        category = determine_image_category(filename) # 新增：获取分类
+        category_key = determine_image_category_key(filename)
 
         images_data.append({
             'id': image_id,
-            'title': image_title,
+            'titles': { 
+                'zh': image_title_zh,
+                'en': image_title_en, 
+                'ja': image_title_ja  
+            },
             'filename': filename,
-            'path': os.path.join(images_dir, filename).replace('\\\\', '/'),
-            'category': category  # 新增：分类字段
+            'path': os.path.join(images_dir, filename).replace('\\', '/'), # 确保使用正斜杠
+            'category_key': category_key
         })
             
     if not os.path.exists(data_dir):
@@ -194,13 +175,15 @@ def generate_image_index():
     with open(image_index_file, 'w', encoding='utf-8') as f:
         json.dump(images_data, f, ensure_ascii=False, indent=4)
         
-    print(f"图片索引已生成: {image_index_file}")
+    print(f"多语言图片索引已生成: {image_index_file}")
     if not images_data:
         print(f"提示: '{images_dir}' 目录中没有找到支持的图片文件。")
     return images_data
 
 if __name__ == '__main__':
-    print("开始生成索引文件...")
+    print("开始生成多语言文章索引...")
     generate_article_index()
+    print("\n开始生成多语言图片索引...")
     generate_image_index()
-    print("索引文件生成完毕。")
+    print("\n索引文件生成完毕。")
+    print("请记得检查并在 'data/image_index.json' 中手动翻译图片标题的 'en' 和 'ja' 字段！")

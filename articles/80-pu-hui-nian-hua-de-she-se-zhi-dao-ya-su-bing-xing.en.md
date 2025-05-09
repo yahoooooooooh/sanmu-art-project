@@ -1,0 +1,16 @@
+# 80-The Art of Coloring in Puhui New Year Paintings: Both Refined and Popular, Always Appropriately Shaded
+
+The coloring technique of Gaomi Puhui New Year Paintings is an important part of its artistic charm. Compared to woodblock New Year paintings, its use of color is more free, with rich use of mixed colors, and it has formed distinct color styles, both "refined" and "popular," in its development.
+
+**The Refinement of "Black Goods": Ink Mood, Ancient and Elegant**
+Early and some traditional Puhui New Year Paintings are called "ink screens," "old smeared paintings," or "black goods." These works are mainly ink-based, pursuing the ink mood and charm of literati paintings, and focusing on ink rather than color. Even when other colors (such as azure, yellow, rouge, etc.) are used, they mostly serve as embellishments and highlights, presenting an overall elegant and simple ink beauty. The subjects are mostly literati, deities and immortals, flowers, birds, insects, and fish, such as "Qinqi Calligraphy and Painting." The popular saying at the time, "Ink screen, ink screen, elegant offering on the desk; wives don't like it, old men cherish it," vividly describes its specific audience.
+
+**The Popularity of "Red Goods": Bright Red and Lively, Festive and Enthusiastic**
+Another major school is called "red goods" or "large color paintings," mainly to cater to the aesthetic needs of young people and the festive atmosphere of the New Year. These works borrow the bright colors of Yangliuqing and Yangjiabu New Year paintings, boldly using large reds and greens, replacing ink with color, and pursuing a bright red and lively visual effect. Artists fully utilize the advantages of hand-painting, using a large number of mixed colors and contrasting colors, with high brightness and saturation, making the picture very lively. The painting formula "Red next to yellow, makes the mother happy; green next to purple, better to die" is a summary of their color experience. The subjects are mostly auspicious flowers and fat babies, such as "Wealthy Peony."
+
+**Fusion of Refined and Popular: Combining and Absorbing, Radiant**
+During the peak period, a style emerged that was between "black goods" and "red goods." It had the ink rhythm modeling of "black goods" and also the bright colors of "red goods," skillfully combining ink wash and heavy color, catering to a wider range of aesthetic needs. For example, Wang Junchen's "Twin Beauties" and Li Yunxiang's "Beauty Picture," the characters' clothing colors are rich, the use of mixed colors is fluent, and even in the head ornaments, dual colors are applied with a flat brush to create a gradient effect, the overall shading is appropriate, and the figures are beautiful and expressive.
+
+The "refined and popular coexisting" coloring characteristic of Gaomi Puhui New Year Paintings is a manifestation of the artists' wisdom in adapting to different folk needs and aesthetic preferences, making its color language rich and multi-layered, and highly artistically expressive.
+
+(This content is compiled and written based on "3.3 Artwork Coloring: Both Refined and Popular" in An Mingming's thesis "Research on Gaomi Puhui New Year Painting Art.")

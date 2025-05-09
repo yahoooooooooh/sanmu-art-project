@@ -1,387 +1,695 @@
 [
     {
         "id": "01头像框",
-        "title": "01头像框",
+        "titles": {
+            "zh": "01头像框",
+            "en": "01 Avatar Frame",
+            "ja": "01 アバターフレーム"
+        },
         "filename": "01头像框.jpg",
-        "path": "images\\01头像框.jpg",
-        "category": "其他"
+        "path": "images/01头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "02头像框",
-        "title": "02头像框",
+        "titles": {
+            "zh": "02头像框",
+            "en": "02 Avatar Frame",
+            "ja": "02 アバターフレーム"
+        },
         "filename": "02头像框.jpg",
-        "path": "images\\02头像框.jpg",
-        "category": "其他"
+        "path": "images/02头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "03头像框",
-        "title": "03头像框",
+        "titles": {
+            "zh": "03头像框",
+            "en": "03 Avatar Frame",
+            "ja": "03 アバターフレーム"
+        },
         "filename": "03头像框.jpg",
-        "path": "images\\03头像框.jpg",
-        "category": "其他"
+        "path": "images/03头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "04头像框",
-        "title": "04头像框",
+        "titles": {
+            "zh": "04头像框",
+            "en": "04 Avatar Frame",
+            "ja": "04 アバターフレーム"
+        },
         "filename": "04头像框.jpg",
-        "path": "images\\04头像框.jpg",
-        "category": "其他"
+        "path": "images/04头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "05头像框",
-        "title": "05头像框",
+        "titles": {
+            "zh": "05头像框",
+            "en": "05 Avatar Frame",
+            "ja": "05 アバターフレーム"
+        },
         "filename": "05头像框.jpg",
-        "path": "images\\05头像框.jpg",
-        "category": "其他"
+        "path": "images/05头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "06头像框",
-        "title": "06头像框",
+        "titles": {
+            "zh": "06头像框",
+            "en": "06 Avatar Frame",
+            "ja": "06 アバターフレーム"
+        },
         "filename": "06头像框.jpg",
-        "path": "images\\06头像框.jpg",
-        "category": "其他"
+        "path": "images/06头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "07头像框",
-        "title": "07头像框",
+        "titles": {
+            "zh": "07头像框",
+            "en": "07 Avatar Frame",
+            "ja": "07 アバターフレーム"
+        },
         "filename": "07头像框.jpg",
-        "path": "images\\07头像框.jpg",
-        "category": "其他"
+        "path": "images/07头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "08头像框",
-        "title": "08头像框",
+        "titles": {
+            "zh": "08头像框",
+            "en": "08 Avatar Frame",
+            "ja": "08 アバターフレーム"
+        },
         "filename": "08头像框.jpg",
-        "path": "images\\08头像框.jpg",
-        "category": "其他"
+        "path": "images/08头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "09头像框",
-        "title": "09头像框",
+        "titles": {
+            "zh": "09头像框",
+            "en": "09 Avatar Frame",
+            "ja": "09 アバターフレーム"
+        },
         "filename": "09头像框.jpg",
-        "path": "images\\09头像框.jpg",
-        "category": "其他"
+        "path": "images/09头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "10头像框",
-        "title": "10头像框",
+        "titles": {
+            "zh": "10头像框",
+            "en": "10 Avatar Frame",
+            "ja": "10 アバターフレーム"
+        },
         "filename": "10头像框.jpg",
-        "path": "images\\10头像框.jpg",
-        "category": "其他"
+        "path": "images/10头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "11头像框",
-        "title": "11头像框",
+        "titles": {
+            "zh": "11头像框",
+            "en": "11 Avatar Frame",
+            "ja": "11 アバターフレーム"
+        },
         "filename": "11头像框.jpg",
-        "path": "images\\11头像框.jpg",
-        "category": "其他"
+        "path": "images/11头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "12头像框",
-        "title": "12头像框",
+        "titles": {
+            "zh": "12头像框",
+            "en": "12 Avatar Frame",
+            "ja": "12 アバターフレーム"
+        },
         "filename": "12头像框.jpg",
-        "path": "images\\12头像框.jpg",
-        "category": "其他"
+        "path": "images/12头像框.jpg",
+        "category_key": "OTHER"
     },
     {
         "id": "1扑灰",
-        "title": "1扑灰",
+        "titles": {
+            "zh": "1扑灰",
+            "en": "1 Puhui (Ash Pouncing)",
+            "ja": "1 撲灰（プーホイ）"
+        },
         "filename": "1扑灰.png",
-        "path": "images\\1扑灰.png",
-        "category": "传统技艺"
+        "path": "images/1扑灰.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "2画灰高清",
-        "title": "2画灰（高清）",
+        "titles": {
+            "zh": "2画灰（高清）",
+            "en": "2 Drawing Ash (HD)",
+            "ja": "2 画灰（高画質）"
+        },
         "filename": "2画灰（高清）.png",
-        "path": "images\\2画灰（高清）.png",
-        "category": "传统技艺"
+        "path": "images/2画灰（高清）.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "3粉手高清",
-        "title": "3粉手（高清）",
+        "titles": {
+            "zh": "3粉手（高清）",
+            "en": "3 Powdering Hands (HD)",
+            "ja": "3 粉手（高画質）"
+        },
         "filename": "3粉手（高清）.png",
-        "path": "images\\3粉手（高清）.png",
-        "category": "传统技艺"
+        "path": "images/3粉手（高清）.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "4上色高清",
-        "title": "4上色（高清）",
+        "titles": {
+            "zh": "4上色（高清）",
+            "en": "4 Coloring (HD)",
+            "ja": "4 色付け（高画質）"
+        },
         "filename": "4上色（高清）.png",
-        "path": "images\\4上色（高清）.png",
-        "category": "传统技艺"
+        "path": "images/4上色（高清）.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "5涮花高清",
-        "title": "5涮花（高清）",
+        "titles": {
+            "zh": "5涮花（高清）",
+            "en": "5 Rinsing Patterns (HD)",
+            "ja": "5 涮花（高画質）"
+        },
         "filename": "5涮花（高清）.png",
-        "path": "images\\5涮花（高清）.png",
-        "category": "传统技艺"
+        "path": "images/5涮花（高清）.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "6开眉眼高清",
-        "title": "6开眉眼（高清）",
+        "titles": {
+            "zh": "6开眉眼（高清）",
+            "en": "6 Drawing Eyebrows and Eyes (HD)",
+            "ja": "6 開眉眼（高画質）"
+        },
         "filename": "6开眉眼（高清）.png",
-        "path": "images\\6开眉眼（高清）.png",
-        "category": "传统技艺"
+        "path": "images/6开眉眼（高清）.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "7落款成画高清",
-        "title": "7落款成画（高清）",
+        "titles": {
+            "zh": "7落款成画（高清）",
+            "en": "7 Signing and Completing the Painting (HD)",
+            "ja": "7 落款成画（高画質）"
+        },
         "filename": "7落款成画（高清）.png",
-        "path": "images\\7落款成画（高清）.png",
-        "category": "传统技艺"
+        "path": "images/7落款成画（高清）.png",
+        "category_key": "TRADITIONAL_TECHNIQUE"
     },
     {
         "id": "ai绘制荷叶",
-        "title": "AI绘制荷叶",
+        "titles": {
+            "zh": "AI绘制荷叶",
+            "en": "AI Painted Lotus Leaf",
+            "ja": "AI描画の蓮の葉"
+        },
         "filename": "AI绘制荷叶.jpg",
-        "path": "images\\AI绘制荷叶.jpg",
-        "category": "AI+手艺"
+        "path": "images/AI绘制荷叶.jpg",
+        "category_key": "AI_PLUS_HANDICRAFT"
     },
     {
         "id": "三星高照",
-        "title": "《三星高照》",
+        "titles": {
+            "zh": "《三星高照》",
+            "en": "\"Three Stars Shining High\"",
+            "ja": "『三星高照』"
+        },
         "filename": "《三星高照》.jpg",
-        "path": "images\\《三星高照》.jpg",
-        "category": "传统作品"
+        "path": "images/《三星高照》.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "五子献寿又名千祥百福",
-        "title": "《五子献寿》（又名《千祥百福》）",
+        "titles": {
+            "zh": "《五子献寿》（又名《千祥百福》）",
+            "en": "\"Five Sons Offering Longevity\" (also known as \"A Thousand Auspicious Blessings\")",
+            "ja": "『五子献寿』（別名『千祥百福』）"
+        },
         "filename": "《五子献寿》（又名《千祥百福》）.jpg",
-        "path": "images\\《五子献寿》（又名《千祥百福》）.jpg",
-        "category": "传统作品"
+        "path": "images/《五子献寿》（又名《千祥百福》）.jpg",
+        "category_key": "TRADITIONAL_WORK"
+    },
+    {
+        "id": "福",
+        "titles": {
+            "zh": "《福》",
+            "en": "\"Fortune\"",
+            "ja": "『福』"
+        },
+        "filename": "《福》.png",
+        "path": "images/《福》.png",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "福禄寿喜-年画",
-        "title": "《福禄寿喜》 年画",
+        "titles": {
+            "zh": "《福禄寿喜》 年画",
+            "en": "\"Fortune, Prosperity, Longevity, Joy\" New Year Picture",
+            "ja": "『福禄寿喜』年画"
+        },
         "filename": "《福禄寿喜》 年画.jpg",
-        "path": "images\\《福禄寿喜》 年画.jpg",
-        "category": "传统作品"
+        "path": "images/《福禄寿喜》 年画.jpg",
+        "category_key": "TRADITIONAL_WORK"
+    },
+    {
+        "id": "福禄寿喜喜",
+        "titles": {
+            "zh": "《福禄寿喜》：《喜》",
+            "en": "\"Fortune, Prosperity, Longevity, Joy\": \"Joy\"",
+            "ja": "『福禄寿喜』：「喜」"
+        },
+        "filename": "《福禄寿喜》：《喜》.png",
+        "path": "images/《福禄寿喜》：《喜》.png",
+        "category_key": "TRADITIONAL_WORK"
+    },
+    {
+        "id": "福禄寿喜寿",
+        "titles": {
+            "zh": "《福禄寿喜》：《寿》",
+            "en": "\"Fortune, Prosperity, Longevity, Joy\": \"Longevity\"",
+            "ja": "『福禄寿喜』：「寿」"
+        },
+        "filename": "《福禄寿喜》：《寿》.png",
+        "path": "images/《福禄寿喜》：《寿》.png",
+        "category_key": "TRADITIONAL_WORK"
+    },
+    {
+        "id": "福禄寿喜禄",
+        "titles": {
+            "zh": "《福禄寿喜》：《禄》",
+            "en": "\"Fortune, Prosperity, Longevity, Joy\": \"Prosperity\"",
+            "ja": "『福禄寿喜』：「禄」"
+        },
+        "filename": "《福禄寿喜》：《禄》.png",
+        "path": "images/《福禄寿喜》：《禄》.png",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "刘墉拒绝贿赂效果图",
-        "title": "刘墉拒绝贿赂效果图",
+        "titles": {
+            "zh": "刘墉拒绝贿赂效果图",
+            "en": "Rendering of Liu Yong Refusing a Bribe",
+            "ja": "劉墉賄賂拒絶効果図"
+        },
         "filename": "刘墉拒绝贿赂效果图.png",
-        "path": "images\\刘墉拒绝贿赂效果图.png",
-        "category": "创新作品"
+        "path": "images/刘墉拒绝贿赂效果图.png",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "台灯",
-        "title": "台灯",
+        "titles": {
+            "zh": "台灯",
+            "en": "Desk Lamp",
+            "ja": "電気スタンド"
+        },
         "filename": "台灯.png",
-        "path": "images\\台灯.png",
-        "category": "文创"
+        "path": "images/台灯.png",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "四季有余图",
-        "title": "四季有余图",
+        "titles": {
+            "zh": "四季有余图",
+            "en": "Picture of Abundance Throughout the Four Seasons",
+            "ja": "四季有余図"
+        },
         "filename": "四季有余图.png",
-        "path": "images\\四季有余图.png",
-        "category": "传统作品"
+        "path": "images/四季有余图.png",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "四条屏",
-        "title": "四条屏",
+        "titles": {
+            "zh": "四条屏",
+            "en": "Four-Panel Screen",
+            "ja": "四条屏"
+        },
         "filename": "四条屏.jpg",
-        "path": "images\\四条屏.jpg",
-        "category": "传统作品"
+        "path": "images/四条屏.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "四美图",
-        "title": "四美图",
+        "titles": {
+            "zh": "四美图",
+            "en": "Picture of Four Beauties",
+            "ja": "四美図"
+        },
         "filename": "四美图.png",
-        "path": "images\\四美图.png",
-        "category": "传统作品"
+        "path": "images/四美图.png",
+        "category_key": "TRADITIONAL_WORK"
+    },
+    {
+        "id": "回娘家",
+        "titles": {
+            "zh": "回娘家",
+            "en": "Returning to Maiden Home",
+            "ja": "実家帰り"
+        },
+        "filename": "回娘家.jpg",
+        "path": "images/回娘家.jpg",
+        "category_key": "TRADITIONAL_WORK"
+    },
+    {
+        "id": "姑嫂闲话",
+        "titles": {
+            "zh": "姑嫂闲话",
+            "en": "Sisters-in-Law Chatting",
+            "ja": "姑嫂閑話"
+        },
+        "filename": "姑嫂闲话.jpg",
+        "path": "images/姑嫂闲话.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "小夜灯高清化",
-        "title": "小夜灯高清化",
+        "titles": {
+            "zh": "小夜灯高清化",
+            "en": "Small Night Lamp (HD)",
+            "ja": "小型ナイトライト（高画質）"
+        },
         "filename": "小夜灯高清化.png",
-        "path": "images\\小夜灯高清化.png",
-        "category": "文创"
+        "path": "images/小夜灯高清化.png",
+        "category_key": "CULTURAL_CREATIVE"
+    },
+    {
+        "id": "担水",
+        "titles": {
+            "zh": "担水",
+            "en": "Carrying Water",
+            "ja": "水運び"
+        },
+        "filename": "担水.jpg",
+        "path": "images/担水.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "文创鼠标垫",
-        "title": "文创——鼠标垫",
+        "titles": {
+            "zh": "文创——鼠标垫",
+            "en": "Cultural Creative Product - Mouse Pad",
+            "ja": "文創グッズーマウスパッド"
+        },
         "filename": "文创——鼠标垫.jpg",
-        "path": "images\\文创——鼠标垫.jpg",
-        "category": "文创"
+        "path": "images/文创——鼠标垫.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创鼠标垫2",
-        "title": "文创——鼠标垫（2）",
+        "titles": {
+            "zh": "文创——鼠标垫（2）",
+            "en": "Cultural Creative Product - Mouse Pad (2)",
+            "ja": "文創グッズーマウスパッド（2）"
+        },
         "filename": "文创——鼠标垫（2）.jpg",
-        "path": "images\\文创——鼠标垫（2）.jpg",
-        "category": "文创"
+        "path": "images/文创——鼠标垫（2）.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创小产品01",
-        "title": "文创小产品01",
+        "titles": {
+            "zh": "文创小产品01",
+            "en": "Cultural Creative Small Product 01",
+            "ja": "文創小物製品01"
+        },
         "filename": "文创小产品01.jpg",
-        "path": "images\\文创小产品01.jpg",
-        "category": "文创"
+        "path": "images/文创小产品01.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创小产品02",
-        "title": "文创小产品02",
+        "titles": {
+            "zh": "文创小产品02",
+            "en": "Cultural Creative Small Product 02",
+            "ja": "文創小物製品02"
+        },
         "filename": "文创小产品02.jpg",
-        "path": "images\\文创小产品02.jpg",
-        "category": "文创"
+        "path": "images/文创小产品02.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创小产品03",
-        "title": "文创小产品03",
+        "titles": {
+            "zh": "文创小产品03",
+            "en": "Cultural Creative Small Product 03",
+            "ja": "文創小物製品03"
+        },
         "filename": "文创小产品03.jpg",
-        "path": "images\\文创小产品03.jpg",
-        "category": "文创"
+        "path": "images/文创小产品03.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创小产品04",
-        "title": "文创小产品04",
+        "titles": {
+            "zh": "文创小产品04",
+            "en": "Cultural Creative Small Product 04",
+            "ja": "文創小物製品04"
+        },
         "filename": "文创小产品04.jpg",
-        "path": "images\\文创小产品04.jpg",
-        "category": "文创"
+        "path": "images/文创小产品04.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创小产品05",
-        "title": "文创小产品05",
+        "titles": {
+            "zh": "文创小产品05",
+            "en": "Cultural Creative Small Product 05",
+            "ja": "文創小物製品05"
+        },
         "filename": "文创小产品05.jpg",
-        "path": "images\\文创小产品05.jpg",
-        "category": "文创"
+        "path": "images/文创小产品05.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "文创小产品06",
-        "title": "文创小产品06",
+        "titles": {
+            "zh": "文创小产品06",
+            "en": "Cultural Creative Small Product 06",
+            "ja": "文創小物製品06"
+        },
         "filename": "文创小产品06.jpg",
-        "path": "images\\文创小产品06.jpg",
-        "category": "文创"
+        "path": "images/文创小产品06.jpg",
+        "category_key": "CULTURAL_CREATIVE"
     },
     {
         "id": "渔乐图",
-        "title": "渔乐图",
+        "titles": {
+            "zh": "渔乐图",
+            "en": "Picture of Fishing Pleasure",
+            "ja": "漁楽図"
+        },
         "filename": "渔乐图.jpg",
-        "path": "images\\渔乐图.jpg",
-        "category": "传统作品"
+        "path": "images/渔乐图.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "玉带福春",
-        "title": "玉带福春",
+        "titles": {
+            "zh": "玉带福春",
+            "en": "Jade Belt Bringing Spring Fortune",
+            "ja": "玉帯福春"
+        },
         "filename": "玉带福春.jpg",
-        "path": "images\\玉带福春.jpg",
-        "category": "传统作品"
+        "path": "images/玉带福春.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "福禄寿喜",
-        "title": "福禄寿喜",
+        "titles": {
+            "zh": "福禄寿喜",
+            "en": "Fortune, Prosperity, Longevity, Joy",
+            "ja": "福禄寿喜"
+        },
         "filename": "福禄寿喜.png",
-        "path": "images\\福禄寿喜.png",
-        "category": "传统作品"
+        "path": "images/福禄寿喜.png",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "荷叶头像框",
-        "title": "荷叶头像框",
+        "titles": {
+            "zh": "荷叶头像框",
+            "en": "Lotus Leaf Avatar Frame",
+            "ja": "蓮の葉アバターフレーム"
+        },
         "filename": "荷叶头像框.png",
-        "path": "images\\荷叶头像框.png",
-        "category": "AI+手艺"
+        "path": "images/荷叶头像框.png",
+        "category_key": "AI_PLUS_HANDICRAFT"
+    },
+    {
+        "id": "踢毽子",
+        "titles": {
+            "zh": "踢毽子",
+            "en": "Playing Shuttlecock",
+            "ja": "羽根つき"
+        },
+        "filename": "踢毽子.jpg",
+        "path": "images/踢毽子.jpg",
+        "category_key": "TRADITIONAL_WORK"
     },
     {
         "id": "鹅次元虎意年画01",
-        "title": "鹅次元虎意年画01",
+        "titles": {
+            "zh": "鹅次元虎意年画01",
+            "en": "Goose Dimension Tiger Theme New Year Picture 01",
+            "ja": "鵝次元虎テーマ年画01"
+        },
         "filename": "鹅次元虎意年画01.jpg",
-        "path": "images\\鹅次元虎意年画01.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画01.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画02",
-        "title": "鹅次元虎意年画02",
+        "titles": {
+            "zh": "鹅次元虎意年画02",
+            "en": "Goose Dimension Tiger Theme New Year Picture 02",
+            "ja": "鵝次元虎テーマ年画02"
+        },
         "filename": "鹅次元虎意年画02.jpg",
-        "path": "images\\鹅次元虎意年画02.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画02.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画03",
-        "title": "鹅次元虎意年画03",
+        "titles": {
+            "zh": "鹅次元虎意年画03",
+            "en": "Goose Dimension Tiger Theme New Year Picture 03",
+            "ja": "鵝次元虎テーマ年画03"
+        },
         "filename": "鹅次元虎意年画03.jpg",
-        "path": "images\\鹅次元虎意年画03.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画03.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画04",
-        "title": "鹅次元虎意年画04",
+        "titles": {
+            "zh": "鹅次元虎意年画04",
+            "en": "Goose Dimension Tiger Theme New Year Picture 04",
+            "ja": "鵝次元虎テーマ年画04"
+        },
         "filename": "鹅次元虎意年画04.jpg",
-        "path": "images\\鹅次元虎意年画04.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画04.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画05",
-        "title": "鹅次元虎意年画05",
+        "titles": {
+            "zh": "鹅次元虎意年画05",
+            "en": "Goose Dimension Tiger Theme New Year Picture 05",
+            "ja": "鵝次元虎テーマ年画05"
+        },
         "filename": "鹅次元虎意年画05.jpg",
-        "path": "images\\鹅次元虎意年画05.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画05.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画06",
-        "title": "鹅次元虎意年画06",
+        "titles": {
+            "zh": "鹅次元虎意年画06",
+            "en": "Goose Dimension Tiger Theme New Year Picture 06",
+            "ja": "鵝次元虎テーマ年画06"
+        },
         "filename": "鹅次元虎意年画06.jpg",
-        "path": "images\\鹅次元虎意年画06.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画06.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画07",
-        "title": "鹅次元虎意年画07",
+        "titles": {
+            "zh": "鹅次元虎意年画07",
+            "en": "Goose Dimension Tiger Theme New Year Picture 07",
+            "ja": "鵝次元虎テーマ年画07"
+        },
         "filename": "鹅次元虎意年画07.jpg",
-        "path": "images\\鹅次元虎意年画07.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画07.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画08",
-        "title": "鹅次元虎意年画08",
+        "titles": {
+            "zh": "鹅次元虎意年画08",
+            "en": "Goose Dimension Tiger Theme New Year Picture 08",
+            "ja": "鵝次元虎テーマ年画08"
+        },
         "filename": "鹅次元虎意年画08.jpg",
-        "path": "images\\鹅次元虎意年画08.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画08.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画09",
-        "title": "鹅次元虎意年画09",
+        "titles": {
+            "zh": "鹅次元虎意年画09",
+            "en": "Goose Dimension Tiger Theme New Year Picture 09",
+            "ja": "鵝次元虎テーマ年画09"
+        },
         "filename": "鹅次元虎意年画09.jpg",
-        "path": "images\\鹅次元虎意年画09.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画09.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画10",
-        "title": "鹅次元虎意年画10",
+        "titles": {
+            "zh": "鹅次元虎意年画10",
+            "en": "Goose Dimension Tiger Theme New Year Picture 10",
+            "ja": "鵝次元虎テーマ年画10"
+        },
         "filename": "鹅次元虎意年画10.jpg",
-        "path": "images\\鹅次元虎意年画10.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画10.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画11",
-        "title": "鹅次元虎意年画11",
+        "titles": {
+            "zh": "鹅次元虎意年画11",
+            "en": "Goose Dimension Tiger Theme New Year Picture 11",
+            "ja": "鵝次元虎テーマ年画11"
+        },
         "filename": "鹅次元虎意年画11.jpg",
-        "path": "images\\鹅次元虎意年画11.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画11.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画12",
-        "title": "鹅次元虎意年画12",
+        "titles": {
+            "zh": "鹅次元虎意年画12",
+            "en": "Goose Dimension Tiger Theme New Year Picture 12",
+            "ja": "鵝次元虎テーマ年画12"
+        },
         "filename": "鹅次元虎意年画12.jpg",
-        "path": "images\\鹅次元虎意年画12.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画12.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画13",
-        "title": "鹅次元虎意年画13",
+        "titles": {
+            "zh": "鹅次元虎意年画13",
+            "en": "Goose Dimension Tiger Theme New Year Picture 13",
+            "ja": "鵝次元虎テーマ年画13"
+        },
         "filename": "鹅次元虎意年画13.jpg",
-        "path": "images\\鹅次元虎意年画13.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画13.jpg",
+        "category_key": "INNOVATIVE_WORK"
     },
     {
         "id": "鹅次元虎意年画14",
-        "title": "鹅次元虎意年画14",
+        "titles": {
+            "zh": "鹅次元虎意年画14",
+            "en": "Goose Dimension Tiger Theme New Year Picture 14",
+            "ja": "鵝次元虎テーマ年画14"
+        },
         "filename": "鹅次元虎意年画14.jpg",
-        "path": "images\\鹅次元虎意年画14.jpg",
-        "category": "创新作品"
+        "path": "images/鹅次元虎意年画14.jpg",
+        "category_key": "INNOVATIVE_WORK"
     }
 ]

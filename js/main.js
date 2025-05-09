@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // 左侧导航链接
     const navArticlesLink = document.getElementById('nav-articles');
     const navGalleryLink = document.getElementById('nav-gallery');
-    const navAIChatLink = document.getElementById('nav-ai-chat'); // 新增：获取AI对话导航链接
+    const navAIChatLink = document.getElementById('nav-ai-chat');
 
     // 右侧视图区域
     const articlesView = document.getElementById('articles-view');
     const galleryView = document.getElementById('gallery-view');
-    const aiChatView = document.getElementById('ai-chat-view'); // 新增：获取AI对话视图
+    const aiChatView = document.getElementById('ai-chat-view');
 
     // 文章相关元素
     const articlesListULElement = document.getElementById('articles-list-ul');
@@ -29,10 +29,107 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log("Detected basePath:", basePath);
 
-    // 更新：将 navAIChatLink 添加到数组
     const allNavLinks = [navArticlesLink, navGalleryLink, navAIChatLink];
     const allViews = [articlesView, galleryView, aiChatView];
 
+    // --- Internationalization (i18n) ---
+    let currentLang = 'zh'; 
+    let translations = {}; 
+    const supportedLangs = ['zh', 'en', 'ja'];
+    const langSwitcherContainer = document.querySelector('.language-switcher');
+    let allArticles = []; 
+    let galleryLoadedOnce = false; 
+
+    function getInitialLanguage() {
+        const storedLang = localStorage.getItem('preferredLang');
+        if (storedLang && supportedLangs.includes(storedLang)) {
+            return storedLang;
+        }
+        const browserLang = navigator.language.split('-')[0];
+        if (supportedLangs.includes(browserLang)) {
+            return browserLang;
+        }
+        return 'zh'; 
+    }
+
+    async function loadTranslations(lang) {
+        try {
+            const response = await fetch(`${basePath}/locales/${lang}.json?v=${new Date().getTime()}`); 
+            if (!response.ok) {
+                throw new Error(`Failed to load ${lang}.json: ${response.status} ${response.statusText}`);
+            }
+            translations = await response.json();
+            console.log(`Translations for ${lang} loaded.`);
+            document.documentElement.lang = lang; 
+        } catch (error) {
+            console.error('Error loading translation file:', error);
+            if (lang !== 'zh') { 
+                console.warn(`Falling back to 'zh' translations.`);
+                await loadTranslations('zh'); 
+            } else {
+                translations = {}; 
+                alert('Failed to load base language file (zh.json). Site may not display correctly.');
+            }
+        }
+    }
+
+    function applyTranslationsToStaticElements() {
+        document.querySelectorAll('[data-i18n-key]').forEach(el => {
+            const key = el.dataset.i18nKey;
+            if (translations[key] !== undefined) { 
+                if (el.tagName === 'TITLE') {
+                    el.textContent = translations[key];
+                } else if (el.tagName === 'IMG' && key === 'logo_alt_text') { 
+                    el.alt = translations[key];
+                } else if (el.tagName === 'A' && el.href.includes('baidu.com') && key === "ai_chat_download_button") { 
+                    el.textContent = translations[key]; 
+                }
+                else {
+                    if (el.id !== 'header-logo') { 
+                       el.innerHTML = translations[key];
+                    }
+                }
+            } else {
+                console.warn(`Translation key "${key}" not found for language "${currentLang}".`);
+            }
+        });
+        const logoElement = document.getElementById('header-logo');
+        if (logoElement) {
+            logoElement.src = `${basePath}/LOGO.png`; 
+        }
+    }
+
+    async function setLanguage(lang) {
+        if (!supportedLangs.includes(lang) || lang === currentLang) return;
+        console.log(`Setting language to: ${lang}`);
+        currentLang = lang;
+        localStorage.setItem('preferredLang', currentLang);
+        
+        await loadTranslations(currentLang);
+        applyTranslationsToStaticElements();
+
+        if (articlesListULElement) articlesListULElement.innerHTML = '';
+        if (articleContentContainerElement) {
+             articleContentContainerElement.innerHTML = `<p>${translations['article_select_prompt'] || '请从左侧选择一篇文章查看。'}</p>`;
+        }
+        if (galleryContainerElement) galleryContainerElement.innerHTML = '';
+        galleryLoadedOnce = false; 
+        
+        await fetchArticleIndexAndHandleHash(); 
+        
+        const currentHash = window.location.hash;
+        if (currentHash.startsWith('#gallery') && (galleryView.style.display === 'flex' || galleryView.style.display === 'block')) {
+            loadGallery(); 
+        } else if (currentHash.startsWith('#ai-chat')) {
+            // AI chat view doesn't depend on dynamic content in the same way for now
+        } else if (currentHash && currentHash !== '#' && !currentHash.startsWith('#articles')) {
+            // If a specific article was showing, handleHashChange will reload it
+        } else {
+            // Default to articles view, handleHashChange covers this
+        }
+        updateNavActiveStateBasedOnHash(); 
+    }
+    
     function setActiveNav(activeLink) {
         allNavLinks.forEach(link => {
             if (link) link.classList.remove('active');
@@ -45,12 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (view) view.style.display = 'none';
         });
         if (viewToShow) {
-            // 根据视图类型决定 display 属性
-            // articles-view 使用 flex, 其他使用 block (或者 galleryView 也用 flex)
             if (viewToShow.id === 'articles-view' || viewToShow.id === 'gallery-view') {
                  viewToShow.style.display = 'flex'; 
             } else {
-                 viewToShow.style.display = 'block'; // aiChatView 用 block
+                 viewToShow.style.display = 'block';
             }
         }
     }
@@ -60,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             showView(articlesView);
             setActiveNav(navArticlesLink);
-            window.location.hash = ''; // 清除哈希，或设置为文章概览的特定哈希
+            window.location.hash = '#articles'; // Or just '', if that's your default
         });
     }
 
@@ -69,78 +164,80 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             showView(galleryView);
             setActiveNav(navGalleryLink);
-            loadGallery(); 
-            window.location.hash = '#gallery'; // 为画廊设置哈希
+            loadGallery(); // Load or reload gallery on click to ensure correct language
+            window.location.hash = '#gallery';
         });
     }
 
-    // 新增：为AI对话导航链接添加事件监听器
     if (navAIChatLink) {
         navAIChatLink.addEventListener('click', (e) => {
             e.preventDefault();
             showView(aiChatView);
             setActiveNav(navAIChatLink);
-            window.location.hash = '#ai-chat'; // 为AI对话设置哈希
+            window.location.hash = '#ai-chat';
         });
     }
-
 
     function loadArticlesList(articlesData) {
         if (!articlesListULElement) return;
         articlesListULElement.innerHTML = ''; 
-
-        if (articlesData.length === 0) {
-            articlesListULElement.innerHTML = '<li>没有找到文章。</li>';
+        if (!articlesData || articlesData.length === 0) {
+            articlesListULElement.innerHTML = `<li>${translations['no_articles_found'] || '没有找到文章。'}</li>`;
             return;
         }
-        articlesData.forEach(article => {
+        articlesData.forEach(articleEntry => { 
             const listItem = document.createElement('li');
             const link = document.createElement('a');
-            link.href = `#${article.id}`; 
-            link.textContent = article.title;
-            link.dataset.filename = article.filename;
-            
+            const title = articleEntry.titles[currentLang] || articleEntry.titles['zh'] || articleEntry.id;
+            link.textContent = title; 
+            link.href = `#${articleEntry.id}`; 
             link.addEventListener('click', (event) => {
                 event.preventDefault();
-                showView(articlesView); // 确保文章视图是显示的
-                setActiveNav(navArticlesLink); // 设置文章导航为激活
-                loadArticleContent(article.filename, article.id, article.title);
-                window.location.hash = `#${article.id}`; 
+                showView(articlesView); 
+                setActiveNav(navArticlesLink);
+                loadArticleContent(articleEntry); 
+                window.location.hash = `#${articleEntry.id}`; 
             });
-            
             listItem.appendChild(link);
             articlesListULElement.appendChild(listItem);
         });
     }
     
-    let allArticles = []; 
-    fetch(`${basePath}/data/article_index.json`)
-        .then(response => {
+    async function fetchArticleIndexAndHandleHash() { 
+        try {
+            const response = await fetch(`${basePath}/data/article_index.json?v=${new Date().getTime()}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}, trying to fetch ${response.url}`);
             }
-            return response.json();
-        })
-        .then(articles => {
-            allArticles = articles; 
+            allArticles = await response.json(); 
             loadArticlesList(allArticles); 
-            // 处理哈希加载的逻辑调整
             handleHashChange(allArticles); 
-        })
-        .catch(error => {
+        } catch (error) {
             console.error('加载文章索引失败:', error);
             if (articlesListULElement) {
-                articlesListULElement.innerHTML = `<li>加载文章列表失败。错误: ${error.message}</li>`;
+                articlesListULElement.innerHTML = `<li>${translations['error_loading_article_list'] || '加载文章列表失败。'} Error: ${error.message}</li>`;
             }
-            document.title = '错误 - 扑灰年画创新传承项目成果展示';
-            showView(articlesView); // 默认或错误时显示文章视图
+            const errorTitle = translations['error_generic'] || '错误';
+            const siteBase = translations['site_title_base'] || '扑灰年画创新传承项目成果展示';
+            document.title = `${errorTitle} - ${siteBase}`;
+            showView(articlesView); 
             setActiveNav(navArticlesLink);
-        });
+        }
+    }
 
-    function loadArticleContent(filename, articleId, articleTitle) {
+    function loadArticleContent(articleEntry) { 
         if (!articleContentContainerElement) return;
+        const filenameToLoad = articleEntry.filenames[currentLang] || articleEntry.filenames['zh'];
+        const titleToDisplay = articleEntry.titles[currentLang] || articleEntry.titles['zh'] || articleEntry.id;
+        const articleId = articleEntry.id;
 
-        fetch(`${basePath}/articles/${filename}`)
+        if (!filenameToLoad) {
+            console.error(`No filename found for article ID ${articleId} in language ${currentLang} or fallback 'zh'.`);
+            articleContentContainerElement.innerHTML = `<p>${translations['error_loading_article_content'] || '加载文章内容失败。'} (File not specified for language)</p>`;
+            return;
+        }
+
+        fetch(`${basePath}/articles/${filenameToLoad}?v=${new Date().getTime()}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}, trying to fetch ${response.url}`);
@@ -152,37 +249,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     articleContentContainerElement.innerHTML = window.marked.parse(markdownContent);
                 } else {
                     console.error('Marked.js 未加载。');
-                    articleContentContainerElement.innerHTML = '<p>错误：Markdown解析库未加载。</p>';
+                    articleContentContainerElement.innerHTML = '<p>Error: Markdown parsing library not loaded.</p>';
                 }
-                
-                if (articleTitle) {
-                    document.title = `${articleTitle} - 扑灰年画创新传承项目成果展示`;
-                } else {
-                    const firstH1 = articleContentContainerElement.querySelector('h1');
-                    if (firstH1 && firstH1.textContent) {
-                        document.title = `${firstH1.textContent.trim()} - 扑灰年画创新传承项目成果展示`;
-                    } else {
-                        document.title = '扑灰年画创新传承项目成果展示';
-                    }
-                }
-                console.log(`文章 ${filename} (ID: ${articleId}, Title: ${articleTitle}) 已加载。`);
+                const siteBase = translations['site_title_base'] || '扑灰年画创新传承项目成果展示';
+                document.title = `${titleToDisplay} - ${siteBase}`;
+                console.log(`Article ${filenameToLoad} (ID: ${articleId}, Title: ${titleToDisplay}) loaded for lang ${currentLang}.`);
             })
             .catch(error => {
-                console.error(`加载文章 '${filename}' 失败:`, error);
-                articleContentContainerElement.innerHTML = `<p>加载文章内容失败。错误: ${error.message}</p>`;
-                document.title = '错误 - 扑灰年画创新传承项目成果展示';
+                console.error(`加载文章 '${filenameToLoad}' (ID: ${articleId}) 失败:`, error);
+                articleContentContainerElement.innerHTML = `<p>${translations['error_loading_article_content'] || '加载文章内容失败。'} Error: ${error.message}</p>`;
+                const errorTitle = translations['error_generic'] || '错误';
+                const siteBase = translations['site_title_base'] || '扑灰年画创新传承项目成果展示';
+                document.title = `${errorTitle} - ${siteBase}`;
             });
     }
 
-    let galleryLoadedOnce = false; 
     function loadGallery() {
         if (!galleryContainerElement) {
-            console.warn("图片画廊容器 '.gallery-container' 未找到。");
+            console.warn("Image gallery container '.gallery-container' not found.");
             return;
         }
-        // if (galleryLoadedOnce) return; // 暂时允许重复加载以看到分类效果，后续可根据需要调整
-
-        fetch(`${basePath}/data/image_index.json`)
+        fetch(`${basePath}/data/image_index.json?v=${new Date().getTime()}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}, trying to fetch ${response.url}`);
@@ -191,64 +278,55 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(images => {
                 galleryContainerElement.innerHTML = ''; 
-                if (images.length === 0) {
-                    galleryContainerElement.innerHTML = '<p>沒有找到圖片。</p>';
+                if (!images || images.length === 0) {
+                    galleryContainerElement.innerHTML = `<p>${translations['no_images_found'] || '没有找到图片。'}</p>`;
                     return;
                 }
-
-                // 1. 按分类对图片进行分组
                 const imagesByCategory = images.reduce((acc, image) => {
-                    const category = image.category || '其他'; // 如果没有分类，默认为"其他"
-                    if (!acc[category]) {
-                        acc[category] = [];
+                    const categoryKey = image.category_key || "OTHER"; 
+                    if (!acc[categoryKey]) {
+                        acc[categoryKey] = [];
                     }
-                    acc[category].push(image);
+                    acc[categoryKey].push(image);
                     return acc;
                 }, {});
 
-                // 2. 定义分类的显示顺序 (可以根据您的偏好调整)
-                const categoryOrder = [
-                    "传统技艺",
-                    "传统作品",
-                    "创新作品",
-                    "AI+手艺",
-                    "文创",
-                    "其他"
+                const categoryDisplayOrderKeys = [ // These are the keys from IMAGE_CATEGORY_KEYS
+                    "TRADITIONAL_TECHNIQUE", "TRADITIONAL_WORK", "INNOVATIVE_WORK",
+                    "AI_PLUS_HANDICRAFT", "CULTURAL_CREATIVE", "OTHER"
                 ];
+                // Map these to the translation keys in locales/*.json
+                const categoryTranslationKeys = categoryDisplayOrderKeys.map(key => `gallery_category_${key}`);
 
-                // 3. 遍历分类并渲染图片
-                for (const categoryName of categoryOrder) {
-                    if (imagesByCategory[categoryName] && imagesByCategory[categoryName].length > 0) {
+                for (const i in categoryDisplayOrderKeys) {
+                    const actualCategoryKey = categoryDisplayOrderKeys[i];
+                    const translationKey = categoryTranslationKeys[i];
+
+                    if (imagesByCategory[actualCategoryKey] && imagesByCategory[actualCategoryKey].length > 0) {
                         const categorySection = document.createElement('div');
                         categorySection.classList.add('gallery-category-section');
-
-                        const categoryTitle = document.createElement('h3');
-                        categoryTitle.classList.add('gallery-category-title');
-                        categoryTitle.textContent = categoryName;
-                        categorySection.appendChild(categoryTitle);
-
+                        const categoryTitleElement = document.createElement('h3');
+                        categoryTitleElement.classList.add('gallery-category-title');
+                        categoryTitleElement.textContent = translations[translationKey] || actualCategoryKey; 
+                        categorySection.appendChild(categoryTitleElement);
                         const categoryImagesContainer = document.createElement('div');
-                        categoryImagesContainer.classList.add('gallery-category-images'); // 用于网格布局
-
-                        imagesByCategory[categoryName].forEach(image => {
+                        categoryImagesContainer.classList.add('gallery-category-images');
+                        imagesByCategory[actualCategoryKey].forEach(image => {
                             const galleryItem = document.createElement('div');
                             galleryItem.classList.add('gallery-item');
                             galleryItem.id = `gallery-image-${image.id}`;
-
                             const imgElement = document.createElement('img');
                             imgElement.src = `${basePath}/${image.path}`; 
-                            imgElement.alt = image.title;
-                            imgElement.title = image.title;
+                            const imageDisplayTitle = image.titles[currentLang] || image.titles['zh'] || image.id;
+                            imgElement.alt = imageDisplayTitle; 
+                            imgElement.title = imageDisplayTitle;
                             imgElement.loading = 'lazy'; 
-
                             const titleElement = document.createElement('p');
                             titleElement.classList.add('gallery-item-title');
-                            titleElement.textContent = image.title;
-
+                            titleElement.textContent = imageDisplayTitle;
                             imgElement.addEventListener('click', () => {
                                 window.open(`${basePath}/${image.path}`, '_blank');
                             });
-
                             galleryItem.appendChild(imgElement);
                             galleryItem.appendChild(titleElement);
                             categoryImagesContainer.appendChild(galleryItem);
@@ -257,66 +335,86 @@ document.addEventListener('DOMContentLoaded', () => {
                         galleryContainerElement.appendChild(categorySection);
                     }
                 }
-                // 处理那些在imagesByCategory中存在但在categoryOrder中未定义的分类 (如果有的话)
-                for (const categoryName in imagesByCategory) {
-                    if (!categoryOrder.includes(categoryName) && imagesByCategory[categoryName].length > 0) {
-                        // ... 此处可以复制上面的逻辑来渲染未在预定顺序中的分类 ...
-                        // 为简化，暂时假设所有在 image_index.json 中的分类名都已包含在 categoryOrder 中
-                        console.warn(`分类 "${categoryName}" 在 categoryOrder 中未定义，但包含图片。`);
-                    }
-                }
-
                 galleryLoadedOnce = true; 
-                console.log("图片画廊已加载并按分类显示。");
+                console.log("Multi-language image gallery loaded.");
             })
             .catch(error => {
                 console.error('加载图片索引失败:', error);
                 if (galleryContainerElement) {
-                    galleryContainerElement.innerHTML = `<p>加载图片画廊失败。错误: ${error.message}</p>`;
+                    galleryContainerElement.innerHTML = `<p>${translations['error_loading_gallery'] || '加载图片画廊失败。'} Error: ${error.message}</p>`;
                 }
             });
     }
+    
+    function updateNavActiveStateBasedOnHash() {
+        const hash = window.location.hash;
+        if (hash.startsWith('#gallery')) setActiveNav(navGalleryLink);
+        else if (hash.startsWith('#ai-chat')) setActiveNav(navAIChatLink);
+        else if (hash && hash !== '#' && (hash.startsWith('#articles') || !hash.startsWith('#'))) {
+             // If hash is #articles or any article ID like #some-article-id
+            setActiveNav(navArticlesLink);
+        }
+        else setActiveNav(navArticlesLink); // Default
+    }
 
-    // 统一处理哈希变化的函数
     function handleHashChange(articles = allArticles) {
         const hash = window.location.hash;
+        updateNavActiveStateBasedOnHash(); // Update nav active state first
+
         if (hash.startsWith('#gallery')) {
             showView(galleryView);
-            setActiveNav(navGalleryLink);
-            loadGallery();
+            // setActiveNav(navGalleryLink); // Moved to updateNavActiveStateBasedOnHash
+            if(!galleryLoadedOnce || currentLangChangedGallery) { // currentLangChangedGallery is a flag you might set in setLanguage
+                loadGallery();
+                // currentLangChangedGallery = false; // Reset flag
+            }
         } else if (hash.startsWith('#ai-chat')) {
             showView(aiChatView);
-            setActiveNav(navAIChatLink);
-        } else if (hash && hash !== '#') { // 处理文章哈希
+            // setActiveNav(navAIChatLink); // Moved
+        } else if (hash && hash !== '#' && !hash.startsWith('#articles')) { 
             const articleIdFromHash = hash.substring(1);
             const articleToLoad = articles.find(article => article.id === articleIdFromHash);
             if (articleToLoad) {
                 showView(articlesView);
-                setActiveNav(navArticlesLink);
-                loadArticleContent(articleToLoad.filename, articleToLoad.id, articleToLoad.title);
+                // setActiveNav(navArticlesLink); // Moved
+                loadArticleContent(articleToLoad); 
             } else {
-                console.warn(`哈希路由：未找到ID为 '${articleIdFromHash}' 的文章。显示默认文章视图。`);
-                showView(articlesView); // 如果文章ID无效，显示文章列表
-                setActiveNav(navArticlesLink);
-                if (articles.length > 0 && articleContentContainerElement) {
-                     // 可选：清空文章内容区或加载第一篇文章
-                    articleContentContainerElement.innerHTML = '<p>请从左侧选择一篇文章查看。</p>';
-                    document.title = '文章概览 - 扑灰年画创新传承项目成果展示';
+                console.warn(`Hash routing: Article ID '${articleIdFromHash}' not found. Showing default article view.`);
+                showView(articlesView); 
+                // setActiveNav(navArticlesLink); // Moved
+                if (articleContentContainerElement) {
+                    articleContentContainerElement.innerHTML = `<p>${translations['article_select_prompt'] || '请从左侧选择一篇文章查看。'}</p>`;
+                    const siteBase = translations['site_title_base'] || '扑灰年画创新传承项目成果展示';
+                    const overviewTitle = translations['nav_articles'] || '文章概览';
+                    document.title = `${overviewTitle} - ${siteBase}`;
                 }
             }
-        } else { // 没有哈希或哈希是空的，默认显示文章视图
+        } else { 
             showView(articlesView);
-            setActiveNav(navArticlesLink);
-            if (articles.length > 0 && articleContentContainerElement) {
-                articleContentContainerElement.innerHTML = '<p>请从左侧选择一篇文章查看。</p>';
-                document.title = '文章概览 - 扑灰年画创新传承项目成果展示';
+            // setActiveNav(navArticlesLink); // Moved
+            if (articleContentContainerElement) {
+                articleContentContainerElement.innerHTML = `<p>${translations['article_select_prompt'] || '请从左侧选择一篇文章查看。'}</p>`;
+                const siteBase = translations['site_title_base'] || '扑灰年画创新传承项目成果展示';
+                const overviewTitle = translations['nav_articles'] || '文章概览';
+                document.title = `${overviewTitle} - ${siteBase}`;
             }
         }
     }
 
-    // 监听哈希变化
-    window.addEventListener('hashchange', () => handleHashChange(allArticles));
+    // --- Initial Load ---
+    currentLang = getInitialLanguage();
+    await loadTranslations(currentLang); 
+    applyTranslationsToStaticElements(); 
 
-    // 初始加载时也调用一次（在文章列表加载后）
-    // loadArticleFromHash(allArticles) 已被 handleHashChange(allArticles) 替代，在 fetch.then 中调用
+    if (langSwitcherContainer) {
+        langSwitcherContainer.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (e.target.tagName === 'A' && e.target.dataset.lang) {
+                setLanguage(e.target.dataset.lang);
+            }
+        });
+    }
+    
+    await fetchArticleIndexAndHandleHash(); 
+    window.addEventListener('hashchange', () => handleHashChange(allArticles));
 });

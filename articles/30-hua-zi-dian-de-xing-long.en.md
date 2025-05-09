@@ -1,0 +1,14 @@
+# 30-The Prosperity of "Painting Shops": Market Flourishing and Wide Distribution of Gaomi New Year Paintings in the Qing Dynasty
+
+Gaomi Puhui New Year painting is not only a treasure of folk art but also a commodity that once flourished. From the Kangxi to Qianlong periods of the Qing Dynasty, with the rise of the New Year painting market, the emergence and development of "painting shops" greatly promoted the maturity, prosperity, and wide dissemination of Puhui New Year paintings.
+
+According to recollections of elderly artists, the earliest shops that began operating Puhui New Year paintings included names like "Tong Shun Tang," "Zeng Sheng," "Qi Wan Shun," and "Li Xing." As soon as these painting shops opened, they quickly attracted a large number of "painting customers" (i.e., customers who bought New Year paintings). The shops were constantly bustling with people throughout the year, lively and extraordinary, described in literature as "like a small wharf," until nearing the twelfth lunar month when the crowd coming to buy New Year paintings gradually receded.
+
+The prosperity of painting shops not only boosted the local market but also enabled Gaomi Puhui New Year paintings to spread out of Gaomi and be sold to various places. Their sales range extended from near to far, covering the Laishan and Linyi areas of Shandong, and even reaching Jiangsu, the Three Northeastern Provinces, and Inner Mongolia, greatly expanding the influence of Gaomi Puhui New Year paintings throughout the country.
+
+The commercial operation model of painting shops also, in turn, promoted the enthusiasm of New Year painting artists to enrich and expand their themes and content. It can be said that the maturity and prosperity of Puhui New Year paintings during the Kangxi to Qianlong periods were reflected not only in the increase in the number and scale of painting shops and workshops but also in the increasing variety of Puhui New Year painting themes and the continuous innovation in New Year painting expression forms.
+
+It was precisely through the unremitting efforts of New Year painting artists that the themes and content of Puhui New Year paintings took a decisive step from relatively simple subjects like flowers and deities in the early period to a broader range of fields reflecting real life, such as figure painting, landscapes, bamboo, and fish. By the end of the Qianlong period in the Qing Dynasty, a New Year painting production pattern had formed in the Shandong area with Weixian Yangjiabu woodblock New Year paintings in the north and Gaomi Puhui New Year paintings in the south, with the two major production areas each leading the way.
+
+(This content is compiled and written based on the description of painting shops and market development in "(1) Origin and Changes" of Ge Hanqing and Ouyang Jubo's "Historical Development and Production Process of Gaomi Puhui New Year Paintings".)
+
