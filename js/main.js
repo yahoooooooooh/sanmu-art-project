@@ -180,8 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn("图片画廊容器 '.gallery-container' 未找到。");
             return;
         }
-         // 如果已经加载过一次，可以根据需求决定是否重新加载
-        // if (galleryLoadedOnce) return;
+        // if (galleryLoadedOnce) return; // 暂时允许重复加载以看到分类效果，后续可根据需要调整
 
         fetch(`${basePath}/data/image_index.json`)
             .then(response => {
@@ -197,31 +196,78 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                images.forEach(image => {
-                    const galleryItem = document.createElement('div');
-                    galleryItem.classList.add('gallery-item');
-                    galleryItem.id = `gallery-image-${image.id}`;
+                // 1. 按分类对图片进行分组
+                const imagesByCategory = images.reduce((acc, image) => {
+                    const category = image.category || '其他'; // 如果没有分类，默认为"其他"
+                    if (!acc[category]) {
+                        acc[category] = [];
+                    }
+                    acc[category].push(image);
+                    return acc;
+                }, {});
 
-                    const imgElement = document.createElement('img');
-                    imgElement.src = `${basePath}/${image.path}`; 
-                    imgElement.alt = image.title;
-                    imgElement.title = image.title;
-                    imgElement.loading = 'lazy'; 
+                // 2. 定义分类的显示顺序 (可以根据您的偏好调整)
+                const categoryOrder = [
+                    "传统技艺",
+                    "传统作品",
+                    "创新作品",
+                    "AI+手艺",
+                    "文创",
+                    "其他"
+                ];
 
-                    const titleElement = document.createElement('p');
-                    titleElement.classList.add('gallery-item-title');
-                    titleElement.textContent = image.title;
+                // 3. 遍历分类并渲染图片
+                for (const categoryName of categoryOrder) {
+                    if (imagesByCategory[categoryName] && imagesByCategory[categoryName].length > 0) {
+                        const categorySection = document.createElement('div');
+                        categorySection.classList.add('gallery-category-section');
 
-                    imgElement.addEventListener('click', () => {
-                        window.open(`${basePath}/${image.path}`, '_blank');
-                    });
+                        const categoryTitle = document.createElement('h3');
+                        categoryTitle.classList.add('gallery-category-title');
+                        categoryTitle.textContent = categoryName;
+                        categorySection.appendChild(categoryTitle);
 
-                    galleryItem.appendChild(imgElement);
-                    galleryItem.appendChild(titleElement);
-                    galleryContainerElement.appendChild(galleryItem);
-                });
+                        const categoryImagesContainer = document.createElement('div');
+                        categoryImagesContainer.classList.add('gallery-category-images'); // 用于网格布局
+
+                        imagesByCategory[categoryName].forEach(image => {
+                            const galleryItem = document.createElement('div');
+                            galleryItem.classList.add('gallery-item');
+                            galleryItem.id = `gallery-image-${image.id}`;
+
+                            const imgElement = document.createElement('img');
+                            imgElement.src = `${basePath}/${image.path}`; 
+                            imgElement.alt = image.title;
+                            imgElement.title = image.title;
+                            imgElement.loading = 'lazy'; 
+
+                            const titleElement = document.createElement('p');
+                            titleElement.classList.add('gallery-item-title');
+                            titleElement.textContent = image.title;
+
+                            imgElement.addEventListener('click', () => {
+                                window.open(`${basePath}/${image.path}`, '_blank');
+                            });
+
+                            galleryItem.appendChild(imgElement);
+                            galleryItem.appendChild(titleElement);
+                            categoryImagesContainer.appendChild(galleryItem);
+                        });
+                        categorySection.appendChild(categoryImagesContainer);
+                        galleryContainerElement.appendChild(categorySection);
+                    }
+                }
+                // 处理那些在imagesByCategory中存在但在categoryOrder中未定义的分类 (如果有的话)
+                for (const categoryName in imagesByCategory) {
+                    if (!categoryOrder.includes(categoryName) && imagesByCategory[categoryName].length > 0) {
+                        // ... 此处可以复制上面的逻辑来渲染未在预定顺序中的分类 ...
+                        // 为简化，暂时假设所有在 image_index.json 中的分类名都已包含在 categoryOrder 中
+                        console.warn(`分类 "${categoryName}" 在 categoryOrder 中未定义，但包含图片。`);
+                    }
+                }
+
                 galleryLoadedOnce = true; 
-                console.log("图片画廊已加载。");
+                console.log("图片画廊已加载并按分类显示。");
             })
             .catch(error => {
                 console.error('加载图片索引失败:', error);

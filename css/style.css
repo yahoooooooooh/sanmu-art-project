@@ -199,20 +199,56 @@ header h1 {
 #gallery-view {
     /* .view-section 的通用样式已包含背景、padding等 */
     /* 如果有特定于画廊的布局，可以加在这里 */
+    /* 移除或调整 gallery-container 的直接 grid 样式，因为它现在是分类的容器 */
 }
-#gallery-view h2 { /* h2 样式可以考虑统一 */
+#gallery-view h2 { /* 这是 "图片画廊" 的主标题，保持或按需调整 */
     margin-top: 0;
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* 可以考虑增大一些，作为总标题 */
     color: #6D4C41;
     padding-bottom: 10px;
     border-bottom: 1px solid #D2B48C;
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* 增大和分类标题的间距 */
 }
+
+/* 原 .gallery-container 现在是分类区域的容器，不再直接是图片网格 */
 .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
+    /* display: grid; */ /* 移除，现在由 js/main.js 中的 categorySection 来组织 */
+    /* gap: 20px; */   /* 移除 */
+    display: flex; /* 让分类区域垂直排列 */
+    flex-direction: column;
+    gap: 30px; /* 分类区域之间的间距 */
 }
+
+/* 新增：每个分类区域的样式 */
+.gallery-category-section {
+    /* background-color: #FBFBFB; /* 可选：给每个分类区域一个轻微的背景色区分 */
+    /* padding: 20px; */
+    /* border-radius: 6px; */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */
+    /* margin-bottom: 30px; */ /* 已通过父级 gallery-container 的 gap 实现 */
+}
+
+/* 新增：分类标题的样式 (h3) */
+.gallery-category-title {
+    font-size: 1.15rem; /* 比主标题小一点 */
+    color: #8B5A2B; /* 更深的棕色，同侧边栏导航标题 */
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-top: 0; /* 移除默认的h3上边距 */
+    margin-bottom: 18px;
+    border-bottom: 1px dashed #D2B48C; /* 使用虚线与主标题区分 */
+    text-transform: uppercase; /* 可选：大写 */
+    letter-spacing: 0.5px;   /* 可选：字间距 */
+}
+
+/* 新增：包含每个分类图片的网格容器 */
+.gallery-category-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* 保持原来的网格列定义 */
+    gap: 20px; /* 图片项之间的间距 */
+}
+
+/* .gallery-item 和 .gallery-item img 等样式保持不变，它们现在位于 .gallery-category-images 内 */
 .gallery-item {
     border: 1px solid #D2B48C;
     border-radius: 6px;
