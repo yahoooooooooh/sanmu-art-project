@@ -520,3 +520,87 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: #BF9B70; /* 悬停 - 更深的棕色 */
 }
+
+/* Usage Policy Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色遮罩 */
+    display: flex; /* 使用 flex 居中弹窗内容 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 确保在最上层 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: #FDF5E6; /* 类似内容面板的背景色 */
+    padding: 30px 35px;
+    border-radius: 8px;
+    border: 1px solid #D2B48C;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 600px; /* 弹窗最大宽度 */
+    max-height: 80vh; /* 弹窗最大高度，允许滚动 */
+    overflow-y: auto; /* 内容超出时可滚动 */
+    position: relative; /* 为了关闭按钮的定位 */
+    color: #6D4C41; /* 主文字颜色 */
+}
+
+.modal-content h3 {
+    font-size: 1.4rem;
+    color: #8B4513; /* 鞍棕色 */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #D2B48C;
+    padding-bottom: 10px;
+}
+
+.modal-content h4 {
+    font-size: 1.1rem;
+    color: #8B5A2B; /* 更深的棕色 */
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.modal-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.2rem; /* 调整关闭按钮中文字的大小 */
+    font-weight: bold;
+    color: #8B5A2B;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-close-btn:disabled {
+    color: #AAAAAA;
+    cursor: not-allowed;
+}
+
+.modal-close-btn:not(:disabled):hover {
+    background-color: #E0A98F;
+    color: #FFFFFF;
+}
+
+/* 当弹窗显示时，禁止body滚动 (这个由JS控制，但可以加一个以防万一的类) */
+/* body.modal-open { 
+    overflow: hidden; 
+} */

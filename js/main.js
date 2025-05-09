@@ -417,4 +417,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     await fetchArticleIndexAndHandleHash(); 
     window.addEventListener('hashchange', () => handleHashChange(allArticles));
+
+    // --- Usage Policy Modal Logic ---
+    const usagePolicyModal = document.getElementById('usagePolicyModal');
+    const closePolicyModalBtn = document.getElementById('closePolicyModalBtn');
+    const policyModalDisplayKey = 'usagePolicyModalShown'; // Key for localStorage
+
+    function showUsagePolicyModal() {
+        if (usagePolicyModal) {
+            usagePolicyModal.style.display = 'flex'; // Show the modal
+            // Disable scrolling on the body
+            document.body.style.overflow = 'hidden';
+
+            // Enable the close button after 5 seconds
+            setTimeout(() => {
+                if (closePolicyModalBtn) {
+                    closePolicyModalBtn.disabled = false;
+                    closePolicyModalBtn.textContent = '✓ 我已阅读并同意 (Close)'; // Or just '关闭'
+                }
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+    }
+
+    function hideUsagePolicyModal() {
+        if (usagePolicyModal) {
+            usagePolicyModal.style.display = 'none';
+            // Re-enable scrolling on the body
+            document.body.style.overflow = '';
+            // Store that the modal has been shown in this session to prevent re-showing on hash change navigation
+            sessionStorage.setItem(policyModalDisplayKey, 'true');
+        }
+    }
+
+    if (closePolicyModalBtn) {
+        closePolicyModalBtn.addEventListener('click', hideUsagePolicyModal);
+    }
+
+    // Show modal only if it hasn't been shown in the current session
+    // This prevents it from re-appearing if the user navigates within the site using hash links
+    if (!sessionStorage.getItem(policyModalDisplayKey)) {
+        showUsagePolicyModal();
+    }
+    // --- End of Usage Policy Modal Logic ---
+
 });
